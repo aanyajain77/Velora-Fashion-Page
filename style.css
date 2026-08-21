@@ -1033,6 +1033,10 @@ ul {
   pointer-events: auto;
 }
 
+.modal-overlay:target .modal-box {
+  transform: translateY(0);
+}
+
 .modal-box {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1046,9 +1050,6 @@ ul {
   transition: transform 0.3s ease;
 }
 
-.modal-overlay:target .modal-box {
-  transform: translateY(0);
-}
 
 .modal-close {
   position: absolute;
