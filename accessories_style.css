@@ -113,7 +113,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.25rem 2rem;
+    padding: 1.5rem 2rem;
 }
 
 /* Pure CSS Hamburger Toggle */
@@ -213,7 +213,7 @@ ul {
 }
 
 .nav-link.sale {
-    color: var(--color-accent);
+    color: #b5a48b;
     font-weight: 500;
 }
 
@@ -226,7 +226,7 @@ ul {
 .btn-auth {
     background-color: var(--color-primary);
     color: #ffffff;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 1.15rem;
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.15em;
@@ -241,6 +241,8 @@ ul {
 }
 
 .icon-btn {
+    background: none;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,15 +258,16 @@ ul {
 .icon-btn svg {
     width: 20px;
     height: 20px;
+    stroke-width: 1.5;
 }
 
 .cart-badge {
     position: absolute;
     top: -6px;
     right: -8px;
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
     color: #ffffff;
-    font-size: 0.65rem;
+    font-size: 0.625rem;
     font-weight: 600;
     width: 16px;
     height: 16px;
@@ -885,12 +888,24 @@ ul {
     padding: 2.5rem;
 }
 
+#login-modal .modal-box {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    max-width: 420px;
+    max-height: none;
+    overflow-y: visible;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
 .modal-close {
     position: absolute;
     top: 1.25rem;
-    right: 1.5rem;
-    font-size: 1.75rem;
+    right: 1.25rem;
+    font-size: 1.5rem;
     color: var(--color-text-muted);
+    text-decoration: none;
     line-height: 1;
     transition: var(--transition);
 }
@@ -986,19 +1001,23 @@ ul {
 /* Login Modal Specifics */
 .modal-header {
     text-align: center;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2rem;
 }
 
 .modal-title {
     font-family: var(--font-serif);
-    font-size: 1.8rem;
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--color-primary);
     margin-bottom: 0.35rem;
 }
 
 .modal-subtitle {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
+    font-weight: 300;
 }
 
 .auth-tabs {
@@ -1011,12 +1030,12 @@ ul {
 
 .tab-label {
     display: inline-block;
-    width: 50%;
+    width: 48%;
     text-align: center;
-    padding: 0.75rem 0;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    padding: 0.6rem 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-text-muted);
     border-bottom: 2px solid var(--color-border);
@@ -1032,10 +1051,13 @@ ul {
 
 .tab-content {
     display: none;
-    padding-top: 1.5rem;
+    padding-top: 1.75rem;
 }
 
-#tab-login:checked~.content-login,
+#tab-login:checked~.content-login {
+    display: block;
+}
+
 #tab-signup:checked~.content-signup {
     display: block;
 }
@@ -1043,7 +1065,7 @@ ul {
 .auth-form {
     display: flex;
     flex-direction: column;
-    gap: 1.15rem;
+    gap: 1.25rem;
 }
 
 .form-group {
@@ -1061,13 +1083,14 @@ ul {
 }
 
 .form-input {
+    width: 100%;
     padding: 0.75rem 1rem;
-    font-size: 0.88rem;
-    font-family: var(--font-sans);
     border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
     border-radius: var(--radius-sm);
-    background-color: var(--color-surface-alt);
+    font-size: 0.85rem;
     outline: none;
+    font-family: var(--font-sans);
     transition: var(--transition);
 }
 
@@ -1078,14 +1101,17 @@ ul {
 
 .btn-full {
     width: 100%;
-    padding: 0.85rem 0;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    border-radius: var(--radius-sm);
+    margin-top: 0.5rem;
+    padding: 0.85rem;
     border: none;
     cursor: pointer;
+    outline: none;
+}
+
+#login-modal .btn-full:focus,
+#login-modal .btn-full:focus-visible {
+    outline: none;
+    box-shadow: none;
 }
 
 .btn-primary {
@@ -1223,31 +1249,63 @@ ul {
 }
 
 @media (max-width: 868px) {
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1rem 1.25rem;
+        position: relative;
+    }
+
     .hamburger-btn {
         display: flex;
+        order: 1;
+        margin-right: 0.5rem;
+        margin-left: 0;
+    }
+
+    .brand-logo {
+        order: 2;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .header-actions {
+        order: 3;
+        margin-left: 0;
+        gap: 0.85rem;
     }
 
     .main-nav {
-        position: fixed;
-        top: 73px;
-        left: 0;
+        display: block;
         width: 100%;
+        order: 4;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.3s ease;
         background-color: var(--color-bg);
-        border-bottom: 1px solid var(--color-border);
-        padding: 1.5rem 2rem;
-        box-shadow: var(--shadow-md);
-        display: none;
-        z-index: 99;
     }
 
     #mobile-menu-toggle:checked~.header-container .main-nav {
-        display: block;
+        max-height: 420px;
+        opacity: 1;
+        padding-top: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-top: 1px solid var(--color-border);
+        margin-top: 0.85rem;
     }
 
     .main-nav .nav-list {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1.25rem;
+        align-items: center;
+        gap: 1.15rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 0.35rem 0;
     }
 
     .acc-hero-grid {

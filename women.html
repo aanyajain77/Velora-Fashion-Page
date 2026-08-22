@@ -15,6 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="women_style.css">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -29,18 +31,18 @@
         <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
         <div class="container header-container">
 
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo">
+                <span class="brand-name">Velora</span>
+                <span class="brand-tagline">LIVE YOUR STYLE</span>
+            </a>
+
             <!-- Pure CSS Hamburger Toggle Button -->
             <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </label>
-
-            <!-- Brand Logo -->
-            <a href="index.html" class="brand-logo">
-                <h1 class="brand-name">Velora</h1>
-                <span class="brand-tagline">LIVE YOUR STYLE</span>
-            </a>
 
             <!-- Navigation Links -->
             <nav class="main-nav">
@@ -50,41 +52,44 @@
                     <li><a href="women.html" class="nav-link active">Women</a></li>
                     <li><a href="accessories.html" class="nav-link">Accessories</a></li>
                     <li><a href="#tops" class="nav-link">New Arrivals</a></li>
-                    <li><a href="#jackets" class="nav-link">Sale</a></li>
-                    <li><a href="#footer" class="nav-link sale">About</a></li>
-                    <li><a href="#login-modal" class="btn-auth">Login / Sign Up</a></li>
+                    <li><a href="#jackets" class="nav-link sale">Sale</a></li>
+                    <li><a href="#footer" class="nav-link">About</a></li>
                 </ul>
             </nav>
 
-            <!-- Header Action Icons -->
+            <!-- Action Icons & Auth -->
             <div class="header-actions">
-                <button type="button" class="icon-btn" aria-label="Search">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"
-                        viewBox="0 0 24 24">
+                <a href="#login-modal" class="btn-auth">Login / Sign Up</a>
+                <a href="#women-products" class="icon-btn" aria-label="Search">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                </button>
+                </a>
 
-                <button type="button" class="icon-btn" aria-label="Wishlist">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"
-                        viewBox="0 0 24 24">
+                <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path
-                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                         </path>
                     </svg>
-                </button>
+                </a>
 
-                <button type="button" class="icon-btn" aria-label="Shopping Bag">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"
-                        viewBox="0 0 24 24">
+                <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <path d="M16 10a4 4 0 0 1-8 0"></path>
                     </svg>
-                    <span class="badge-count">0</span>
-                </button>
+                    <span class="cart-badge">0</span>
+                </a>
 
+                <a href="#login-modal" class="icon-btn" aria-label="User Account">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
 
             </div>
 
@@ -105,7 +110,7 @@
                 </div>
             </div>
             <div class="hero-image-container">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80"
+                <img src="https://thumbs.dreamstime.com/b/portrait-two-sexy-pretty-beautiful-women-fashion-style-clothes-sisters-long-curly-hair-perfect-make-up-people-lifestyle-113021487.jpg"
                     alt="Velora Women's Fashion Model" class="hero-image">
             </div>
         </div>
@@ -141,7 +146,7 @@
                 <!-- Category 1: Dresses & Gowns -->
                 <a href="#dresses" class="category-card">
                     <div class="category-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://assets.ajio.com/medias/sys_master/root1/20251208/jxKr/6936bd7c720fb821d373b035/-473Wx593H-702594035-blue-MODEL.jpg"
                             alt="Women's Dresses & Evening Gowns">
                     </div>
                     <div class="category-info">
@@ -153,7 +158,7 @@
                 <!-- Category 2: Tops & Blouses -->
                 <a href="#tops" class="category-card">
                     <div class="category-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://m.media-amazon.com/images/I/71zUaQ-VUWL._AC_UY1100_.jpg"
                             alt="Women's Tops & Silk Blouses">
                     </div>
                     <div class="category-info">
@@ -165,7 +170,7 @@
                 <!-- Category 3: Denim & Jeans -->
                 <a href="#jeans" class="category-card">
                     <div class="category-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://m.media-amazon.com/images/I/61cF5XbHFdL._AC_UY1100_.jpg"
                             alt="Women's Premium Denim & Jeans">
                     </div>
                     <div class="category-info">
@@ -177,7 +182,7 @@
                 <!-- Category 4: Skirts & Pants -->
                 <a href="#skirts" class="category-card">
                     <div class="category-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://m.media-amazon.com/images/I/612eLiGbu1L._AC_UY1100_.jpg"
                             alt="Women's Skirts & Trousers">
                     </div>
                     <div class="category-info">
@@ -189,7 +194,7 @@
                 <!-- Category 5: Outerwear & Coats -->
                 <a href="#jackets" class="category-card">
                     <div class="category-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0_MMsBEv3VMngf4w69cBH4cnkl5PqOO_KCLAzIGgBfg3039igGvIVh2c&s=10"
                             alt="Women's Outerwear & Trench Coats">
                     </div>
                     <div class="category-info">
@@ -201,7 +206,7 @@
                 <!-- Category 6: Handbags & Accessories -->
                 <a href="#bags" class="category-card">
                     <div class="category-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://5.imimg.com/data5/ANDROID/Default/2023/5/312045706/UG/GJ/XP/190408770/product-jpeg-500x500.jpg"
                             alt="Women's Handbags & Accessories">
                     </div>
                     <div class="category-info">
@@ -233,7 +238,7 @@
                 <div class="product-card" id="dresses">
                     <div class="product-image-box">
                         <span class="product-badge">New</span>
-                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://www.forevernew.co.in/cdn/shop/files/30048501_s.jpg?v=1782061191&width=3840"
                             alt="Silk Satin Evening Midi Dress">
                     </div>
                     <div class="product-content">
@@ -252,7 +257,7 @@
                 <div class="product-card" id="tops">
                     <div class="product-image-box">
                         <span class="product-badge">Popular</span>
-                        <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://www.stfrock.com.au/cdn/shop/files/251009_StFrock_Maddie_AM_T1770D-WHT_1033.jpg?v=1764034310&width=700"
                             alt="Ivory Satin Wrap Blouse">
                     </div>
                     <div class="product-content">
@@ -271,7 +276,7 @@
                 <div class="product-card" id="jackets">
                     <div class="product-image-box">
                         <span class="product-badge">Best Seller</span>
-                        <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://i.etsystatic.com/62415535/r/il/e1304d/7543635429/il_570xN.7543635429_fq1x.jpg"
                             alt="Camel Wool Blend Trench Coat">
                     </div>
                     <div class="product-content">
@@ -290,7 +295,7 @@
                 <div class="product-card" id="jeans">
                     <div class="product-image-box">
                         <span class="product-badge">Trending</span>
-                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://static.cilory.com/866869-large_default/high-waist-flared-denim-jeans.jpg.webp"
                             alt="High-Rise Straight Flare Jeans">
                     </div>
                     <div class="product-content">
@@ -308,7 +313,7 @@
                 <!-- Product 5: Pleated Midi Skirt -->
                 <div class="product-card" id="skirts">
                     <div class="product-image-box">
-                        <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://m.media-amazon.com/images/I/71K+wo1Sm7L.jpg"
                             alt="Metallic Pleated Midi Skirt">
                     </div>
                     <div class="product-content">
@@ -327,7 +332,7 @@
                 <div class="product-card" id="bags">
                     <div class="product-image-box">
                         <span class="product-badge">Must Have</span>
-                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://rukmini1.flixcart.com/image/1500/1500/xif0q/sling-bag/o/q/e/women-s-faux-leather-crossbody-sling-bag-flap-style-shoulder-bag-resized-original-imahg84fjnhq7ryq.jpeg?q=70"
                             alt="Designer Leather Crossbody Bag">
                     </div>
                     <div class="product-content">
@@ -345,7 +350,7 @@
                 <!-- Product 7: Cashmere Knit Sweater -->
                 <div class="product-card">
                     <div class="product-image-box">
-                        <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://image.made-in-china.com/202f0j00gpoqTvKnANcR/Wholesale-Manufacturer-Trendy-Design-Turtleneck-Cable-Knit-Oversize-Solid-Color-Cashmere-Women-Sweater-for-Winter.webp"
                             alt="Oversized Soft Cashmere Sweater">
                     </div>
                     <div class="product-content">
@@ -363,7 +368,7 @@
                 <!-- Product 8: Tailored Blazer -->
                 <div class="product-card">
                     <div class="product-image-box">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=500&q=80"
+                        <img src="https://showoffff.in/cdn/shop/files/CHN-GD-004_Teal_2_9a1e23fc-91ff-4b22-9442-e5e0dd660642.jpg?v=1778332456&width=1080"
                             alt="Tailored Double-Breasted Linen Blazer">
                     </div>
                     <div class="product-content">
@@ -387,7 +392,7 @@
         <div class="container">
             <div class="promo-box">
                 <div class="promo-image">
-                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80"
+                    <img src="https://images.unsplash.com/photo-1617922001439-4a2e6562f328?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdvbWVuJTIwZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D"
                         alt="Women's High Fashion Offer">
                 </div>
                 <div class="promo-text">

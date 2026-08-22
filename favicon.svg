@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Crisp White Circular Background -->
+  <circle cx="128" cy="128" r="128" fill="#ffffff"/>
+  <!-- Onyx Black 'V' monogram -->
+  <text x="50%" y="54%" font-family="Playfair Display, serif" font-size="160" font-weight="700" fill="#1a1a1a" text-anchor="middle" dominant-baseline="central">V</text>
+</svg>

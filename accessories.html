@@ -17,6 +17,26 @@
 
     <!-- Dedicated Pure CSS Stylesheet for Accessories -->
     <link rel="stylesheet" href="accessories_style.css">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        .product-img,
+.cat-card-img,
+.acc-hero-banner-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-img.loaded,
+.cat-card-img.loaded,
+.acc-hero-banner-img.loaded {
+    opacity: 1;
+}
+    </style>
 </head>
 
 <body>
@@ -35,18 +55,18 @@
         <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
         <div class="container header-container">
 
-            <!-- Pure CSS Hamburger Toggle Button -->
-            <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </label>
-
             <!-- Brand Logo -->
             <a href="index.html" class="brand-logo">
                 <span class="brand-name">Velora</span>
                 <span class="brand-tagline">LIVE YOUR STYLE</span>
             </a>
+
+            <!-- Pure CSS Hamburger Toggle Button -->
+            <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
 
             <!-- Main Navigation Bar -->
             <nav class="main-nav">
@@ -64,7 +84,7 @@
             <!-- Action Icons & Auth -->
             <div class="header-actions">
                 <a href="#login-modal" class="btn-auth">Login / Sign Up</a>
-                <a href="#products-women" class="icon-btn" aria-label="Search Catalog">
+                <a href="#products-women" class="icon-btn" aria-label="Search">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -155,7 +175,7 @@
 
                     <!-- Card 1: Fine Jewelry & Waist Chains -->
                     <a href="#w-jewelry" class="cat-card">
-                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://karatcart.com/cdn/shop/files/22027533_1_d5c1570e-9515-4e62-8068-d02c78401804.jpg?v=1763112776"
                             alt="Women's Fine Jewelry & Waist Chains" class="cat-card-img">
                         <div class="cat-card-overlay">
                             <span class="cat-card-tag">18K Gold & Gems</span>
@@ -166,7 +186,7 @@
 
                     <!-- Card 2: Purses & Handbags -->
                     <a href="#w-bags" class="cat-card">
-                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://coach.scene7.com/is/image/Coach/ccx04_b4mpl_a0"
                             alt="Women's Designer Purses & Handbags" class="cat-card-img">
                         <div class="cat-card-overlay">
                             <span class="cat-card-tag">Italian Leather</span>
@@ -177,7 +197,7 @@
 
                     <!-- Card 3: Hats & Headwear -->
                     <a href="#w-hats" class="cat-card">
-                        <img src="https://images.unsplash.com/photo-1521369984125-650a004690f6?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://images-static.nykaa.com/media/catalog/product/f/8/f8ee70dDTONIQ00001633_1.jpg?tr=w-500"
                             alt="Women's Designer Hats & Berets" class="cat-card-img">
                         <div class="cat-card-overlay">
                             <span class="cat-card-tag">Straw & Felt Hats</span>
@@ -233,7 +253,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://cdn.eternz.com/thumbnails/products/2_d81b1b26_thumbnail_1024.jpg"
                                 alt="18K Gold Layered Herringbone Chain Necklace" class="product-img">
                         </div>
                         <div class="product-info">
@@ -266,7 +286,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://www.ispektrum.ca/cdn/shop/files/velora-valente-leather-bag-women-brown-5-680e942d80528.webp?v=1745786240&width=1946"
                                 alt="Velora Italian Leather Quilted Shoulder Purse" class="product-img">
                         </div>
                         <div class="product-info">
@@ -302,7 +322,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1611591475179-62cd34791ead?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://cdn.eternz.com/thumbnails/products/IMG_0726_1f7e0874_thumbnail_1024.jpg"
                                 alt="Velora Luxe 18K Gold Plated Body & Waist Chain" class="product-img">
                         </div>
                         <div class="product-info">
@@ -366,7 +386,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1521369984125-650a004690f6?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIiFlgkiDn8TfvklETtu5wEcy_z6zCrlGn5f-yHkymfC8INKBf9N6Z647J&s=10"
                                 alt="Wide-Brimmed Artisanal Straw Sun Hat" class="product-img">
                         </div>
                         <div class="product-info">
@@ -396,7 +416,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://hidesign.com/cdn/shop/files/8903439908782_0_55035ccc-d658-4eb5-a3a6-c2f62085f070_2048x.jpg?v=1784025998"
                                 alt="Handcrafted Structured Leather Tote Bag" class="product-img">
                         </div>
                         <div class="product-info">
@@ -426,7 +446,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://greenwooddesigns.com.au/cdn/shop/files/Gold_bracelet_with_pearl_and_shell_charms.webp?v=1751414045"
                                 alt="Diamond-Cut Pearl & Gold Charm Bracelet" class="product-img">
                         </div>
                         <div class="product-info">
@@ -456,7 +476,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpsz4WLcYcxHxlOu2BKEAuGmhdc3j6xBNYtAFRtGXxFja8M3-SX0EPVO4&"
                                 alt="Emerald & Solitaire Crystal Ring Set" class="product-img">
                         </div>
                         <div class="product-info">
@@ -486,7 +506,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://cdn.shopaccino.com/shubhams/products/46-804859574578307_l.jpg?v=731"
                                 alt="Gold Chain Evening Envelope Clutch Purse" class="product-img">
                         </div>
                         <div class="product-info">
@@ -516,7 +536,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1534215754734-18e55d13e346?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://www.hatsbythe100.com.au/cdn/shop/products/beret-authentique-24390e-24390e_situ01_web.jpg?v=1689232562&width=1946"
                                 alt="100% Wool Felt French Beret with Silk Ribbon" class="product-img">
                         </div>
                         <div class="product-info">
@@ -546,7 +566,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://rubans.in/cdn/shop/files/rhodium-plated-cubic-zirconia-studded-tennis-bracelet-bracelet-36940868452526.jpg?v=1774854440"
                                 alt="Cubic Zirconia Sparkle Tennis Bracelet" class="product-img">
                         </div>
                         <div class="product-info">
@@ -637,7 +657,7 @@
 
                     <!-- Card 1: Bags & Purses -->
                     <a href="#m-bags" class="cat-card">
-                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROvS8VlFWSMOXjlD3N5_loIeEyoqoU9Jlku63IvRgzerG2xqZg52iafyw&s=10"
                             alt="Bags & Leather Purses" class="cat-card-img">
                         <div class="cat-card-overlay">
                             <span class="cat-card-tag">Leather Collection</span>
@@ -648,7 +668,7 @@
 
                     <!-- Card 2: Footwear & Shoes -->
                     <a href="#m-footwear" class="cat-card">
-                        <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://assets.ajio.com/medias/sys_master/root1/20260727/v9Je/6a674fd7a0359b385ab03ab2/-473Wx593H-700308372-brown-MODEL.jpg"
                             alt="Men's Luxury Shoes" class="cat-card-img">
                         <div class="cat-card-overlay">
                             <span class="cat-card-tag">Handcrafted Footwear</span>
@@ -659,7 +679,7 @@
 
                     <!-- Card 3: Chains & Necklaces -->
                     <a href="#m-chains" class="cat-card">
-                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://vonejewellery.in/cdn/shop/files/5_2_8e601786-1991-4ce7-ba97-d2a70dea21c0.jpg?v=1742205607"
                             alt="Men's Sterling Silver Chains" class="cat-card-img">
                         <div class="cat-card-overlay">
                             <span class="cat-card-tag">925 Silver & Gold</span>
@@ -670,7 +690,7 @@
 
                     <!-- Card 4: Rings & Fine Jewelry -->
                     <a href="#m-rings" class="cat-card">
-                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://cdn.shopify.com/s/files/1/0909/4476/6277/files/Minimal_Silver_Rings_Stack_for_Men_Clean_Everyday_Jewelry_Aesthetic.jpg?v=1764941688"
                             alt="Men's Signet Rings" class="cat-card-img">
                         <div class="cat-card-overlay">
                             <span class="cat-card-tag">Statement Pieces</span>
@@ -716,7 +736,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://media.assettype.com/esquireindia%2F2026-04-01%2Fxmvnu62m%2F2025_05_23T22_3A00_3A12_044Z_tiggermaron.webp"
                                 alt="Velora Heritage Leather Weekender Purse Bag" class="product-img">
                         </div>
                         <div class="product-info">
@@ -752,7 +772,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://www.louisstitch.com/cdn/shop/files/LSITSUDGR_2_89dfb129-436f-490a-bb55-9e1857f485ed.jpg?v=1748519105&width=1080"
                                 alt="Artisanal Italian Suede Penny Loafers Shoes" class="product-img">
                         </div>
                         <div class="product-info">
@@ -785,7 +805,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://silverwow.net/cdn/shop/files/10mm-miami-cuban-chain-necklace-men-solid-silver-side-view.jpg?v=1764825794&width=1946"
                                 alt="925 Sterling Silver Cuban Link Chain" class="product-img">
                         </div>
                         <div class="product-info">
@@ -818,7 +838,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://i.etsystatic.com/27522472/r/il/9dcff5/7821672538/il_fullxfull.7821672538_8b7e.jpg"
                                 alt="Black Onyx Gold Signet Ring" class="product-img">
                         </div>
                         <div class="product-info">
@@ -849,7 +869,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://i.etsystatic.com/14236499/r/il/027b4d/7214995635/il_fullxfull.7214995635_4j44.jpg"
                                 alt="Structured Leather City Crossbody Purse Bag" class="product-img">
                         </div>
                         <div class="product-info">
@@ -882,7 +902,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://craftandglory.in/cdn/shop/files/0000s_0021_DSC06096.ARW.jpg?v=1749555692&width=533"
                                 alt="Handcrafted Goodyear Welted Chelsea Boots" class="product-img">
                         </div>
                         <div class="product-info">
@@ -912,7 +932,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1611591475179-62cd34791ead?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtva1y_-n5j5j8-ozxORzLsSAnOqMZEUNMnbMsAnrFwrTg7-pd1pZZTRlt&s=10"
                                 alt="Minimalist Gold Bar Pendant Chain" class="product-img">
                         </div>
                         <div class="product-info">
@@ -942,7 +962,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://pureformeu.com/cdn/shop/files/SapphireRing_TitaniumSteel_4.jpg?v=1782288221&width=3840"
                                 alt="Brushed Titanium & Sapphire Signet Ring" class="product-img">
                         </div>
                         <div class="product-info">
@@ -977,7 +997,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://thewatchshop.in/cdn/shop/products/TVS9005D.jpg?v=1686910501"
                                 alt="Automatic Mechanical Chronograph Watch" class="product-img">
                         </div>
                         <div class="product-info">
@@ -1038,7 +1058,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://baccabucci.com/cdn/shop/products/MG_8089.jpg?v=1633867526"
                                 alt="Full-Grain Italian Leather Dress Belt" class="product-img">
                         </div>
                         <div class="product-info">
@@ -1069,7 +1089,7 @@
                             </svg>
                         </button>
                         <div class="product-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80"
+                            <img src="https://www.thewalletstore.in/cdn/shop/files/WINE_1.jpg?v=1768825155&width=2500"
                                 alt="Slim Bifold Leather Cardholder Purse Wallet" class="product-img">
                         </div>
                         <div class="product-info">
@@ -1142,7 +1162,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                <img src="https://cdn.eternz.com/thumbnails/products/2_d81b1b26_thumbnail_1024.jpg"
                     alt="18K Gold Layered Herringbone Chain Necklace" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Jewelry & Chains</span>
@@ -1163,7 +1183,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+                <img src="https://www.ispektrum.ca/cdn/shop/files/velora-valente-leather-bag-women-brown-5-680e942d80528.webp?v=1745786240&width=1946"
                     alt="Velora Quilted Italian Leather Shoulder Purse" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Purses & Handbags</span>
@@ -1185,7 +1205,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1611591475179-62cd34791ead?auto=format&fit=crop&w=600&q=80"
+                <img src="https://cdn.eternz.com/thumbnails/products/IMG_0726_1f7e0874_thumbnail_1024.jpg"
                     alt="Velora Luxe 18K Gold Plated Body & Waist Chain" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Jewelry & Waist Chains</span>
@@ -1228,7 +1248,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1521369984125-650a004690f6?auto=format&fit=crop&w=600&q=80"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIiFlgkiDn8TfvklETtu5wEcy_z6zCrlGn5f-yHkymfC8INKBf9N6Z647J&s=10"
                     alt="Wide-Brimmed Straw Sun Hat" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Hats & Headwear</span>
@@ -1249,7 +1269,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                <img src="https://hidesign.com/cdn/shop/files/8903439908782_0_55035ccc-d658-4eb5-a3a6-c2f62085f070_2048x.jpg?v=1784025998"
                     alt="Structured Leather City Tote Bag" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Purses & Handbags</span>
@@ -1270,7 +1290,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+                <img src="https://greenwooddesigns.com.au/cdn/shop/files/Gold_bracelet_with_pearl_and_shell_charms.webp?v=1751414045"
                     alt="Freshwater Pearl Charm Bracelet" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Jewelry & Bracelets</span>
@@ -1291,7 +1311,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=600&q=80"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpsz4WLcYcxHxlOu2BKEAuGmhdc3j6xBNYtAFRtGXxFja8M3-SX0EPVO4&"
                     alt="Emerald Stacking Ring Set" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Jewelry & Rings</span>
@@ -1312,7 +1332,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80"
+                <img src="https://cdn.shopaccino.com/shubhams/products/46-804859574578307_l.jpg?v=731"
                     alt="Gold Chain Evening Envelope Clutch Purse" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Purses & Handbags</span>
@@ -1333,7 +1353,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1534215754734-18e55d13e346?auto=format&fit=crop&w=600&q=80"
+                <img src="https://www.hatsbythe100.com.au/cdn/shop/products/beret-authentique-24390e-24390e_situ01_web.jpg?v=1689232562&width=1946"
                     alt="Wool Felt French Beret" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Hats & Headwear</span>
@@ -1354,7 +1374,7 @@
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+                <img src="https://rubans.in/cdn/shop/files/rhodium-plated-cubic-zirconia-studded-tennis-bracelet-bracelet-36940868452526.jpg?v=1774854440"
                     alt="Diamond Tennis Bracelet" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Jewelry & Bracelets</span>
@@ -1397,7 +1417,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                <img src="https://media.assettype.com/esquireindia%2F2026-04-01%2Fxmvnu62m%2F2025_05_23T22_3A00_3A12_044Z_tiggermaron.webp"
                     alt="Velora Heritage Leather Weekender Purse" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Bags & Purses</span>
@@ -1419,7 +1439,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80"
+                <img src="https://www.louisstitch.com/cdn/shop/files/LSITSUDGR_2_89dfb129-436f-490a-bb55-9e1857f485ed.jpg?v=1748519105&width=1080"
                     alt="Artisanal Italian Suede Penny Loafers" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Footwear & Shoes</span>
@@ -1440,7 +1460,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                <img src="https://silverwow.net/cdn/shop/files/10mm-miami-cuban-chain-necklace-men-solid-silver-side-view.jpg?v=1764825794&width=1946"
                     alt="925 Sterling Silver Cuban Link Chain" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Chains & Necklaces</span>
@@ -1461,7 +1481,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+                <img src="https://i.etsystatic.com/27522472/r/il/9dcff5/7821672538/il_fullxfull.7821672538_8b7e.jpg"
                     alt="Black Onyx Gold Signet Ring" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Rings & Jewelry</span>
@@ -1483,7 +1503,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+                <img src="https://i.etsystatic.com/14236499/r/il/027b4d/7214995635/il_fullxfull.7214995635_4j44.jpg"
                     alt="Structured Leather City Crossbody Purse" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Bags & Purses</span>
@@ -1504,7 +1524,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80"
+                <img src="https://craftandglory.in/cdn/shop/files/0000s_0021_DSC06096.ARW.jpg?v=1749555692&width=533"
                     alt="Chelsea Leather Boots Shoes" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Footwear & Shoes</span>
@@ -1525,7 +1545,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1611591475179-62cd34791ead?auto=format&fit=crop&w=600&q=80"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtva1y_-n5j5j8-ozxORzLsSAnOqMZEUNMnbMsAnrFwrTg7-pd1pZZTRlt&s=10"
                     alt="Gold Bar Pendant Chain" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Chains & Necklaces</span>
@@ -1546,7 +1566,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=600&q=80"
+                <img src="https://pureformeu.com/cdn/shop/files/SapphireRing_TitaniumSteel_4.jpg?v=1782288221&width=3840"
                     alt="Titanium Sapphire Ring" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Rings & Jewelry</span>
@@ -1567,7 +1587,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80"
+                <img src="https://thewatchshop.in/cdn/shop/products/TVS9005D.jpg?v=1686910501"
                     alt="Chronograph Watch" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Watches & Eyewear</span>
@@ -1610,7 +1630,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=600&q=80"
+                <img src="https://baccabucci.com/cdn/shop/products/MG_8089.jpg?v=1633867526"
                     alt="Italian Leather Belt" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Belts & Goods</span>
@@ -1631,7 +1651,7 @@
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
-                <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80"
+                <img src="https://www.thewalletstore.in/cdn/shop/files/WINE_1.jpg?v=1768825155&width=2500"
                     alt="Leather Cardholder Wallet Purse" class="quickview-img">
                 <div class="quickview-details">
                     <span class="quickview-tag">Bags & Purses</span>
@@ -1647,66 +1667,63 @@
             </div>
         </div>
     </div>
-
-    <!-- Pure CSS Login & Sign Up Modal -->
-    <div id="login-modal" class="modal-overlay">
-        <div class="modal-box">
-            <a href="#" class="modal-close" aria-label="Close Modal">&times;</a>
-            <div class="modal-header">
-                <h3 class="modal-title">Velora Account</h3>
-                <p class="modal-subtitle">Login or create a new account to continue</p>
-            </div>
-
-            <!-- Pure CSS Tabs using hidden radio buttons -->
-            <div class="auth-tabs">
-                <input type="radio" id="tab-login" name="auth-tab" checked>
-                <label for="tab-login" class="tab-label">Login</label>
-
-                <input type="radio" id="tab-signup" name="auth-tab">
-                <label for="tab-signup" class="tab-label">Sign Up</label>
-
-                <!-- Login Form -->
-                <div class="tab-content content-login">
-                    <form class="auth-form" action="#" method="get">
-                        <div class="form-group">
-                            <label class="form-label" for="login-email">Email Address</label>
-                            <input type="email" id="login-email" class="form-input" placeholder="name@example.com"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="login-password">Password</label>
-                            <input type="password" id="login-password" class="form-input" placeholder="••••••••"
-                                required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Login to Account</button>
-                    </form>
-                </div>
-
-                <!-- Sign Up Form -->
-                <div class="tab-content content-signup">
-                    <form class="auth-form" action="#" method="get">
-                        <div class="form-group">
-                            <label class="form-label" for="signup-name">Full Name</label>
-                            <input type="text" id="signup-name" class="form-input" placeholder="Jane Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="signup-email">Email Address</label>
-                            <input type="email" id="signup-email" class="form-input" placeholder="name@example.com"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="signup-password">Create Password</label>
-                            <input type="password" id="signup-password" class="form-input" placeholder="••••••••"
-                                required>
-                        </div>
-                        <button type="submit" class="btn btn-accent btn-full">Create Velora Account</button>
-                    </form>
-                </div>
-            </div>
-
+    
+        <!-- Pure CSS Login & Sign Up Modal -->
+<div id="login-modal" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close" aria-label="Close Modal">&times;</a>
+        
+        <div class="modal-header">
+            <h3 class="modal-title">Velora Account</h3>
+            <p class="modal-subtitle">Login or create a new account to continue</p>
         </div>
-    </div>
 
+        <!-- Pure CSS Tabs using radio buttons -->
+        <div class="auth-tabs">
+            <input type="radio" id="tab-login" name="auth-tab" checked>
+            <label for="tab-login" class="tab-label">Login</label>
+
+            <input type="radio" id="tab-signup" name="auth-tab">
+            <label for="tab-signup" class="tab-label">Sign Up</label>
+
+            <!-- Login Form -->
+            <div class="tab-content content-login">
+                <form class="auth-form" action="#" method="post">
+                    <div class="form-group">
+                        <label class="form-label" for="login-email">Email Address</label>
+                        <input type="email" id="login-email" name="email" class="form-input" placeholder="name@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" class="form-input" placeholder="••••••••" autocomplete="current-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Login to Account</button>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="tab-content content-signup">
+                <form class="auth-form" action="#" method="post">
+                    <div class="form-group">
+                        <label class="form-label" for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="fullname" class="form-input" placeholder="Jane Doe" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" name="email" class="form-input" placeholder="name@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signup-password">Create Password</label>
+                        <input type="password" id="signup-password" name="password" class="form-input" placeholder="••••••••" autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent btn-full">Create Velora Account</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+                
     <!-- Site Footer -->
     <footer class="site-footer" id="footer">
         <div class="container">
@@ -1803,64 +1820,21 @@
         </div>
     </footer>
 
-    <!-- Pure CSS Login & Sign Up Modal -->
-    <div id="login-modal" class="modal-overlay">
-        <div class="modal-box">
-            <a href="#" class="modal-close" aria-label="Close Modal">&times;</a>
-            <div class="modal-header">
-                <h3 class="modal-title">Velora Account</h3>
-                <p class="modal-subtitle">Login or create a new account to continue</p>
-            </div>
+    <script>
+document.querySelectorAll('img').forEach(img => {
+    if (img.complete) {
+        img.classList.add('loaded');
+    } else {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
 
-            <!-- Pure CSS Tabs using hidden radio buttons -->
-            <div class="auth-tabs">
-                <input type="radio" id="tab-login" name="auth-tab" checked>
-                <label for="tab-login" class="tab-label">Login</label>
-
-                <input type="radio" id="tab-signup" name="auth-tab">
-                <label for="tab-signup" class="tab-label">Sign Up</label>
-
-                <!-- Login Form -->
-                <div class="tab-content content-login">
-                    <form class="auth-form" action="#" method="get">
-                        <div class="form-group">
-                            <label class="form-label" for="login-email">Email Address</label>
-                            <input type="email" id="login-email" class="form-input" placeholder="name@example.com"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="login-password">Password</label>
-                            <input type="password" id="login-password" class="form-input" placeholder="••••••••"
-                                required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Login to Account</button>
-                    </form>
-                </div>
-
-                <!-- Sign Up Form -->
-                <div class="tab-content content-signup">
-                    <form class="auth-form" action="#" method="get">
-                        <div class="form-group">
-                            <label class="form-label" for="signup-name">Full Name</label>
-                            <input type="text" id="signup-name" class="form-input" placeholder="Jane Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="signup-email">Email Address</label>
-                            <input type="email" id="signup-email" class="form-input" placeholder="name@example.com"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="signup-password">Create Password</label>
-                            <input type="password" id="signup-password" class="form-input" placeholder="••••••••"
-                                required>
-                        </div>
-                        <button type="submit" class="btn btn-accent btn-full">Create Velora Account</button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
+        img.addEventListener('error', () => {
+            img.classList.add('loaded');
+        });
+    }
+});
+</script>
 
 </body>
 
