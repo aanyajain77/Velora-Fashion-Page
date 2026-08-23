@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Footwear Collection | Velora Fashion</title>
+    <meta name="description"
+        content="Discover Velora's Luxury Footwear Collection for Women & Men: handcrafted Italian heels, leather pumps, dress oxfords, suede loafers, chelsea boots, and minimalist sneakers.">
+
+    <!-- Google Fonts for High-End Fashion Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Dedicated Pure CSS Stylesheet for Footwear -->
+    <link rel="stylesheet" href="footwear_style.css">
+</head>
+
+<body>
+
+    <!-- Hidden Radio Control Inputs for Pure CSS Gender Toggle -->
+    <input type="radio" id="gender-women" name="gender-toggle" class="gender-radio" checked>
+    <input type="radio" id="gender-men" name="gender-toggle" class="gender-radio">
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        Free Shipping on all orders above $99 <span class="star-icon">✦</span>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
+        <div class="container header-container">
+
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo">
+                <span class="brand-name">Velora</span>
+                <span class="brand-tagline">LIVE YOUR STYLE</span>
+            </a>
+
+            <!-- Pure CSS Hamburger Toggle Button -->
+            <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <!-- Main Navigation Bar -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="men.html" class="nav-link">Men</a></li>
+                    <li><a href="women.html" class="nav-link">Women</a></li>
+                    <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+                    <li><a href="footwear.html" class="nav-link active">Footwear</a></li>
+                    <li><a href="sale.html" class="nav-link sale">Sale</a></li>
+                    <li><a href="#footer" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Icons & Auth -->
+            <div class="header-actions">
+                <a href="#login-modal" class="btn-auth">Login / Sign Up</a>
+                <a href="#products-women" class="icon-btn" aria-label="Search Catalog">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
+                <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </a>
+                <a href="#login-modal" class="icon-btn" aria-label="User Account">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Pure CSS Gender Switcher Sticky Bar -->
+    <div class="gender-switcher-wrapper">
+        <div class="container gender-switcher-container">
+
+            <!-- Gender Tabs using Pure CSS Radio Labels -->
+            <div class="gender-tabs">
+                <label for="gender-women" class="gender-tab-label">
+                    <span>♀ Women's Footwear</span>
+                </label>
+                <label for="gender-men" class="gender-tab-label">
+                    <span>♂ Men's Footwear</span>
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION A: WOMEN'S FOOTWEAR COLLECTION (ACTIVE DEFAULT)
+       ========================================================================== -->
+    <div class="women-collection-wrapper" id="women">
+
+        <!-- Women's Hero Banner -->
+        <section class="acc-hero women-hero">
+            <div class="container acc-hero-grid">
+                <div class="acc-hero-content">
+                    <p class="acc-hero-subtitle"><span>✦</span> Women's Luxury Collection</p>
+                    <h1 class="acc-hero-title">Stature, Elegance &<br>Unmatched Polish</h1>
+                    <p class="acc-hero-desc">Step into unparalleled sophistication with Velora's Women's Footwear
+                        collection. Explore 100% Italian calfskin heels, crystal evening pumps, minimalist luxury
+                        sneakers, hand-stitched suede boots, and artisanal summer slides.</p>
+                </div>
+                <div class="acc-hero-media">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80"
+                        alt="Women's Luxury Footwear Showcase" class="acc-hero-banner-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Visual Category Cards for Women -->
+        <section class="category-highlight-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-subtitle">Curated Women's Categories</p>
+                    <h2 class="section-title">Explore Footwear Styles</h2>
+                </div>
+                <div class="category-highlight-grid">
+
+                    <a href="#w-heels" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+                            alt="High Heels & Pumps" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Heels & Stilettos</h3>
+                            <span class="cat-card-count">24 Designs</span>
+                        </div>
+                    </a>
+
+                    <a href="#w-sneakers" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80"
+                            alt="Minimalist Sneakers" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Luxury Sneakers</h3>
+                            <span class="cat-card-count">18 Designs</span>
+                        </div>
+                    </a>
+
+                    <a href="#w-boots" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                            alt="Boots & Ankle Booties" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Boots & Ankle Booties</h3>
+                            <span class="cat-card-count">16 Designs</span>
+                        </div>
+                    </a>
+
+                    <a href="#w-sandals" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=600&q=80"
+                            alt="Sandals & Mules" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Sandals & Mules</h3>
+                            <span class="cat-card-count">20 Designs</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Catalog Section for Women -->
+        <section class="product-catalog-section" id="products-women">
+            <div class="container">
+                <div class="catalog-toolbar">
+                    <div class="catalog-title-group">
+                        <h2 class="catalog-title">Women's Footwear Catalog</h2>
+                        <span class="catalog-item-count">(12 Featured Products)</span>
+                    </div>
+                    <div class="filter-pills-row">
+                        <span class="filter-pill active">All Styles</span>
+                        <span class="filter-pill">Stilettos & Heels</span>
+                        <span class="filter-pill">Sneakers</span>
+                        <span class="filter-pill">Boots</span>
+                        <span class="filter-pill">Loafers & Flats</span>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+
+                    <!-- Product 1 -->
+                    <div class="product-card" id="w-heels">
+                        <span class="product-badge accent-badge">ITALIAN LEATHER</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+                                alt="Velora 105mm Italian Leather Stiletto Pumps" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Heels & Stilettos</span>
+                            <h3 class="product-title">Velora 105mm Italian Leather Stiletto Pumps</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(48 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$320</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #d1b89d;"
+                                    title="Nude Leather"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                                <span class="swatch" style="background-color: #800020;" title="Burgundy"></span>
+                            </div>
+                            <a href="#quick-view-w1" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <span class="product-badge">BESTSELLER</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80"
+                                alt="Crystal Embellished Evening Strappy Heels" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Evening Footwear</span>
+                            <h3 class="product-title">Crystal Embellished Evening Strappy Heels</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(62 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$380</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #e0e0e0;"
+                                    title="Silver Crystal"></span>
+                                <span class="swatch" style="background-color: #b5a48b;" title="Champagne Gold"></span>
+                            </div>
+                            <a href="#quick-view-w2" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" id="w-sneakers">
+                        <span class="product-badge accent-badge">NEW</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80"
+                                alt="Minimalist Calfskin Leather White Sneakers" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Luxury Sneakers</span>
+                            <h3 class="product-title">Minimalist Calfskin Leather White Sneakers</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(35 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$240</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #ffffff;"
+                                    title="Pure White"></span>
+                                <span class="swatch" style="background-color: #f4e1d2;" title="Rose Nude"></span>
+                            </div>
+                            <a href="#quick-view-w3" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" id="w-sandals">
+                        <span class="product-badge">HANDCRAFTED</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=600&q=80"
+                                alt="Pointed-Toe Patent Leather Mules" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Sandals & Mules</span>
+                            <h3 class="product-title">Pointed-Toe Patent Leather Mules</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(29 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$260</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #1a1a1a;"
+                                    title="Glossy Black"></span>
+                                <span class="swatch" style="background-color: #f7f0e6;" title="Cream Ivory"></span>
+                            </div>
+                            <a href="#quick-view-w4" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card" id="w-boots">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                                alt="Suede Ankle Boots with Sculpted Heel" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Boots & Booties</span>
+                            <h3 class="product-title">Suede Ankle Boots with Sculpted Heel</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(51 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$340</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #a8947d;"
+                                    title="Taupe Suede"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Black Suede"></span>
+                            </div>
+                            <a href="#quick-view-w5" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <span class="product-badge accent-badge">TRENDING</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=600&q=80"
+                                alt="Chunky Platform Lug-Sole Loafers" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Loafers & Flats</span>
+                            <h3 class="product-title">Chunky Platform Lug-Sole Loafers</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(43 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$290</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #1a1a1a;" title="Jet Black"></span>
+                                <span class="swatch" style="background-color: #4a2c2a;" title="Deep Oxblood"></span>
+                            </div>
+                            <a href="#quick-view-w6" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+                                alt="Velvet Ankle-Strap Block Heels" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Heels & Stilettos</span>
+                            <h3 class="product-title">Velvet Ankle-Strap Block Heels</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(39 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$310</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #004938;"
+                                    title="Emerald Velvet"></span>
+                                <span class="swatch" style="background-color: #0b1f3a;" title="Midnight Navy"></span>
+                            </div>
+                            <a href="#quick-view-w7" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <span class="product-badge accent-badge">SUMMER LUXE</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=600&q=80"
+                                alt="Metallic Strappy Gladiator Sandals" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Sandals & Mules</span>
+                            <h3 class="product-title">Metallic Strappy Gladiator Sandals</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(27 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$210</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #b5a48b;" title="Warm Gold"></span>
+                                <span class="swatch" style="background-color: #8c6239;" title="Antique Bronze"></span>
+                            </div>
+                            <a href="#quick-view-w8" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="product-card">
+                        <span class="product-badge accent-badge">ITALIAN LEATHER</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=600&q=80"
+                                alt="Italian Leather Knee-High Riding Boots" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Boots & Booties</span>
+                            <h3 class="product-title">Italian Leather Knee-High Riding Boots</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(56 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$450</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #633618;"
+                                    title="Cognac Brown"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                            </div>
+                            <a href="#quick-view-w9" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=600&q=80"
+                                alt="Woven Leather Summer Flat Slides" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Sandals & Mules</span>
+                            <h3 class="product-title">Woven Leather Summer Flat Slides</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(31 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$180</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #8c6239;" title="Warm Tan"></span>
+                                <span class="swatch" style="background-color: #f7f6f2;" title="Off White"></span>
+                            </div>
+                            <a href="#quick-view-w10" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 11 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=600&q=80"
+                                alt="Pointed Ballerina Flats with Bow Detail" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Loafers & Flats</span>
+                            <h3 class="product-title">Pointed Ballerina Flats with Bow Detail</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(44 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$195</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #e8c5c8;"
+                                    title="Blush Pink"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Black Leather"></span>
+                            </div>
+                            <a href="#quick-view-w11" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 12 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581101767113-1677fc2beaa8?auto=format&fit=crop&w=600&q=80"
+                                alt="Retro Platform Heeled Sandals" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Heels & Stilettos</span>
+                            <h3 class="product-title">Retro Platform Heeled Sandals</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(33 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$275</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #c49a6c;"
+                                    title="Camel Leather"></span>
+                                <span class="swatch" style="background-color: #ffffff;" title="Pure Ivory"></span>
+                            </div>
+                            <a href="#quick-view-w12" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ==========================================================================
+       SECTION B: MEN'S FOOTWEAR COLLECTION
+       ========================================================================== -->
+    <div class="men-collection-wrapper" id="men">
+
+        <!-- Men's Hero Banner -->
+        <section class="acc-hero men-hero">
+            <div class="container acc-hero-grid">
+                <div class="acc-hero-content">
+                    <p class="acc-hero-subtitle"><span>✦</span> Men's Luxury Footwear</p>
+                    <h1 class="acc-hero-title">Crafted Precision &<br>Refined Stride</h1>
+                    <p class="acc-hero-desc">Elevate your footwear wardrobe with Velora's Men's Footwear collection.
+                        Discover hand-burnished Italian Oxfords, cap-toe double monk straps, supple suede loafers,
+                        calfskin Chelsea boots, and clean minimalist luxury sneakers.</p>
+                </div>
+                <div class="acc-hero-media">
+                    <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=800&q=80"
+                        alt="Men's Luxury Footwear Showcase" class="acc-hero-banner-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Visual Category Cards for Men -->
+        <section class="category-highlight-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-subtitle">Curated Men's Categories</p>
+                    <h2 class="section-title">Explore Men's Styles</h2>
+                </div>
+                <div class="category-highlight-grid">
+
+                    <a href="#m-oxfords" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80"
+                            alt="Oxfords & Formal Shoes" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Oxfords & Dress Shoes</h3>
+                            <span class="cat-card-count">22 Designs</span>
+                        </div>
+                    </a>
+
+                    <a href="#m-sneakers" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+                            alt="Premium Sneakers" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Premium Sneakers</h3>
+                            <span class="cat-card-count">20 Designs</span>
+                        </div>
+                    </a>
+
+                    <a href="#m-loafers" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80"
+                            alt="Italian Loafers & Drivers" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Loafers & Drivers</h3>
+                            <span class="cat-card-count">19 Designs</span>
+                        </div>
+                    </a>
+
+                    <a href="#m-boots" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80"
+                            alt="Chelsea & Combat Boots" class="cat-card-img">
+                        <div class="cat-card-overlay"></div>
+                        <div class="cat-card-content">
+                            <h3 class="cat-card-title">Chelsea & Combat Boots</h3>
+                            <span class="cat-card-count">15 Designs</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Catalog Section for Men -->
+        <section class="product-catalog-section" id="products-men">
+            <div class="container">
+                <div class="catalog-toolbar">
+                    <div class="catalog-title-group">
+                        <h2 class="catalog-title">Men's Footwear Catalog</h2>
+                        <span class="catalog-item-count">(12 Featured Products)</span>
+                    </div>
+                    <div class="filter-pills-row">
+                        <span class="filter-pill active">All Styles</span>
+                        <span class="filter-pill">Formal & Oxfords</span>
+                        <span class="filter-pill">Sneakers</span>
+                        <span class="filter-pill">Loafers</span>
+                        <span class="filter-pill">Boots</span>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+
+                    <!-- Men Product 1 -->
+                    <div class="product-card" id="m-oxfords">
+                        <span class="product-badge accent-badge">ITALIAN LEATHER</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80"
+                                alt="Hand-Burnished Italian Leather Oxfords" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Oxfords & Dress Shoes</span>
+                            <h3 class="product-title">Hand-Burnished Italian Leather Oxfords</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(54 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$360</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #3b2314;"
+                                    title="Espresso Brown"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                            </div>
+                            <a href="#quick-view-m1" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 2 -->
+                    <div class="product-card">
+                        <span class="product-badge">HANDCRAFTED</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+                                alt="Cap-Toe Double Monk Strap Dress Shoes" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Oxfords & Dress Shoes</span>
+                            <h3 class="product-title">Cap-Toe Double Monk Strap Dress Shoes</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(41 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$340</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #633618;"
+                                    title="Walnut Tan"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Black Leather"></span>
+                            </div>
+                            <a href="#quick-view-m2" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 3 -->
+                    <div class="product-card" id="m-sneakers">
+                        <span class="product-badge">BESTSELLER</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+                                alt="Minimalist Nappa Leather Low-Top Sneakers" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Premium Sneakers</span>
+                            <h3 class="product-title">Minimalist Nappa Leather Low-Top Sneakers</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(78 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$250</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #ffffff;"
+                                    title="Pure White"></span>
+                                <span class="swatch" style="background-color: #e5e0d8;" title="Off-White"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Matte Black"></span>
+                            </div>
+                            <a href="#quick-view-m3" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 4 -->
+                    <div class="product-card" id="m-loafers">
+                        <span class="product-badge accent-badge">NEW</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80"
+                                alt="Classic Suede Penny Loafers" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Loafers & Drivers</span>
+                            <h3 class="product-title">Classic Suede Penny Loafers</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(32 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$280</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #8c5737;"
+                                    title="Chestnut Suede"></span>
+                                <span class="swatch" style="background-color: #162438;" title="Navy Suede"></span>
+                            </div>
+                            <a href="#quick-view-m4" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 5 -->
+                    <div class="product-card" id="m-boots">
+                        <span class="product-badge accent-badge">ITALIAN LEATHER</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80"
+                                alt="Handcrafted Calfskin Chelsea Boots" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Chelsea & Combat Boots</span>
+                            <h3 class="product-title">Handcrafted Calfskin Chelsea Boots</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(65 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$390</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #2b2b2b;"
+                                    title="Charcoal Black"></span>
+                                <span class="swatch" style="background-color: #6d4c3d;" title="Tan Calfskin"></span>
+                            </div>
+                            <a href="#quick-view-m5" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 6 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?auto=format&fit=crop&w=600&q=80"
+                                alt="Bit Driver Loafers with Gold Hardware" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Loafers & Drivers</span>
+                            <h3 class="product-title">Bit Driver Loafers with Gold Hardware</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(37 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$295</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #3b2314;"
+                                    title="Dark Espresso"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                            </div>
+                            <a href="#quick-view-m6" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 7 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=600&q=80"
+                                alt="Rugged Leather Lace-Up Combat Boots" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Chelsea & Combat Boots</span>
+                            <h3 class="product-title">Rugged Leather Lace-Up Combat Boots</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(49 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$350</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #1a1a1a;"
+                                    title="Matte Black"></span>
+                                <span class="swatch" style="background-color: #7a5033;" title="Vintage Tan"></span>
+                            </div>
+                            <a href="#quick-view-m7" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 8 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=600&q=80"
+                                alt="Suede Venetian Slip-On Loafers" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Loafers & Drivers</span>
+                            <h3 class="product-title">Suede Venetian Slip-On Loafers</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(28 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$260</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #c9b097;"
+                                    title="Sand Suede"></span>
+                                <span class="swatch" style="background-color: #4a5568;" title="Slate Blue"></span>
+                            </div>
+                            <a href="#quick-view-m8" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 9 -->
+                    <div class="product-card">
+                        <span class="product-badge accent-badge">TRENDING</span>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80"
+                                alt="Retro High-Top Italian Leather Sneakers" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Premium Sneakers</span>
+                            <h3 class="product-title">Retro High-Top Italian Leather Sneakers</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(42 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$270</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #1a2a3a;"
+                                    title="Navy/White"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="All Black"></span>
+                            </div>
+                            <a href="#quick-view-m9" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 10 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=600&q=80"
+                                alt="Woven Calfskin Summer Slides" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Casual & Slides</span>
+                            <h3 class="product-title">Woven Calfskin Summer Slides</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(25 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$190</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #3b2314;"
+                                    title="Dark Espresso"></span>
+                                <span class="swatch" style="background-color: #8c5737;" title="Tan Leather"></span>
+                            </div>
+                            <a href="#quick-view-m10" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 11 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80"
+                                alt="Cap-Toe Brogue Leather Shoes" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Oxfords & Dress Shoes</span>
+                            <h3 class="product-title">Cap-Toe Brogue Leather Shoes</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(50 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$330</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #4a1525;"
+                                    title="Deep Oxblood"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                            </div>
+                            <a href="#quick-view-m11" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Product 12 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1543508282-6c1959247c1b?auto=format&fit=crop&w=600&q=80"
+                                alt="Casual Canvas & Suede Espadrilles" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Casual & Slides</span>
+                            <h3 class="product-title">Casual Canvas & Suede Espadrilles</h3>
+                            <div class="product-rating">★★★★★ <span class="count">(36 reviews)</span></div>
+                            <div class="product-price-row"><span class="current-price">$175</span></div>
+                            <div class="product-swatches">
+                                <span class="swatch active" style="background-color: #d1b89d;"
+                                    title="Natural Linen"></span>
+                                <span class="swatch" style="background-color: #1a2a3a;" title="Navy Suede"></span>
+                            </div>
+                            <a href="#quick-view-m12" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Craftsmanship & Service Highlights -->
+    <section class="craftsmanship-section">
+        <div class="container">
+            <div class="craftsmanship-grid">
+
+                <div class="craft-item">
+                    <div class="craft-item-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="craft-item-title">Italian Artisanship</h3>
+                    <p class="craft-item-desc">Hand-crafted by master cobblers in Florence using 100% full-grain
+                        calfskin.</p>
+                </div>
+
+                <div class="craft-item">
+                    <div class="craft-item-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path
+                                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="craft-item-title">Ergonomic Cushioning</h3>
+                    <p class="craft-item-desc">Dual-density memory foam footbeds for effortless all-day stride comfort.
+                    </p>
+                </div>
+
+                <div class="craft-item">
+                    <div class="craft-item-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="craft-item-title">Free Express Shipping</h3>
+                    <p class="craft-item-desc">Complimentary global express delivery on all footwear orders over $99.
+                    </p>
+                </div>
+
+                <div class="craft-item">
+                    <div class="craft-item-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="craft-item-title">30-Day Risk-Free Returns</h3>
+                    <p class="craft-item-desc">Hassle-free exchanges and complete refunds within 30 days of delivery.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Brand -->
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo">
+                        <span class="brand-name">Velora</span>
+                        <span class="brand-tagline">LIVE YOUR STYLE</span>
+                    </a>
+                    <p class="footer-desc">Velora is a modern luxury fashion house celebrating timeless elegance, master
+                        craftsmanship, and contemporary style for both men and women worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">
+                            <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24">
+                                <path
+                                    d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.367 18.62 0 12.017 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Shop Links -->
+                <div>
+                    <h4 class="footer-col-title">Shop Footwear</h4>
+                    <div class="footer-links">
+                        <a href="#w-heels">Women's Heels & Pumps</a>
+                        <a href="#w-sneakers">Women's Luxury Sneakers</a>
+                        <a href="#w-boots">Women's Boots & Mules</a>
+                        <a href="#m-oxfords">Men's Italian Oxfords</a>
+                        <a href="#m-loafers">Men's Suede Loafers</a>
+                        <a href="#m-boots">Men's Chelsea Boots</a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Collections -->
+                <div>
+                    <h4 class="footer-col-title">Collections</h4>
+                    <div class="footer-links">
+                        <a href="men.html">Men's Apparel</a>
+                        <a href="women.html">Women's Apparel</a>
+                        <a href="accessories.html">Accessories</a>
+                        <a href="footwear.html">Footwear</a>
+                        <a href="index.html">New Arrivals</a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Customer Care -->
+                <div>
+                    <h4 class="footer-col-title">Customer Care</h4>
+                    <div class="footer-links">
+                        <a href="#footer">Shipping & Delivery</a>
+                        <a href="#footer">Returns & Exchanges</a>
+                        <a href="#footer">Footwear Sizing Guide</a>
+                        <a href="#footer">Shoe Care & Leather Guide</a>
+                        <a href="#footer">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!-- Column 5: Contact -->
+                <div>
+                    <h4 class="footer-col-title">Contact Us</h4>
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+1 (800) 555-8356</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>support@velorafashion.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>740 Fifth Avenue, New York, NY 10019</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div>&copy; 2026 Velora Fashion Store. All Rights Reserved.</div>
+                <div>
+                    <span>Accepted Payments:</span>
+                    <span class="payment-badge">VISA</span>
+                    <span class="payment-badge">MASTERCARD</span>
+                    <span class="payment-badge">PAYPAL</span>
+                    <span class="payment-badge">AMEX</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Pure CSS Quick View Modal Example (Product W1) -->
+    <div id="quick-view-w1" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <div class="quickview-media">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+                        alt="Velora 105mm Italian Leather Stiletto Pumps">
+                </div>
+                <div class="quickview-details">
+                    <span class="quickview-category">Heels & Stilettos</span>
+                    <h3 class="quickview-title">Velora 105mm Italian Leather Stiletto Pumps</h3>
+                    <div class="quickview-price">$320</div>
+                    <p class="quickview-desc">Handcrafted in Florence from supple 100% Italian calfskin leather.
+                        Featuring a sleek 105mm stiletto heel, tapered pointed toe, and cushioned leather footbed for
+                        effortless evening allure.</p>
+
+                    <div class="size-selector">
+                        <span class="size-selector-label">Select EU Size:</span>
+                        <div class="size-options">
+                            <button class="size-btn">36</button>
+                            <button class="size-btn active">37</button>
+                            <button class="size-btn">38</button>
+                            <button class="size-btn">39</button>
+                            <button class="size-btn">40</button>
+                        </div>
+                    </div>
+
+                    <button class="btn-add-cart">Add to Cart - $320</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pure CSS Quick View Modal Example (Product M1) -->
+    <div id="quick-view-m1" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <div class="quickview-media">
+                    <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80"
+                        alt="Hand-Burnished Italian Leather Oxfords">
+                </div>
+                <div class="quickview-details">
+                    <span class="quickview-category">Oxfords & Dress Shoes</span>
+                    <h3 class="quickview-title">Hand-Burnished Italian Leather Oxfords</h3>
+                    <div class="quickview-price">$360</div>
+                    <p class="quickview-desc">Masterfully crafted from full-grain Italian calfskin with hand-applied
+                        patina finish. Features traditional Goodyear welt construction and breathable leather lining.
+                    </p>
+
+                    <div class="size-selector">
+                        <span class="size-selector-label">Select EU Size:</span>
+                        <div class="size-options">
+                            <button class="size-btn">41</button>
+                            <button class="size-btn active">42</button>
+                            <button class="size-btn">43</button>
+                            <button class="size-btn">44</button>
+                            <button class="size-btn">45</button>
+                        </div>
+                    </div>
+
+                    <button class="btn-add-cart">Add to Cart - $360</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pure CSS Login & Sign Up Modal -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="modal-header">
+                <h3 class="modal-title">Velora Account</h3>
+                <p class="modal-subtitle">Login or create a new account to continue</p>
+            </div>
+
+            <!-- Pure CSS Tabs using hidden radio buttons -->
+            <div class="auth-tabs">
+                <input type="radio" id="tab-login" name="auth-tab" checked>
+                <label for="tab-login" class="tab-label">Login</label>
+
+                <input type="radio" id="tab-signup" name="auth-tab">
+                <label for="tab-signup" class="tab-label">Sign Up</label>
+
+                <!-- Login Form -->
+                <div class="tab-content content-login">
+                    <form class="auth-form" action="#" method="get">
+                        <div class="form-group">
+                            <label class="form-label" for="login-email">Email Address</label>
+                            <input type="email" id="login-email" class="form-input" placeholder="name@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-input" placeholder="••••••••"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Login to Account</button>
+                    </form>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="tab-content content-signup">
+                    <form class="auth-form" action="#" method="get">
+                        <div class="form-group">
+                            <label class="form-label" for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" class="form-input" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="signup-email">Email Address</label>
+                            <input type="email" id="signup-email" class="form-input" placeholder="name@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="signup-password">Create Password</label>
+                            <input type="password" id="signup-password" class="form-input" placeholder="••••••••"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-accent btn-full">Create Velora Account</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
