@@ -287,11 +287,14 @@ ul {
     z-index: 90;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
+.gender-switcher-wrapper {
+    top: var(--header-h, 90px);   /* was: top: 73px; */
+}
 
 .gender-switcher-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
 }
