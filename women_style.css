@@ -1161,7 +1161,10 @@ ul {
         font-size: 1.65rem;
         letter-spacing: 0.2em;
     }
-
+    .btn-auth{
+        visibility: hidden;
+    }
+    
     .brand-tagline {
         font-size: 0.55rem;
         letter-spacing: 0.25em;
@@ -1234,7 +1237,10 @@ ul {
     .hero-content {
         padding: 2.25rem 0.5rem;
     }
-
+    
+    .btn-auth{
+        visibility: hidden;
+    } 
     .hero-buttons .btn {
         width: 100%;
     }
@@ -1252,5 +1258,8 @@ ul {
 @media (max-width: 360px) {
     .product-grid {
         grid-template-columns: 1fr;
+    }
+    .btn-auth{
+        visibility: hidden;
     }
 }
