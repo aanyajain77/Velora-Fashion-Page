@@ -884,6 +884,143 @@ ul {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Login & Sign Up Modal - Match Women Page */
+.auth-modal-box {
+    background-color: var(--color-surface);
+    width: 90%;
+    max-width: 440px;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-md);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Authentication Header */
+.auth-modal-box .modal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-modal-box .modal-title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+.auth-modal-box .modal-subtitle {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Login / Sign Up Tabs */
+.auth-modal-box .auth-tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.auth-modal-box .auth-tabs input[type="radio"] {
+    display: none;
+}
+
+.auth-modal-box .tab-label {
+    flex: 1;
+    text-align: center;
+    padding: 0.65rem 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    border-bottom: 2px solid var(--color-border);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.auth-modal-box #tab-login:checked~label[for="tab-login"],
+.auth-modal-box #tab-signup:checked~label[for="tab-signup"] {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.auth-modal-box .tab-content {
+    width: 100%;
+    display: none;
+    padding-top: 1.75rem;
+}
+
+.auth-modal-box #tab-login:checked~.content-login,
+.auth-modal-box #tab-signup:checked~.content-signup {
+    display: block;
+}
+
+/* Authentication Form */
+.auth-modal-box .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.auth-modal-box .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.auth-modal-box .form-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.auth-modal-box .form-input {
+    padding: 0.75rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-family: inherit;
+    outline: none;
+    transition: var(--transition);
+}
+
+.auth-modal-box .form-input:focus {
+    border-color: var(--color-primary);
+}
+
+/* Authentication Buttons */
+.auth-modal-box .btn-full {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.85rem;
+}
+
+.auth-modal-box .btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: 1px solid var(--color-primary);
+}
+
+.auth-modal-box .btn-primary:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.auth-modal-box .btn-accent {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border: 1px solid var(--color-accent);
+}
+
+.auth-modal-box .btn-accent:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
 .modal-overlay:target .modal-box {
     transform: translateY(0);
 }
