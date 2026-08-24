@@ -4,670 +4,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Velora | Modern Fashion & Luxury Apparel</title>
+  <!-- Auto-Redirect to index.html after 3 seconds -->
+  <meta http-equiv="refresh" content="3;url=home.html">
+  <title>Velora | Curating Collection</title>
 
-  <!-- Google Fonts for High-End Fashion Typography -->
+  <!-- Google Fonts for Velora Theme Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
 
-  
-  <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    /* Reset & Layout Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fcfcf9;
+      /* Velora signature off-white theme */
+      color: #1a1a1a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Outer Loader Card with Page Fade Out before redirect */
+    .loader-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+      padding: 20px;
+      animation: fadeOutPage 0.4s ease-in 2.6s forwards;
+    }
+
+    /* Serif Logo "V" */
+    .brand-logo-symbol {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 12vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1;
+      color: #1a1a1a;
+      margin-bottom: clamp(1.5rem, 5vw, 2.8rem);
+      animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Subtitle Text */
+    .loading-status-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 1.2rem;
+      animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Thin Luxury Loading Progress Line */
+    .progress-bar-track {
+      width: 100%;
+      max-width: 250px;
+      height: 1px;
+      background-color: #e2e0d8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background-color: #1a1a1a;
+      animation: fillLine 2.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fillLine {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeOutPage {
+      to {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="top-bar">
-    Free Shipping on all orders above $999 <span class="star-icon">✦</span>
-  </div>
-
-  <!-- Header & Navigation -->
-  <header class="site-header">
-    <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
-    <div class="container header-container">
-
-      <!-- Brand Logo -->
-      <a href="index.html" class="brand-logo">
-        <span class="brand-name">Velora</span>
-        <span class="brand-tagline">LIVE YOUR STYLE</span>
-      </a>
-
-      <!-- Pure CSS Hamburger Toggle Button -->
-      <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </label>
-
-      <!-- Navigation Bar -->
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="men.html" class="nav-link">Men</a></li>
-          <li><a href="women.html" class="nav-link">Women</a></li>
-          <li><a href="accessories.html" class="nav-link">Accessories</a></li>
-          <li><a href="footwear.html" class="nav-link">Footwear</a></li>
-          <li><a href="sale.html" class="nav-link sale">Sale</a></li>
-          <li><a href="#testimonials" class="nav-link">About</a></li>
-        </ul>
-      </nav>
-
-      <!-- Action Icons (Pure CSS SVGs) -->
-      <div class="header-actions">
-        <a href="#login-modal" class="btn-auth">Login / Sign Up</a>
-        <a href="#" class="icon-btn" aria-label="Search">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </a>
-        <a href="#" class="icon-btn" aria-label="Wishlist">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path
-              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-            </path>
-          </svg>
-        </a>
-        <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-          <span class="cart-badge">0</span>
-        </a>
-        <a href="#login-modal" class="icon-btn" aria-label="User Account">
-          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </a>
-      </div>
-
+  <main class="loader-wrapper">
+    <!-- Brand Luxury Symbol Logo -->
+    <div class="brand-logo-symbol">V</div>
+    <!-- Animated Percentage Counter
+        <div class="percentage-counter" id="counter"></div> -->
+    <!-- Subtitle Text -->
+    <p class="loading-status-text">Curating the collection</p>
+    <!-- Progress Line -->
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill"></div>
     </div>
-  </header>
-
-  <!-- Hero Banner Section -->
-  <section class="hero-section">
-    <div class="container hero-wrapper">
-      <div class="hero-content">
-        <p class="hero-subtitle">New Season, New You</p>
-        <h1 class="hero-title">Redefine<br>Your Style</h1>
-        <p class="hero-description">Discover the latest trends curated just for you with timeless elegance and modern
-          craftsmanship.</p>
-        <div class="hero-buttons">
-          <a href="men.html" class="btn btn-primary">Shop Men</a>
-          <a href="women.html" class="btn btn-secondary">Shop Women</a>
-        </div>
-      </div>
-      <div class="hero-image-container">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80"
-          alt="Velora Fashion Model" class="hero-image">
-      </div>
-    </div>
-  </section>
-
-  <!-- Category Grid Section -->
-  <section class="categories-section" id="categories">
-    <div class="container">
-      <div class="category-grid">
-
-        <a href="men.html" class="category-card">
-          <div class="category-img-wrapper">
-            <img src="https://www.bringitonline.in/uploads/2/2/4/5/22456530/devika-outdoor-image-for-main-website-7_orig.jpg"
-              alt="Men's Fashion">
-          </div>
-          <div class="category-info">
-            <h3 class="category-title">Men</h3>
-            <span class="category-action">Explore Now &rarr;</span>
-          </div>
-        </a>
-
-        <a href="women.html" class="category-card">
-          <div class="category-img-wrapper">
-            <img src="https://studio1emporio.com/wp-content/uploads/2022/10/female-models-for-ecommerce-shoot-in-new-delhi.webp"
-              alt="Women's Fashion">
-          </div>
-          <div class="category-info">
-            <h3 class="category-title">Women</h3>
-            <span class="category-action">Explore Now &rarr;</span>
-          </div>
-        </a>
-
-        <a href="accessories.html#footwear" class="category-card">
-          <div class="category-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1676379827610-c380c52db0c6?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Footwear">
-          </div>
-          <div class="category-info">
-            <h3 class="category-title">Footwear</h3>
-            <span class="category-action">Explore Now &rarr;</span>
-          </div>
-        </a>
-
-        <a href="accessories.html" class="category-card">
-          <div class="category-img-wrapper">
-            <img src="https://images.pexels.com/photos/22432991/pexels-photo-22432991/free-photo-of-bags-on-white-background.jpeg?cs=tinysrgb&dpr=1&w=500"
-              alt="Accessories">
-          </div>
-          <div class="category-info">
-            <h3 class="category-title">Accessories</h3>
-            <span class="category-action">Explore Now &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- New Arrivals Grid -->
-  <section class="products-section" id="new-arrivals">
-    <div class="container">
-
-      <div class="section-header">
-        <h2 class="section-title">New Arrivals</h2>
-        <a href="#" class="view-all-link">View All &rarr;</a>
-      </div>
-
-      <div class="product-grid">
-
-        <!-- Product 1 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <span class="product-badge">New</span>
-            <img src="https://assets.myntassets.com/h_1440,q_75,w_1080/v1/assets/images/16761982/2023/7/11/ca0e5ab2-b940-4c2a-8f12-d760c297cf1f1689057607794-max-Men-Black-Polo-Collar-T-shirt-1621689057607472-1.jpg"
-              alt="Black Polo T-Shirt">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Black Polo T-Shirt</h3>
-            <div class="product-price">$49</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(128)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <img src="https://dynamic.zacdn.com/a46wQNfirWe3LBLu7hcMuBgC_t8=/filters:quality(70):format(webp)/https://static-ph.zacdn.com/p/asos-design-2604-5191143-1.jpg"
-              alt="Ruched Front Top">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Ruched Front Top</h3>
-            <div class="product-price">$65</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(96)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <img src="https://d1pdzcnm6xgxlz.cloudfront.net/tops/8905875146254-9.jpg"
-              alt="Linen Shirt">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Linen Summer Shirt</h3>
-            <div class="product-price">$75</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(110)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <img src="https://www.only.in/cdn/shop/files/901450401_g0.jpg?v=1745914513&width=2048"
-              alt="Floral Midi Dress">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Floral Midi Dress</h3>
-            <div class="product-price">$89</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(85)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Limited Time Promotional Banner -->
-  <section class="promo-banner" id="promo">
-    <div class="container">
-      <div class="promo-box">
-        <div class="promo-image">
-          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=80"
-            alt="Summer Collection Promo">
-        </div>
-        <div class="promo-text">
-          <p class="promo-tag">Limited Time Offer</p>
-          <h2 class="promo-heading">Summer Collection 2026</h2>
-          <p class="promo-discount">UP TO <span>50% OFF</span></p>
-          <a href="#" class="btn btn-accent">Explore Collection</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Best Sellers Grid -->
-  <section class="products-section">
-    <div class="container">
-
-      <div class="section-header">
-        <h2 class="section-title">Best Sellers</h2>
-        <a href="#" class="view-all-link">View All &rarr;</a>
-      </div>
-
-      <div class="product-grid">
-
-        <!-- Best Seller 1 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <img src="https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/F16801s.jpg?im=Resize,width=750"
-              alt="Bomber Jacket">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Leather Bomber Jacket</h3>
-            <div class="product-price">$149</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(156)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-        <!-- Best Seller 2 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <img src="https://m.media-amazon.com/images/I/61q1X-zRMsL._AC_UY1000_.jpg"
-              alt="White Sneakers">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Classic White Sneakers</h3>
-            <div class="product-price">$95</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(203)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-        <!-- Best Seller 3 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <img src="https://www.permanentstyle.com/wp-content/uploads/2025/04/denim-jacket-style-500x688.jpg"
-              alt="Blue Denim Jacket">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Blue Denim Jacket</h3>
-            <div class="product-price">$110</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(178)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-        <!-- Best Seller 4 -->
-        <div class="product-card">
-          <div class="product-image-box">
-            <img src="https://img.tatacliq.com/images/i21//437Wx649H/MP000000024809708_437Wx649H_202412241818121.jpeg"
-              alt="Black Handbag">
-          </div>
-          <div class="product-content">
-            <h3 class="product-name">Leather Handbag</h3>
-            <div class="product-price">$135</div>
-            <div class="rating-row">
-              <span class="stars">★★★★★</span>
-              <span>(95)</span>
-            </div>
-            <button class="add-cart-btn">Add to Bag</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature Perks Section -->
-  <section class="perks-section">
-    <div class="container">
-      <div class="perks-grid">
-
-        <div class="perk-item">
-          <div class="perk-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
-              <rect x="1" y="3" width="15" height="13"></rect>
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-              <circle cx="5.5" cy="18.5" r="2.5"></circle>
-              <circle cx="18.5" cy="18.5" r="2.5"></circle>
-            </svg>
-          </div>
-          <div>
-            <h4 class="perk-title">Free Shipping</h4>
-            <p class="perk-desc">On all orders above $99</p>
-          </div>
-        </div>
-
-        <div class="perk-item">
-          <div class="perk-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-          </div>
-          <div>
-            <h4 class="perk-title">Secure Payments</h4>
-            <p class="perk-desc">100% encrypted checkout</p>
-          </div>
-        </div>
-
-        <div class="perk-item">
-          <div class="perk-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
-              <polyline points="23 4 23 10 17 10"></polyline>
-              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
-            </svg>
-          </div>
-          <div>
-            <h4 class="perk-title">Easy Returns</h4>
-            <p class="perk-desc">30 days return policy</p>
-          </div>
-        </div>
-
-        <div class="perk-item">
-          <div class="perk-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-              </path>
-            </svg>
-          </div>
-          <div>
-            <h4 class="perk-title">24x7 Support</h4>
-            <p class="perk-desc">We're here to help you</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="container">
-
-      <div class="section-header" style="justify-content: center; text-align: center; margin-bottom: 3rem;">
-        <h2 class="section-title">What Our Customers Say</h2>
-      </div>
-
-      <div class="testimonials-grid">
-
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"The quality of the linen shirt and blazer is amazing. The fit is just perfect
-            and arrived in 2 days. Highly recommended!"</p>
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
-              alt="Sophia Sharma" class="user-avatar">
-            <div>
-              <div class="user-name">Sophia Sharma</div>
-              <div class="user-location">New York</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"Fast delivery and great customer service. Velora has become my go-to online
-            store for modern street fashion."</p>
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
-              alt="Arjun Mehta" class="user-avatar">
-            <div>
-              <div class="user-name">Arjun Mehta</div>
-              <div class="user-location">London</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"Trendy collection and affordable prices. Loved the new arrivals! The leather
-            handbag is so durable and elegant."</p>
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80"
-              alt="Elena Rostova" class="user-avatar">
-            <div>
-              <div class="user-name">Elena Rostova</div>
-              <div class="user-location">Milan</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter Signup Bar -->
-  <section class="newsletter-section">
-    <div class="container newsletter-box">
-
-      <div class="newsletter-info">
-        <svg class="newsletter-icon-large" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-        <div>
-          <h3 class="newsletter-title">Stay Updated with Fashion Trends</h3>
-          <p class="newsletter-sub">Join our newsletter and get 10% off on your first order.</p>
-        </div>
-      </div>
-
-      <div class="newsletter-form">
-        <input type="email" class="newsletter-input" placeholder="Enter your email address">
-        <button type="button" class="btn btn-accent">Subscribe</button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="site-footer">
-    <div class="container">
-
-      <div class="footer-top">
-
-        <!-- Column 1: Brand Info -->
-        <div class="footer-about">
-          <div class="brand-name">Velora</div>
-          <p>Your destination for the latest fashion trends. Stay stylish, stay you with effortless premium apparel.</p>
-          <div class="social-links">
-            <a href="#" class="social-icon" aria-label="Instagram">
-              <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="Facebook">
-              <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24">
-                <path
-                  d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z" />
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="Pinterest">
-              <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24">
-                <path
-                  d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.225.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
-              </svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="YouTube">
-              <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Column 2: Shop Links -->
-        <div>
-          <h4 class="footer-col-title">Shop</h4>
-          <div class="footer-links">
-            <a href="men.html">Men's Collection</a>
-            <a href="women.html">Women's Collection</a>
-            <a href="accessories.html">Accessories</a>
-            <a href="footwear.html">Footwear</a>
-            <a href="#new-arrivals">New Arrivals</a>
-            <a href="sale.html">Sale & Discounts</a>
-          </div>
-        </div>
-
-        <!-- Column 3: Company -->
-        <div>
-          <h4 class="footer-col-title">Company</h4>
-          <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Our Stores</a>
-            <a href="#">Careers</a>
-            <a href="#">Fashion Blog</a>
-            <a href="#">Sustainability</a>
-          </div>
-        </div>
-
-        <!-- Column 4: Help -->
-        <div>
-          <h4 class="footer-col-title">Help</h4>
-          <div class="footer-links">
-            <a href="#">FAQs</a>
-            <a href="#">Shipping & Delivery</a>
-            <a href="#">Returns & Exchanges</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-          </div>
-        </div>
-
-        <!-- Column 5: Contact Us -->
-        <div class="footer-contact-col">
-          <h4 class="footer-col-title">Contact Us</h4>
-          <div class="contact-info-list">
-            <div class="contact-item">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                </path>
-              </svg>
-              <span>+1 (800) 555-8356</span>
-            </div>
-            <div class="contact-item">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <span>support@velorafashion.com</span>
-            </div>
-            <div class="contact-item">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span>740 Fifth Avenue, New York, NY 10019</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <div>&copy; 2026 Velora Fashion Store. All Rights Reserved.</div>
-        <div>
-          <span>Accepted Payments:</span>
-          <span class="payment-badge">VISA</span>
-          <span class="payment-badge">MASTERCARD</span>
-          <span class="payment-badge">PAYPAL</span>
-          <span class="payment-badge">AMEX</span>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- Pure CSS Login & Sign Up Modal -->
-  <div id="login-modal" class="modal-overlay">
-    <div class="modal-box">
-      <a href="#" class="modal-close" aria-label="Close Modal">&times;</a>
-      <div class="modal-header">
-        <h3 class="modal-title">Velora Account</h3>
-        <p class="modal-subtitle">Login or create a new account to continue</p>
-      </div>
-
-      <!-- Pure CSS Tabs using hidden radio buttons -->
-      <div class="auth-tabs">
-        <input type="radio" id="tab-login" name="auth-tab" checked>
-        <label for="tab-login" class="tab-label">Login</label>
-
-        <input type="radio" id="tab-signup" name="auth-tab">
-        <label for="tab-signup" class="tab-label">Sign Up</label>
-
-        <!-- Login Form -->
-        <div class="tab-content content-login">
-          <form class="auth-form" action="#" method="get">
-            <div class="form-group">
-              <label class="form-label" for="login-email">Email Address</label>
-              <input type="email" id="login-email" class="form-input" placeholder="name@example.com" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="login-password">Password</label>
-              <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">Login to Account</button>
-          </form>
-        </div>
-
-        <!-- Sign Up Form -->
-        <div class="tab-content content-signup">
-          <form class="auth-form" action="#" method="get">
-            <div class="form-group">
-              <label class="form-label" for="signup-name">Full Name</label>
-              <input type="text" id="signup-name" class="form-input" placeholder="Jane Doe" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="signup-email">Email Address</label>
-              <input type="email" id="signup-email" class="form-input" placeholder="name@example.com" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="signup-password">Create Password</label>
-              <input type="password" id="signup-password" class="form-input" placeholder="••••••••" required>
-            </div>
-            <button type="submit" class="btn btn-accent btn-full">Create Velora Account</button>
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
+  </main>
 </body>
 
 </html>
