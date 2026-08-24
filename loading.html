@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Auto-Redirect to index.html after 3 seconds -->
+  <meta http-equiv="refresh" content="3;url=index.html">
+  <title>Velora | Curating Collection</title>
+
+  <!-- Google Fonts for Velora Theme Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <style>
+    /* Reset & Layout Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fcfcf9;
+      /* Velora signature off-white theme */
+      color: #1a1a1a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Outer Loader Card with Page Fade Out before redirect */
+    .loader-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+      padding: 20px;
+      animation: fadeOutPage 0.4s ease-in 2.6s forwards;
+    }
+
+    /* Serif Logo "V" */
+    .brand-logo-symbol {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 12vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1;
+      color: #1a1a1a;
+      margin-bottom: clamp(1.5rem, 5vw, 2.8rem);
+      animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Subtitle Text */
+    .loading-status-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 1.2rem;
+      animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Thin Luxury Loading Progress Line */
+    .progress-bar-track {
+      width: 100%;
+      max-width: 250px;
+      height: 1px;
+      background-color: #e2e0d8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background-color: #1a1a1a;
+      animation: fillLine 2.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fillLine {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeOutPage {
+      to {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="loader-wrapper">
+    <!-- Brand Luxury Symbol Logo -->
+    <div class="brand-logo-symbol">V</div>
+    <!-- Animated Percentage Counter
+        <div class="percentage-counter" id="counter"></div> -->
+    <!-- Subtitle Text -->
+    <p class="loading-status-text">Curating the collection</p>
+    <!-- Progress Line -->
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill"></div>
+    </div>
+  </main>
+</body>
+
+</html>

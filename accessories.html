@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Accessories Collection | Velora Fashion</title>
+    <meta name="description"
+        content="Discover Velora's Luxury Accessories Collection for Women & Men: fine jewelry, waist chains, purses, handbags, hats, sunglasses, shoes, chains, and rings.">
+
+    <!-- Google Fonts for High-End Fashion Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Dedicated Pure CSS Stylesheet for Accessories -->
+    <link rel="stylesheet" href="accessories_style.css">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+.product-img,
+.cat-card-img,
+.acc-hero-banner-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Hidden Radio Control Inputs for Pure CSS Gender Toggle -->
+    <input type="radio" id="gender-women" name="gender-toggle" class="gender-radio" checked>
+    <input type="radio" id="gender-men" name="gender-toggle" class="gender-radio">
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        Free Shipping on all orders above $99 <span class="star-icon">✦</span>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
+        <div class="container header-container">
+
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo">
+                <span class="brand-name">Velora</span>
+                <span class="brand-tagline">LIVE YOUR STYLE</span>
+            </a>
+
+            <!-- Pure CSS Hamburger Toggle Button -->
+            <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <!-- Main Navigation Bar -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="men.html" class="nav-link">Men</a></li>
+                    <li><a href="women.html" class="nav-link">Women</a></li>
+                    <li><a href="accessories.html" class="nav-link active">Accessories</a></li>
+                    <li><a href="footwear.html" class="nav-link">Footwear</a></li>
+                    <li><a href="sale.html" class="nav-link sale">Sale</a></li>
+                    <li><a href="#footer" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Icons & Auth -->
+            <div class="header-actions">
+                <a href="#login-modal" class="btn-auth">Login / Sign Up</a>
+                <a href="#products-women" class="icon-btn" aria-label="Search">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
+                <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </a>
+                <a href="#login-modal" class="icon-btn" aria-label="User Account">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Pure CSS Gender Switcher Sticky Bar -->
+    <div class="gender-switcher-wrapper">
+        <div class="container gender-switcher-container">
+
+            <!-- Gender Tabs using Pure CSS Radio Labels -->
+            <div class="gender-tabs">
+                <label for="gender-women" class="gender-tab-label">
+                    <span>♀ Women's Accessories</span>
+                </label>
+                <label for="gender-men" class="gender-tab-label">
+                    <span>♂ Men's Accessories</span>
+                </label>
+            </div>
+
+            <!-- Quick Filter Pills
+      <div class="filter-pills-scroll">
+        <a href="#w-jewelry" class="filter-pill active">Fine Jewelry & Waist Chains</a>
+        <a href="#w-bags" class="filter-pill">Purses & Handbags</a>
+        <a href="#w-hats" class="filter-pill">Hats & Headwear</a>
+        <a href="#w-sunglasses" class="filter-pill">Sunglasses</a>
+      </div> -->
+
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION A: WOMEN'S ACCESSORIES COLLECTION (ACTIVE DEFAULT)
+       ========================================================================== -->
+    <div class="women-collection-wrapper" id="women">
+
+        <!-- Women's Hero Banner -->
+        <section class="acc-hero women-hero">
+            <div class="container acc-hero-grid">
+                <div class="acc-hero-content">
+                    <p class="acc-hero-subtitle"><span>✦</span> Women's Luxury Collection</p>
+                    <h1 class="acc-hero-title">Timeless Grace &<br>Artisanal Polish</h1>
+                    <p class="acc-hero-desc">Elevate your outfit with Velora's Women's Accessories. Discover 18K gold
+                        layered chains, crystal ring sets, waist chains, artisanal straw sun hats, quilted leather
+                        shoulder purses, and retro sunglasses.</p>
+                </div>
+                <div class="acc-hero-media">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80"
+                        alt="Women's Luxury Accessories & Jewelry Showcase" class="acc-hero-banner-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Visual Category Cards for Women -->
+        <section class="category-highlight-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-subtitle">Curated Women's Categories</p>
+                    <h2 class="section-title">Explore by Style</h2>
+                </div>
+
+                <div class="category-highlight-grid">
+
+                    <!-- Card 1: Fine Jewelry & Waist Chains -->
+                    <a href="#w-jewelry" class="cat-card">
+                        <img src="https://karatcart.com/cdn/shop/files/22027533_1_d5c1570e-9515-4e62-8068-d02c78401804.jpg?v=1763112776"
+                            alt="Women's Fine Jewelry & Waist Chains" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">18K Gold & Gems</span>
+                            <h3 class="cat-card-title">Jewelry & Waist Chains</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Purses & Handbags -->
+                    <a href="#w-bags" class="cat-card">
+                        <img src="https://coach.scene7.com/is/image/Coach/ccx04_b4mpl_a0"
+                            alt="Women's Designer Purses & Handbags" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">Italian Leather</span>
+                            <h3 class="cat-card-title">Purses & Handbags</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Hats & Headwear -->
+                    <a href="#w-hats" class="cat-card">
+                        <img src="https://images-static.nykaa.com/media/catalog/product/f/8/f8ee70dDTONIQ00001633_1.jpg?tr=w-500"
+                            alt="Women's Designer Hats & Berets" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">Straw & Felt Hats</span>
+                            <h3 class="cat-card-title">Hats & Headwear</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 4: Sunglasses -->
+                    <a href="#w-sunglasses" class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                            alt="Women's Designer Sunglasses" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">UV400 Protection</span>
+                            <h3 class="cat-card-title">Sunglasses & Eyewear</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Women's Product Catalog Grid Section -->
+        <section class="products-section" id="products-women">
+            <div class="container">
+
+                <div class="catalog-header-bar">
+                    <div class="catalog-count">Showing <strong>12 Luxury Accessories</strong> for Women</div>
+                    <div class="catalog-sort">
+                        <label for="sort-select-w">Sort By:</label>
+                        <select id="sort-select-w" class="sort-select">
+                            <option value="featured">Featured Essentials</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+
+                    <!-- Women Product 1: 18K Gold Layered Herringbone Chain -->
+                    <div class="product-card" id="w-jewelry">
+                        <div class="product-badge-group">
+                            <span class="badge-tag">Bestseller</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://cdn.eternz.com/thumbnails/products/2_d81b1b26_thumbnail_1024.jpg"
+                                alt="18K Gold Layered Herringbone Chain Necklace" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Jewelry & Chains</span>
+                            <h3 class="product-title">18K Gold Layered Herringbone Chain Necklace</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(64 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$220</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #b5a48b;" title="18K Gold Plated"></span>
+                                <span class="swatch" style="background-color: #e0e0e0;" title="Sterling Silver"></span>
+                            </div>
+                            <a href="#quick-view-w1" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 2: Italian Leather Quilted Shoulder Purse -->
+                    <div class="product-card" id="w-bags">
+                        <div class="product-badge-group">
+                            <span class="badge-tag sale">-15%</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://www.ispektrum.ca/cdn/shop/files/velora-valente-leather-bag-women-brown-5-680e942d80528.webp?v=1745786240&width=1946"
+                                alt="Velora Italian Leather Quilted Shoulder Purse" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Purses & Handbags</span>
+                            <h3 class="product-title">Velora Quilted Italian Leather Shoulder Purse</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(82 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$380</span>
+                                <span class="old-price">$450</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                                <span class="swatch" style="background-color: #f2f0eb;" title="Cream Ivory"></span>
+                                <span class="swatch" style="background-color: #a23b2a;" title="Burgundy Red"></span>
+                            </div>
+                            <a href="#quick-view-w2" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 3: 18K Gold Plated Body & Waist Chain -->
+                    <div class="product-card">
+                        <div class="product-badge-group">
+                            <span class="badge-tag sale">-15%</span>
+                            <span class="badge-tag">Trending</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://cdn.eternz.com/thumbnails/products/IMG_0726_1f7e0874_thumbnail_1024.jpg"
+                                alt="Velora Luxe 18K Gold Plated Body & Waist Chain" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Jewelry & Waist Chains</span>
+                            <h3 class="product-title">Velora Luxe 18K Gold Plated Delicate Waist Chain</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(51 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$165</span>
+                                <span class="old-price">$195</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #b5a48b;" title="18K Gold"></span>
+                                <span class="swatch" style="background-color: #d8d8d8;" title="Silver Tone"></span>
+                            </div>
+                            <a href="#quick-view-w3" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 4: Oversized Retro Cat-Eye Sunglasses -->
+                    <div class="product-card" id="w-sunglasses">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                                alt="Oversized Retro Cat-Eye Sunglasses" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Sunglasses</span>
+                            <h3 class="product-title">Oversized Retro Cat-Eye Sunglasses</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(43 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$175</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Gloss Black"></span>
+                                <span class="swatch" style="background-color: #4a2e1b;" title="Tortoise Shell"></span>
+                            </div>
+                            <a href="#quick-view-w4" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 5: Wide-Brimmed Artisanal Straw Sun Hat -->
+                    <div class="product-card" id="w-hats">
+                        <div class="product-badge-group">
+                            <span class="badge-tag">Artisanal</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIiFlgkiDn8TfvklETtu5wEcy_z6zCrlGn5f-yHkymfC8INKBf9N6Z647J&s=10"
+                                alt="Wide-Brimmed Artisanal Straw Sun Hat" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Hats & Headwear</span>
+                            <h3 class="product-title">Wide-Brimmed Artisanal Straw Sun Hat</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(37 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$135</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #e6d3a7;" title="Natural Straw"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Black Ribbon"></span>
+                            </div>
+                            <a href="#quick-view-w5" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 6: Handcrafted Structured Leather Tote Bag -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://hidesign.com/cdn/shop/files/8903439908782_0_55035ccc-d658-4eb5-a3a6-c2f62085f070_2048x.jpg?v=1784025998"
+                                alt="Handcrafted Structured Leather Tote Bag" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Purses & Handbags</span>
+                            <h3 class="product-title">Handcrafted Structured Leather City Tote Bag</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(49 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$320</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #8c6239;" title="Cognac Tan"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Classic Black"></span>
+                            </div>
+                            <a href="#quick-view-w6" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 7: Diamond-Cut Pearl & Gold Charm Bracelet -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://greenwooddesigns.com.au/cdn/shop/files/Gold_bracelet_with_pearl_and_shell_charms.webp?v=1751414045"
+                                alt="Diamond-Cut Pearl & Gold Charm Bracelet" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Jewelry & Bracelets</span>
+                            <h3 class="product-title">Freshwater Pearl & 18K Gold Charm Bracelet</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(29 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$175</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #f8f8f8;" title="Freshwater Pearl"></span>
+                                <span class="swatch" style="background-color: #b5a48b;" title="18K Gold Details"></span>
+                            </div>
+                            <a href="#quick-view-w7" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 8: Emerald & Solitaire Crystal Ring Set -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpsz4WLcYcxHxlOu2BKEAuGmhdc3j6xBNYtAFRtGXxFja8M3-SX0EPVO4&"
+                                alt="Emerald & Solitaire Crystal Ring Set" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Jewelry & Rings</span>
+                            <h3 class="product-title">Emerald Cut Crystal & Gold Stacking Ring Set</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(58 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$145</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #1b4332;" title="Emerald Green"></span>
+                                <span class="swatch" style="background-color: #ffffff;" title="Clear Solitaire"></span>
+                            </div>
+                            <a href="#quick-view-w8" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 9: Gold Chain Evening Envelope Clutch Purse -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://cdn.shopaccino.com/shubhams/products/46-804859574578307_l.jpg?v=731"
+                                alt="Gold Chain Evening Envelope Clutch Purse" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Purses & Handbags</span>
+                            <h3 class="product-title">Gold Chain Satin Evening Envelope Clutch Purse</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(34 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$240</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #b5a48b;" title="Champagne Gold"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Midnight Black"></span>
+                            </div>
+                            <a href="#quick-view-w9" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 10: 100% Wool Felt French Beret -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://www.hatsbythe100.com.au/cdn/shop/products/beret-authentique-24390e-24390e_situ01_web.jpg?v=1689232562&width=1946"
+                                alt="100% Wool Felt French Beret with Silk Ribbon" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Hats & Headwear</span>
+                            <h3 class="product-title">100% Australian Wool Felt Parisian Beret</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(22 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$110</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #6a040f;" title="Deep Red"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Noir Black"></span>
+                            </div>
+                            <a href="#quick-view-w10" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 11: Cubic Zirconia Sparkle Tennis Bracelet -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://rubans.in/cdn/shop/files/rhodium-plated-cubic-zirconia-studded-tennis-bracelet-bracelet-36940868452526.jpg?v=1774854440"
+                                alt="Cubic Zirconia Sparkle Tennis Bracelet" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Jewelry & Bracelets</span>
+                            <h3 class="product-title">Cubic Zirconia Diamond Tennis Bracelet</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(71 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$185</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #e0e0e0;"
+                                    title="White Gold / Diamond"></span>
+                                <span class="swatch" style="background-color: #b5a48b;" title="Rose Gold"></span>
+                            </div>
+                            <a href="#quick-view-w11" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Women Product 12: Gradient Tinted Retro Square Sunglasses -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80"
+                                alt="Gradient Tinted Retro Square Sunglasses" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Sunglasses</span>
+                            <h3 class="product-title">Gradient Tinted Retro Square Sunglasses</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(46 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$150</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #8c6239;" title="Amber Gradient"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Smoke Black"></span>
+                            </div>
+                            <a href="#quick-view-w12" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- ==========================================================================
+       SECTION B: MEN'S ACCESSORIES COLLECTION
+       ========================================================================== -->
+    <div class="men-collection-wrapper" id="men">
+
+        <!-- Men's Hero Banner -->
+        <section class="acc-hero">
+            <div class="container acc-hero-grid">
+                <div class="acc-hero-content">
+                    <p class="acc-hero-subtitle"><span>✦</span> Men's Luxury Collection</p>
+                    <h1 class="acc-hero-title">Elevate Every<br>Gentleman's Detail</h1>
+                    <p class="acc-hero-desc">Discover precision-crafted essentials. From Italian leather purses &
+                        weekender duffles to Goodyear-welted shoes, sterling silver chains, signet rings, and classic
+                        chronograph timepieces.</p>
+                </div>
+                <div class="acc-hero-media">
+                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=800&q=80"
+                        alt="Men's Luxury Accessories Showcase" class="acc-hero-banner-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Category Highlights (4 Main Categories for Men) -->
+        <section class="category-highlight-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-subtitle">Curated Men's Categories</p>
+                    <h2 class="section-title">Explore by Style</h2>
+                </div>
+
+                <div class="category-highlight-grid">
+
+                    <!-- Card 1: Bags & Purses -->
+                    <a href="#m-bags" class="cat-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROvS8VlFWSMOXjlD3N5_loIeEyoqoU9Jlku63IvRgzerG2xqZg52iafyw&s=10"
+                            alt="Bags & Leather Purses" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">Leather Collection</span>
+                            <h3 class="cat-card-title">Bags & Purses</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Footwear & Shoes -->
+                    <a href="#m-footwear" class="cat-card">
+                        <img src="https://assets.ajio.com/medias/sys_master/root1/20260727/v9Je/6a674fd7a0359b385ab03ab2/-473Wx593H-700308372-brown-MODEL.jpg"
+                            alt="Men's Luxury Shoes" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">Handcrafted Footwear</span>
+                            <h3 class="cat-card-title">Shoes & Loafers</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Chains & Necklaces -->
+                    <a href="#m-chains" class="cat-card">
+                        <img src="https://vonejewellery.in/cdn/shop/files/5_2_8e601786-1991-4ce7-ba97-d2a70dea21c0.jpg?v=1742205607"
+                            alt="Men's Sterling Silver Chains" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">925 Silver & Gold</span>
+                            <h3 class="cat-card-title">Chains & Necklaces</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 4: Rings & Fine Jewelry -->
+                    <a href="#m-rings" class="cat-card">
+                        <img src="https://cdn.shopify.com/s/files/1/0909/4476/6277/files/Minimal_Silver_Rings_Stack_for_Men_Clean_Everyday_Jewelry_Aesthetic.jpg?v=1764941688"
+                            alt="Men's Signet Rings" class="cat-card-img">
+                        <div class="cat-card-overlay">
+                            <span class="cat-card-tag">Statement Pieces</span>
+                            <h3 class="cat-card-title">Rings & Jewelry</h3>
+                            <span class="cat-card-link">View Collection &rarr;</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Men's Product Catalog Grid Section -->
+        <section class="products-section" id="products-men">
+            <div class="container">
+
+                <div class="catalog-header-bar">
+                    <div class="catalog-count">Showing <strong>12 Luxury Accessories</strong> for Men</div>
+                    <div class="catalog-sort">
+                        <label for="sort-select-m">Sort By:</label>
+                        <select id="sort-select-m" class="sort-select">
+                            <option value="featured">Featured Essentials</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+
+                    <!-- Product 1: Weekender Leather Bag / Purse -->
+                    <div class="product-card" id="m-bags">
+                        <div class="product-badge-group">
+                            <span class="badge-tag sale">-18%</span>
+                            <span class="badge-tag">Bestseller</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://media.assettype.com/esquireindia%2F2026-04-01%2Fxmvnu62m%2F2025_05_23T22_3A00_3A12_044Z_tiggermaron.webp"
+                                alt="Velora Heritage Leather Weekender Purse Bag" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Bags & Purses</span>
+                            <h3 class="product-title">Velora Heritage Leather Weekender Bag</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(48 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$345</span>
+                                <span class="old-price">$420</span>
+                                <span class="save-badge">Save $75</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #4a2e1b;" title="Chestnut Brown"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                                <span class="swatch" style="background-color: #8c6239;" title="Cognac Tan"></span>
+                            </div>
+                            <a href="#quick-view-m1" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Italian Suede Loafers / Shoes -->
+                    <div class="product-card" id="m-footwear">
+                        <div class="product-badge-group">
+                            <span class="badge-tag">New</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://www.louisstitch.com/cdn/shop/files/LSITSUDGR_2_89dfb129-436f-490a-bb55-9e1857f485ed.jpg?v=1748519105&width=1080"
+                                alt="Artisanal Italian Suede Penny Loafers Shoes" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Footwear & Shoes</span>
+                            <h3 class="product-title">Artisanal Italian Suede Penny Loafers</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(32 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$280</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #6b5b45;" title="Sand Suede"></span>
+                                <span class="swatch" style="background-color: #2b303a;" title="Navy Suede"></span>
+                            </div>
+                            <a href="#quick-view-m2" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: 925 Sterling Silver Cuban Link Chain -->
+                    <div class="product-card" id="m-chains">
+                        <div class="product-badge-group">
+                            <span class="badge-tag">Handmade</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://silverwow.net/cdn/shop/files/10mm-miami-cuban-chain-necklace-men-solid-silver-side-view.jpg?v=1764825794&width=1946"
+                                alt="925 Sterling Silver Cuban Link Chain" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Chains & Necklaces</span>
+                            <h3 class="product-title">925 Sterling Silver Heavy Cuban Link Chain</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(56 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$195</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #d8d8d8;" title="Polished Silver"></span>
+                                <span class="swatch" style="background-color: #b5a48b;" title="18K Gold Plated"></span>
+                            </div>
+                            <a href="#quick-view-m3" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Black Onyx Gold Signet Ring -->
+                    <div class="product-card" id="m-rings">
+                        <div class="product-badge-group">
+                            <span class="badge-tag sale">-20%</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://i.etsystatic.com/27522472/r/il/9dcff5/7821672538/il_fullxfull.7821672538_8b7e.jpg"
+                                alt="Black Onyx Gold Signet Ring" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Rings & Jewelry</span>
+                            <h3 class="product-title">18K Gold Plated Black Onyx Signet Ring</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(41 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$140</span>
+                                <span class="old-price">$175</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #b5a48b;" title="Gold / Onyx"></span>
+                                <span class="swatch" style="background-color: #c0c0c0;" title="Silver / Onyx"></span>
+                            </div>
+                            <a href="#quick-view-m4" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: City Leather Crossbody Purse Bag -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://i.etsystatic.com/14236499/r/il/027b4d/7214995635/il_fullxfull.7214995635_4j44.jpg"
+                                alt="Structured Leather City Crossbody Purse Bag" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Bags & Purses</span>
+                            <h3 class="product-title">Structured Leather City Crossbody Purse</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(19 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$210</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Matte Black"></span>
+                                <span class="swatch" style="background-color: #3b281c;" title="Dark Espresso"></span>
+                            </div>
+                            <a href="#quick-view-m5" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 6: Chelsea Leather Boots / Shoes -->
+                    <div class="product-card">
+                        <div class="product-badge-group">
+                            <span class="badge-tag">Handcrafted</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://craftandglory.in/cdn/shop/files/0000s_0021_DSC06096.ARW.jpg?v=1749555692&width=533"
+                                alt="Handcrafted Goodyear Welted Chelsea Boots" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Footwear & Shoes</span>
+                            <h3 class="product-title">Goodyear-Welted Chelsea Leather Boots</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(64 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$320</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Black Leather"></span>
+                                <span class="swatch" style="background-color: #5c3a21;" title="Antique Tan"></span>
+                            </div>
+                            <a href="#quick-view-m6" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 7: 18K Gold Plated Bar Pendant Chain -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtva1y_-n5j5j8-ozxORzLsSAnOqMZEUNMnbMsAnrFwrTg7-pd1pZZTRlt&s=10"
+                                alt="Minimalist Gold Bar Pendant Chain" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Chains & Necklaces</span>
+                            <h3 class="product-title">18K Gold Plated Minimalist Bar Pendant Chain</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(27 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$165</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #b5a48b;" title="Warm Gold"></span>
+                                <span class="swatch" style="background-color: #e0e0e0;" title="Platinum Silver"></span>
+                            </div>
+                            <a href="#quick-view-m7" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 8: Brushed Titanium & Sapphire Ring -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://pureformeu.com/cdn/shop/files/SapphireRing_TitaniumSteel_4.jpg?v=1782288221&width=3840"
+                                alt="Brushed Titanium & Sapphire Signet Ring" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Rings & Jewelry</span>
+                            <h3 class="product-title">Brushed Titanium & Sapphire Signet Ring</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(15 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$125</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #7f8c8d;" title="Titanium Gray"></span>
+                                <span class="swatch" style="background-color: #2c3e50;"
+                                    title="Midnight Blue Sapphire"></span>
+                            </div>
+                            <a href="#quick-view-m8" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 9: Automatic Mechanical Chronograph Watch -->
+                    <div class="product-card">
+                        <div class="product-badge-group">
+                            <span class="badge-tag sale">-13%</span>
+                            <span class="badge-tag">Luxury</span>
+                        </div>
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://thewatchshop.in/cdn/shop/products/TVS9005D.jpg?v=1686910501"
+                                alt="Automatic Mechanical Chronograph Watch" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Watches & Eyewear</span>
+                            <h3 class="product-title">Automatic Mechanical Chronograph Watch</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(78 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$450</span>
+                                <span class="old-price">$520</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Black Dial"></span>
+                                <span class="swatch" style="background-color: #f2f0eb;" title="Silver Dial"></span>
+                            </div>
+                            <a href="#quick-view-m9" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 10: Vintage Square Acetate Sunglasses -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                                alt="Vintage Square Acetate Sunglasses" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Watches & Eyewear</span>
+                            <h3 class="product-title">Vintage Square Acetate Sunglasses</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(39 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$160</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #3e2723;" title="Tortoise Shell"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Gloss Black"></span>
+                            </div>
+                            <a href="#quick-view-m10" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 11: Full-Grain Italian Leather Dress Belt -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://baccabucci.com/cdn/shop/products/MG_8089.jpg?v=1633867526"
+                                alt="Full-Grain Italian Leather Dress Belt" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Belts & Goods</span>
+                            <h3 class="product-title">Full-Grain Italian Leather Reversible Dress Belt</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(45 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$95</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #1a1a1a;"
+                                    title="Black / Tan Reversible"></span>
+                                <span class="swatch" style="background-color: #4a2e1b;" title="Mahogany Brown"></span>
+                            </div>
+                            <a href="#quick-view-m11" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 12: Bifold Leather Cardholder Purse & Wallet -->
+                    <div class="product-card">
+                        <button class="wishlist-btn" aria-label="Add to Wishlist">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div class="product-image-wrapper">
+                            <img src="https://www.thewalletstore.in/cdn/shop/files/WINE_1.jpg?v=1768825155&width=2500"
+                                alt="Slim Bifold Leather Cardholder Purse Wallet" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-label">Bags & Purses</span>
+                            <h3 class="product-title">Slim Bifold Leather Cardholder Wallet Purse</h3>
+                            <div class="product-rating">
+                                ★★★★★ <span class="count">(51 reviews)</span>
+                            </div>
+                            <div class="product-price-row">
+                                <span class="current-price">$85</span>
+                            </div>
+                            <div class="product-swatches">
+                                <span class="swatch" style="background-color: #8c6239;" title="Cognac Leather"></span>
+                                <span class="swatch" style="background-color: #1a1a1a;" title="Onyx Black"></span>
+                            </div>
+                            <a href="#quick-view-m12" class="btn-quickview">Quick View</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Craftsmanship & Quality Guarantee Section -->
+    <section class="craftsmanship-section">
+        <div class="container">
+            <div class="craft-grid">
+
+                <div class="craft-card">
+                    <div class="craft-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="craft-title">Full-Grain Italian Leather</h3>
+                    <p class="craft-desc">Vegetable-tanned by master artisans in Florence. Our luxury purses, shoulder
+                        bags, totes, and weekenders age gracefully with a rich patina over time.</p>
+                </div>
+
+                <div class="craft-card">
+                    <div class="craft-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 3l14 9-14 9V3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="craft-title">Solid 925 Silver & 18K Gold</h3>
+                    <p class="craft-desc">Every chain, waist chain, bracelet, and ring set is cast in solid 925 sterling
+                        silver or heavy 18K gold plating, guaranteed skin-safe and tarnish-resistant.</p>
+                </div>
+
+                <div class="craft-card">
+                    <div class="craft-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="craft-title">2-Year Velora Guarantee</h3>
+                    <p class="craft-desc">We stand behind our quality. Enjoy complimentary worldwide shipping on orders
+                        over $99, hassle-free returns, and lifetime care support.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PURE CSS QUICK VIEW MODALS FOR WOMEN -->
+    <div id="quick-view-w1" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://cdn.eternz.com/thumbnails/products/2_d81b1b26_thumbnail_1024.jpg"
+                    alt="18K Gold Layered Herringbone Chain Necklace" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Jewelry & Chains</span>
+                    <h2 class="quickview-title">18K Gold Layered Herringbone Chain Necklace</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$220</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - 18K Gold Plated</div>
+                    <p class="quickview-desc">Double-layered liquid herringbone chain necklace crafted with heavy 18K
+                        yellow gold electroplating over solid brass. Anti-tarnish finish.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $220</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w2" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://www.ispektrum.ca/cdn/shop/files/velora-valente-leather-bag-women-brown-5-680e942d80528.webp?v=1745786240&width=1946"
+                    alt="Velora Quilted Italian Leather Shoulder Purse" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Purses & Handbags</span>
+                    <h2 class="quickview-title">Velora Quilted Italian Leather Shoulder Purse</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$380</span>
+                        <span class="old-price">$450</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Made in Italy</div>
+                    <p class="quickview-desc">Soft lambskin quilted shoulder bag with gold-tone sliding chain strap,
+                        turn-lock closure, and dual interior compartments.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $380</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w3" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://cdn.eternz.com/thumbnails/products/IMG_0726_1f7e0874_thumbnail_1024.jpg"
+                    alt="Velora Luxe 18K Gold Plated Body & Waist Chain" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Jewelry & Waist Chains</span>
+                    <h2 class="quickview-title">Velora Luxe 18K Gold Plated Delicate Waist Chain</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$165</span>
+                        <span class="old-price">$195</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Adjustable Length</div>
+                    <p class="quickview-desc">High-fashion body and waist belly chain designed with delicate gold links
+                        and an adjustable extension chain. Perfect for dresses & resort wear.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $165</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w4" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                    alt="Oversized Retro Cat-Eye Sunglasses" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Sunglasses</span>
+                    <h2 class="quickview-title">Oversized Retro Cat-Eye Sunglasses</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$175</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - UV400 Protection</div>
+                    <p class="quickview-desc">Chic acetate cat-eye sunglasses with scratch-resistant polarized lenses.
+                        Provides full UV400 protection with classic Italian elegance.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $175</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w5" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIiFlgkiDn8TfvklETtu5wEcy_z6zCrlGn5f-yHkymfC8INKBf9N6Z647J&s=10"
+                    alt="Wide-Brimmed Straw Sun Hat" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Hats & Headwear</span>
+                    <h2 class="quickview-title">Wide-Brimmed Artisanal Straw Sun Hat</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$135</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Handwoven Straw</div>
+                    <p class="quickview-desc">Handwoven natural Ecuadorian raffia straw sun hat with an elegant black
+                        grossgrain ribbon band. UPF 50+ sun protection.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $135</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w6" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://hidesign.com/cdn/shop/files/8903439908782_0_55035ccc-d658-4eb5-a3a6-c2f62085f070_2048x.jpg?v=1784025998"
+                    alt="Structured Leather City Tote Bag" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Purses & Handbags</span>
+                    <h2 class="quickview-title">Handcrafted Structured Leather City Tote Bag</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$320</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Spacious city tote purse crafted from pebble-grain Italian leather.
+                        Includes zippered top closure, key lanyard, and tablet sleeve.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $320</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w7" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://greenwooddesigns.com.au/cdn/shop/files/Gold_bracelet_with_pearl_and_shell_charms.webp?v=1751414045"
+                    alt="Freshwater Pearl Charm Bracelet" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Jewelry & Bracelets</span>
+                    <h2 class="quickview-title">Freshwater Pearl & 18K Gold Charm Bracelet</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$175</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Lustrous baroque freshwater pearls accented with 18K gold-plated starburst
+                        charms and toggle clasp.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $175</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w8" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpsz4WLcYcxHxlOu2BKEAuGmhdc3j6xBNYtAFRtGXxFja8M3-SX0EPVO4&"
+                    alt="Emerald Stacking Ring Set" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Jewelry & Rings</span>
+                    <h2 class="quickview-title">Emerald Cut Crystal & Gold Stacking Ring Set</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$145</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Set of 3 stackable 18K gold plated bands, featuring an emerald-cut lab
+                        gemstone and dual pave cz bands.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $145</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w9" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://cdn.shopaccino.com/shubhams/products/46-804859574578307_l.jpg?v=731"
+                    alt="Gold Chain Evening Envelope Clutch Purse" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Purses & Handbags</span>
+                    <h2 class="quickview-title">Gold Chain Satin Evening Envelope Clutch Purse</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$240</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Sleek satin envelope clutch purse featuring detachable gold crossbody
+                        chain strap and magnetic snap closure.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $240</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w10" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://www.hatsbythe100.com.au/cdn/shop/products/beret-authentique-24390e-24390e_situ01_web.jpg?v=1689232562&width=1946"
+                    alt="Wool Felt French Beret" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Hats & Headwear</span>
+                    <h2 class="quickview-title">100% Australian Wool Felt Parisian Beret</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$110</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Classic 100% Australian wool felt French beret with silk satin lining and
+                        grosgrain ribbon accent.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $110</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w11" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://rubans.in/cdn/shop/files/rhodium-plated-cubic-zirconia-studded-tennis-bracelet-bracelet-36940868452526.jpg?v=1774854440"
+                    alt="Diamond Tennis Bracelet" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Jewelry & Bracelets</span>
+                    <h2 class="quickview-title">Cubic Zirconia Diamond Tennis Bracelet</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$185</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Classic 4mm cubic zirconia stones prong-set in 925 sterling silver with
+                        double safety latch box clasp.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $185</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-w12" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80"
+                    alt="Gradient Retro Square Sunglasses" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Sunglasses</span>
+                    <h2 class="quickview-title">Gradient Tinted Retro Square Sunglasses</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$150</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Square acetate frame sunglasses with warm amber gradient lenses and 100%
+                        UV protection.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $150</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PURE CSS QUICK VIEW MODALS FOR MEN -->
+    <div id="quick-view-m1" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://media.assettype.com/esquireindia%2F2026-04-01%2Fxmvnu62m%2F2025_05_23T22_3A00_3A12_044Z_tiggermaron.webp"
+                    alt="Velora Heritage Leather Weekender Purse" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Bags & Purses</span>
+                    <h2 class="quickview-title">Velora Heritage Leather Weekender Bag</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$345</span>
+                        <span class="old-price">$420</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Ready for Express Shipping</div>
+                    <p class="quickview-desc">Handcrafted from vegetable-tanned full-grain Italian leather. Features
+                        reinforced brass hardware and cotton canvas shoulder strap.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $345</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m2" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://www.louisstitch.com/cdn/shop/files/LSITSUDGR_2_89dfb129-436f-490a-bb55-9e1857f485ed.jpg?v=1748519105&width=1080"
+                    alt="Artisanal Italian Suede Penny Loafers" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Footwear & Shoes</span>
+                    <h2 class="quickview-title">Artisanal Italian Suede Penny Loafers</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$280</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Handcrafted in Italy</div>
+                    <p class="quickview-desc">Cut from butter-soft Tuscan calf suede with flexible Blake-stitched
+                        leather soles. Ultra-comfortable for smart-casual wear.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $280</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m3" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://silverwow.net/cdn/shop/files/10mm-miami-cuban-chain-necklace-men-solid-silver-side-view.jpg?v=1764825794&width=1946"
+                    alt="925 Sterling Silver Cuban Link Chain" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Chains & Necklaces</span>
+                    <h2 class="quickview-title">925 Sterling Silver Heavy Cuban Link Chain</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$195</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Solid Sterling Silver</div>
+                    <p class="quickview-desc">Solid 925 sterling silver chain with diamond-cut bevelled edges for
+                        maximum brilliance. Features a secure custom box lock clasp.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $195</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m4" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://i.etsystatic.com/27522472/r/il/9dcff5/7821672538/il_fullxfull.7821672538_8b7e.jpg"
+                    alt="Black Onyx Gold Signet Ring" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Rings & Jewelry</span>
+                    <h2 class="quickview-title">18K Gold Plated Black Onyx Signet Ring</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$140</span>
+                        <span class="old-price">$175</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Hand-Cut Natural Onyx</div>
+                    <p class="quickview-desc">Heavyweight signet ring set with a flat-cut natural black onyx gemstone,
+                        surrounded by a 18K yellow gold plated frame.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $140</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m5" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://i.etsystatic.com/14236499/r/il/027b4d/7214995635/il_fullxfull.7214995635_4j44.jpg"
+                    alt="Structured Leather City Crossbody Purse" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Bags & Purses</span>
+                    <h2 class="quickview-title">Structured Leather City Crossbody Purse</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$210</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Compact urban crossbody bag crafted from pebble-grain leather with
+                        magnetic flap closure and inner zippered security pocket.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $210</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m6" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://craftandglory.in/cdn/shop/files/0000s_0021_DSC06096.ARW.jpg?v=1749555692&width=533"
+                    alt="Chelsea Leather Boots Shoes" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Footwear & Shoes</span>
+                    <h2 class="quickview-title">Goodyear-Welted Chelsea Leather Boots</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$320</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Durable Goodyear welted leather soles, elastic side goring, and calfskin
+                        lining for timeless elegance and decades of wear.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $320</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m7" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtva1y_-n5j5j8-ozxORzLsSAnOqMZEUNMnbMsAnrFwrTg7-pd1pZZTRlt&s=10"
+                    alt="Gold Bar Pendant Chain" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Chains & Necklaces</span>
+                    <h2 class="quickview-title">18K Gold Plated Minimalist Bar Pendant Chain</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$165</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Features a polished geometric bar pendant on a 22-inch micro cable chain,
+                        finished with 18K heavy gold plating.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $165</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m8" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://pureformeu.com/cdn/shop/files/SapphireRing_TitaniumSteel_4.jpg?v=1782288221&width=3840"
+                    alt="Titanium Sapphire Ring" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Rings & Jewelry</span>
+                    <h2 class="quickview-title">Brushed Titanium & Sapphire Signet Ring</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$125</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Lightweight aerospace-grade titanium band featuring a brushed matte finish
+                        and inset lab-grown blue sapphire facet.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $125</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m9" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://thewatchshop.in/cdn/shop/products/TVS9005D.jpg?v=1686910501"
+                    alt="Chronograph Watch" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Watches & Eyewear</span>
+                    <h2 class="quickview-title">Automatic Mechanical Chronograph Watch</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$450</span>
+                        <span class="old-price">$520</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - Swiss Movement</div>
+                    <p class="quickview-desc">Self-winding automatic movement with 42-hour power reserve, sapphire
+                        crystal glass, 50m water resistance, and genuine leather strap.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $450</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m10" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+                    alt="Acetate Sunglasses" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Watches & Eyewear</span>
+                    <h2 class="quickview-title">Vintage Square Acetate Sunglasses</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$160</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - 100% UV Protection</div>
+                    <p class="quickview-desc">Hand-polished Mazzucchelli acetate frame with anti-reflective polarized
+                        lenses and 7-barrel stainless steel hinges.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $160</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m11" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://baccabucci.com/cdn/shop/products/MG_8089.jpg?v=1633867526"
+                    alt="Italian Leather Belt" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Belts & Goods</span>
+                    <h2 class="quickview-title">Full-Grain Italian Leather Dress Belt</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$95</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock</div>
+                    <p class="quickview-desc">Versatile 32mm dress belt featuring a brushed silver buckle and
+                        twist-reversible black & cognac brown full-grain leather.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $95</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-view-m12" class="modal-overlay">
+        <div class="modal-box">
+            <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
+            <div class="quickview-grid">
+                <img src="https://www.thewalletstore.in/cdn/shop/files/WINE_1.jpg?v=1768825155&width=2500"
+                    alt="Leather Cardholder Wallet Purse" class="quickview-img">
+                <div class="quickview-details">
+                    <span class="quickview-tag">Bags & Purses</span>
+                    <h2 class="quickview-title">Slim Bifold Leather Cardholder Wallet Purse</h2>
+                    <div class="quickview-price-row">
+                        <span class="quickview-price">$85</span>
+                    </div>
+                    <div class="quickview-stock">✓ In Stock - RFID Blocking</div>
+                    <p class="quickview-desc">Ultra-slim bifold profile with 6 card slots, central cash pocket, and
+                        integrated RFID security shielding.</p>
+                    <a href="#login-modal" class="btn-add-cart">Add to Bag &bull; $85</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Pure CSS Login & Sign Up Modal -->
+<div id="login-modal" class="modal-overlay">
+    <div class="modal-box">
+        <a href="#" class="modal-close" aria-label="Close Modal">&times;</a>
+        
+        <div class="modal-header">
+            <h3 class="modal-title">Velora Account</h3>
+            <p class="modal-subtitle">Login or create a new account to continue</p>
+        </div>
+
+        <!-- Pure CSS Tabs using radio buttons -->
+        <div class="auth-tabs">
+            <input type="radio" id="tab-login" name="auth-tab" checked>
+            <label for="tab-login" class="tab-label">Login</label>
+
+            <input type="radio" id="tab-signup" name="auth-tab">
+            <label for="tab-signup" class="tab-label">Sign Up</label>
+
+            <!-- Login Form -->
+            <div class="tab-content content-login">
+                <form class="auth-form" action="#" method="post">
+                    <div class="form-group">
+                        <label class="form-label" for="login-email">Email Address</label>
+                        <input type="email" id="login-email" name="email" class="form-input" placeholder="name@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" class="form-input" placeholder="••••••••" autocomplete="current-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Login to Account</button>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="tab-content content-signup">
+                <form class="auth-form" action="#" method="post">
+                    <div class="form-group">
+                        <label class="form-label" for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="fullname" class="form-input" placeholder="Jane Doe" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" name="email" class="form-input" placeholder="name@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signup-password">Create Password</label>
+                        <input type="password" id="signup-password" name="password" class="form-input" placeholder="••••••••" autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent btn-full">Create Velora Account</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+                
+    <!-- Site Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Brand Info -->
+                <div>
+                    <h3 class="footer-brand-name">VELORA</h3>
+                    <p class="footer-brand-desc">A curation of timeless fashion, fine jewelry, artisanal leather purses
+                        & bags, and luxury accessories for Women and Men.</p>
+                </div>
+
+                <!-- Column 2: Shop Categories -->
+                <div>
+                    <h4 class="footer-col-title">Shop Collection</h4>
+                    <div class="footer-links">
+                        <a href="women.html">Women's Apparel</a>
+                        <a href="men.html">Men's Apparel</a>
+                        <a href="accessories.html#women">Women's Accessories</a>
+                        <a href="accessories.html#men">Men's Accessories</a>
+                        <a href="accessories.html#w-jewelry">Fine Jewelry & Chains</a>
+                        <a href="accessories.html#w-bags">Purses & Handbags</a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div>
+                    <h4 class="footer-col-title">Company</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="#footer">About Us</a>
+                        <a href="#footer">Sustainability</a>
+                        <a href="#footer">Careers</a>
+                        <a href="#footer">Store Locator</a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Customer Help -->
+                <div>
+                    <h4 class="footer-col-title">Customer Care</h4>
+                    <div class="footer-links">
+                        <a href="#footer">Shipping & Delivery</a>
+                        <a href="#footer">Returns & Exchanges</a>
+                        <a href="#footer">Jewelry Care Guide</a>
+                        <a href="#footer">Warranty & Repair</a>
+                        <a href="#footer">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!-- Column 5: Contact -->
+                <div>
+                    <h4 class="footer-col-title">Contact Us</h4>
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+1 (800) 555-8356</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>support@velorafashion.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>740 Fifth Avenue, New York, NY 10019</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div>&copy; 2026 Velora Fashion Store. All Rights Reserved.</div>
+                <div>
+                    <span>Accepted Payments:</span>
+                    <span class="payment-badge">VISA</span>
+                    <span class="payment-badge">MASTERCARD</span>
+                    <span class="payment-badge">PAYPAL</span>
+                    <span class="payment-badge">AMEX</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+document.querySelectorAll('img').forEach(img => {
+    if (img.complete) {
+        img.classList.add('loaded');
+    } else {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+
+        img.addEventListener('error', () => {
+            img.classList.add('loaded');
+        });
+    }
+});
+</script>
+
+</body>
+
+</html>
