@@ -1,0 +1,792 @@
+/*
+ * Velora shared app styles.
+ * Loaded on every page after the page stylesheet. Only covers state that the
+ * JavaScript layer adds (badges, wishlist/cart membership); page design stays
+ * in each page's own stylesheet.
+ */
+
+/* Header badges: hide when the count is zero, line up when both are shown. */
+.header-actions .cart-badge.is-empty {
+  display: none;
+}
+
+.header-actions .cart-badge {
+  min-width: 16px;
+  width: auto;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.header-actions .wishlist-badge {
+  background-color: var(--color-accent, #b5a48b);
+}
+
+/* Logged-in greeting on the auth button. */
+.btn-auth.is-logged-in {
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
+/* Wishlist button state on catalog cards (accessories, footwear, sale). */
+.wishlist-btn.active {
+  color: #e63946;
+}
+
+.wishlist-btn.active svg {
+  fill: currentColor;
+}
+
+/* ------------------------------------------------------------------ */
+/* Toast feedback                                                      */
+/* ------------------------------------------------------------------ */
+.velora-toast-host {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 1200;
+  width: min(92vw, 480px);
+  pointer-events: none;
+}
+
+.velora-toast {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-primary, #1a1a1a);
+  color: #ffffff;
+  padding: 0.85rem 1rem 0.85rem 1.25rem;
+  border-radius: var(--radius-md, 2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: auto;
+}
+
+.velora-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.velora-toast.is-error {
+  background-color: #a23b2a;
+}
+
+.velora-toast__msg {
+  flex: 1;
+}
+
+.velora-toast__action {
+  color: var(--color-accent, #b5a48b);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.velora-toast__action:hover {
+  color: #ffffff;
+}
+
+.velora-toast__close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* JS-controlled modal (options picker)                                */
+/* ------------------------------------------------------------------ */
+.velora-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.velora-modal.is-open {
+  opacity: 1;
+}
+
+.velora-modal[hidden] {
+  display: none;
+}
+
+body.velora-modal-open {
+  overflow: hidden;
+}
+
+.velora-modal__box {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  background-color: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e8e8e1);
+  border-radius: var(--radius-md, 2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  transform: translateY(10px);
+  transition: transform 0.2s ease;
+}
+
+.velora-modal.is-open .velora-modal__box {
+  transform: translateY(0);
+}
+
+.velora-modal__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-text-muted, #666);
+  cursor: pointer;
+}
+
+.velora-modal__close:hover {
+  color: var(--color-primary, #1a1a1a);
+}
+
+.velora-picker {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.75rem;
+}
+
+.velora-picker__media {
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-surface-alt, #f2f0eb);
+  overflow: hidden;
+  border-radius: var(--radius-sm, 2px);
+}
+
+.velora-picker__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.velora-picker__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  font-family: var(--font-sans, sans-serif);
+}
+
+.velora-picker__category {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-light, #999);
+}
+
+.velora-picker__name {
+  font-family: var(--font-serif, serif);
+  font-weight: 400;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 0;
+  padding-right: 1.5rem;
+}
+
+.velora-picker__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.velora-picker__price {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.velora-picker__compare {
+  color: var(--color-text-light, #999);
+  text-decoration: line-through;
+  font-size: 0.85rem;
+}
+
+.velora-picker__group[hidden] {
+  display: none;
+}
+
+.velora-picker__label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #666);
+  margin-bottom: 0.5rem;
+}
+
+.velora-picker__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.velora-option {
+  min-width: 44px;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--color-border, #e8e8e1);
+  background: var(--color-surface, #fff);
+  color: var(--color-text-main, #1a1a1a);
+  font-size: 0.75rem;
+  font-family: inherit;
+  border-radius: var(--radius-sm, 2px);
+  cursor: pointer;
+  transition: var(--transition, all 0.2s ease);
+}
+
+.velora-option:hover,
+.velora-option.is-selected {
+  border-color: var(--color-primary, #1a1a1a);
+  background: var(--color-primary, #1a1a1a);
+  color: #ffffff;
+}
+
+.velora-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border, #e8e8e1);
+  box-shadow: inset 0 0 0 2px #ffffff;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition, all 0.2s ease);
+}
+
+.velora-swatch:hover,
+.velora-swatch.is-selected {
+  border-color: var(--color-primary, #1a1a1a);
+  transform: scale(1.1);
+}
+
+.velora-swatch.is-selected {
+  box-shadow: inset 0 0 0 2px #ffffff, 0 0 0 1px var(--color-primary, #1a1a1a);
+}
+
+.velora-picker__error {
+  margin: 0;
+  color: #a23b2a;
+  font-size: 0.75rem;
+}
+
+.velora-picker__error[hidden] {
+  display: none;
+}
+
+.velora-picker__add {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--color-primary, #1a1a1a);
+  color: #ffffff;
+  border: 1px solid var(--color-primary, #1a1a1a);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition, all 0.2s ease);
+}
+
+.velora-picker__add:hover {
+  background-color: var(--color-accent, #b5a48b);
+  border-color: var(--color-accent, #b5a48b);
+}
+
+/* Quantity stepper (shared by picker and cart page) */
+.velora-qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border, #e8e8e1);
+  border-radius: var(--radius-sm, 2px);
+}
+
+.velora-qty__btn {
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--color-text-main, #1a1a1a);
+  font-family: inherit;
+}
+
+.velora-qty__btn:hover:not(:disabled) {
+  background-color: var(--color-surface-alt, #f2f0eb);
+}
+
+.velora-qty__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.velora-qty__value,
+.velora-qty__input {
+  min-width: 36px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: inherit;
+}
+
+.velora-qty__input {
+  width: 44px;
+  height: 34px;
+  border: none;
+  border-left: 1px solid var(--color-border, #e8e8e1);
+  border-right: 1px solid var(--color-border, #e8e8e1);
+  background: transparent;
+  -moz-appearance: textfield;
+}
+
+.velora-qty__input::-webkit-outer-spin-button,
+.velora-qty__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .velora-picker {
+    grid-template-columns: 1fr;
+  }
+
+  .velora-picker__media {
+    max-width: 200px;
+  }
+
+  .velora-modal__box {
+    padding: 1.5rem;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Cart page                                                           */
+/* ------------------------------------------------------------------ */
+.cart-section {
+  padding: 3.5rem 0 5rem;
+  min-height: 60vh;
+}
+
+.cart-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border, #e8e8e1);
+}
+
+.cart-header .section-title {
+  margin: 0;
+}
+
+.cart-count-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #666);
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.cart-empty[hidden],
+.cart-layout[hidden] {
+  display: none;
+}
+
+.cart-empty__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-accent, #b5a48b);
+  margin-bottom: 1.25rem;
+}
+
+.cart-empty__title {
+  font-family: var(--font-serif, serif);
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.cart-empty__text {
+  color: var(--color-text-muted, #666);
+  margin: 0 0 1.75rem;
+  font-size: 0.9rem;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-line {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) auto auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border, #e8e8e1);
+}
+
+.cart-line__media {
+  display: block;
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-surface-alt, #f2f0eb);
+  overflow: hidden;
+}
+
+.cart-line__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cart-line__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.cart-line__category {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-light, #999);
+}
+
+.cart-line__name {
+  font-family: var(--font-serif, serif);
+  font-size: 1.05rem;
+  color: var(--color-text-main, #1a1a1a);
+  text-decoration: none;
+}
+
+.cart-line__name:hover {
+  color: var(--color-accent, #b5a48b);
+}
+
+.cart-line__variant {
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #666);
+}
+
+.cart-line__price {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  font-size: 0.85rem;
+}
+
+.cart-line__compare {
+  color: var(--color-text-light, #999);
+  text-decoration: line-through;
+  font-size: 0.75rem;
+}
+
+.cart-line__remove {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 0.25rem;
+  font-family: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #666);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.cart-line__remove:hover {
+  color: #a23b2a;
+}
+
+.cart-line__total {
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 64px;
+  text-align: right;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+}
+
+.cart-actions .btn-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #666);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.cart-actions .btn-link:hover {
+  color: var(--color-text-main, #1a1a1a);
+}
+
+.cart-summary {
+  position: sticky;
+  top: 6rem;
+  background-color: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e8e8e1);
+  padding: 1.75rem;
+}
+
+.cart-summary__title {
+  font-family: var(--font-serif, serif);
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 0 0 1.25rem;
+}
+
+.cart-summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  color: var(--color-text-muted, #666);
+}
+
+.cart-summary__row--total {
+  border-top: 1px solid var(--color-border, #e8e8e1);
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  color: var(--color-text-main, #1a1a1a);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cart-summary__note {
+  font-size: 0.72rem;
+  color: var(--color-accent-hover, #9c8b73);
+  margin: 0.25rem 0 1.25rem;
+  min-height: 1em;
+}
+
+.cart-summary .btn-full {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.cart-summary__continue {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #666);
+  text-decoration: none;
+}
+
+.cart-summary__continue:hover {
+  color: var(--color-text-main, #1a1a1a);
+}
+
+@media (max-width: 900px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-line {
+    grid-template-columns: 80px minmax(0, 1fr);
+    grid-template-areas:
+      "media info"
+      "media qty"
+      "media total";
+    row-gap: 0.6rem;
+  }
+
+  .cart-line__media { grid-area: media; }
+  .cart-line__info { grid-area: info; }
+  .cart-line__qty { grid-area: qty; justify-self: start; }
+  .cart-line__total { grid-area: total; text-align: left; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Wishlist hearts injected on home/men/women cards                     */
+/* (accessories/footwear/sale style their own .wishlist-btn)            */
+/* ------------------------------------------------------------------ */
+.wishlist-btn--injected,
+.wishlist-btn--remove {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border, #e8e8e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted, #666);
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition, all 0.3s ease);
+}
+
+.wishlist-btn--injected svg {
+  width: 16px;
+  height: 16px;
+}
+
+.wishlist-btn--injected:hover,
+.wishlist-btn--remove:hover {
+  background-color: #ffffff;
+  color: #e63946;
+  transform: scale(1.1);
+}
+
+/* ------------------------------------------------------------------ */
+/* Wishlist page                                                       */
+/* ------------------------------------------------------------------ */
+.wishlist-grid[hidden] {
+  display: none;
+}
+
+.wishlist-card .product-image-box {
+  position: relative;
+}
+
+.wishlist-card__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wishlist-card .product-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wishlist-card .product-name a:hover {
+  color: var(--color-accent, #b5a48b);
+}
+
+.wishlist-card .product-category {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-light, #999);
+  margin-bottom: 0.35rem;
+}
+
+.wishlist-card__compare {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-light, #999);
+  text-decoration: line-through;
+}
+
+.wishlist-card__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0.6rem 0 1rem;
+  font-size: 0.72rem;
+  color: var(--color-text-muted, #666);
+}
+
+.wishlist-card__colors {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.wishlist-card__swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border, #e8e8e1);
+  box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.wishlist-btn--remove {
+  font-size: 1.1rem;
+  line-height: 1;
+  font-family: inherit;
+}
+
+.wishlist-card__remove {
+  display: block;
+  width: 100%;
+  margin-top: 0.6rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #666);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.wishlist-card__remove:hover {
+  color: #a23b2a;
+}

@@ -15,6 +15,7 @@
 
   
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="velora-app.css">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -66,14 +67,14 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </a>
-        <a href="#" class="icon-btn" aria-label="Wishlist">
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path
               d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
             </path>
           </svg>
         </a>
-        <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+        <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -177,7 +178,7 @@
       <div class="product-grid">
 
         <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="men-black-cotton-polo-t-shirt">
           <div class="product-image-box">
             <span class="product-badge">New</span>
             <img src="https://assets.myntassets.com/h_1440,q_75,w_1080/v1/assets/images/16761982/2023/7/11/ca0e5ab2-b940-4c2a-8f12-d760c297cf1f1689057607794-max-Men-Black-Polo-Collar-T-shirt-1621689057607472-1.jpg"
@@ -195,7 +196,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="women-ruched-front-top">
           <div class="product-image-box">
             <img src="https://dynamic.zacdn.com/a46wQNfirWe3LBLu7hcMuBgC_t8=/filters:quality(70):format(webp)/https://static-ph.zacdn.com/p/asos-design-2604-5191143-1.jpg"
               alt="Ruched Front Top">
@@ -212,7 +213,7 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="men-linen-summer-shirt">
           <div class="product-image-box">
             <img src="https://d1pdzcnm6xgxlz.cloudfront.net/tops/8905875146254-9.jpg"
               alt="Linen Shirt">
@@ -229,7 +230,7 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="women-floral-midi-dress">
           <div class="product-image-box">
             <img src="https://www.only.in/cdn/shop/files/901450401_g0.jpg?v=1745914513&width=2048"
               alt="Floral Midi Dress">
@@ -268,7 +269,7 @@
   </section>
 
   <!-- Best Sellers Grid -->
-  <section class="products-section">
+  <section class="products-section" id="best-sellers">
     <div class="container">
 
       <div class="section-header">
@@ -279,7 +280,7 @@
       <div class="product-grid">
 
         <!-- Best Seller 1 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="men-leather-bomber-jacket">
           <div class="product-image-box">
             <img src="https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/F16801s.jpg?im=Resize,width=750"
               alt="Bomber Jacket">
@@ -296,7 +297,7 @@
         </div>
 
         <!-- Best Seller 2 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="fw-u-classic-white-sneakers">
           <div class="product-image-box">
             <img src="https://m.media-amazon.com/images/I/61q1X-zRMsL._AC_UY1000_.jpg"
               alt="White Sneakers">
@@ -313,7 +314,7 @@
         </div>
 
         <!-- Best Seller 3 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="men-blue-denim-jacket">
           <div class="product-image-box">
             <img src="https://www.permanentstyle.com/wp-content/uploads/2025/04/denim-jacket-style-500x688.jpg"
               alt="Blue Denim Jacket">
@@ -330,7 +331,7 @@
         </div>
 
         <!-- Best Seller 4 -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="acc-w-leather-handbag">
           <div class="product-image-box">
             <img src="https://img.tatacliq.com/images/i21//437Wx649H/MP000000024809708_437Wx649H_202412241818121.jpeg"
               alt="Black Handbag">
@@ -668,6 +669,14 @@
     </div>
   </div>
 
+  <!-- Velora shared JavaScript (deferred; order matters: storage -> products -> store -> header -> app) -->
+  <script src="js/storage.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart-ui.js" defer></script>
+  <script src="js/wishlist-ui.js" defer></script>
 </body>
 
 </html>

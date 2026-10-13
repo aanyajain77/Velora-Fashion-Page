@@ -17,6 +17,7 @@
 
   <!-- Dedicated Pure CSS Stylesheet for Men's Section -->
   <link rel="stylesheet" href="men_style.css">
+  <link rel="stylesheet" href="velora-app.css">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   
@@ -69,14 +70,14 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </a>
-        <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path
               d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
             </path>
           </svg>
         </a>
-        <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+        <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -233,7 +234,7 @@
       <div class="product-grid">
 
         <!-- Product 1: Blazer -->
-        <div class="product-card" id="suits">
+        <div class="product-card" data-product-id="men-tailored-beige-blazer" id="suits">
           <div class="product-image-box">
             <span class="product-badge">New</span>
             <img src="https://i.etsystatic.com/30819167/r/il/511733/4111155381/il_1080xN.4111155381_kgqo.jpg"
@@ -252,7 +253,7 @@
         </div>
 
         <!-- Product 2: Polo -->
-        <div class="product-card" id="tshirts">
+        <div class="product-card" data-product-id="men-black-cotton-polo-t-shirt" id="tshirts">
           <div class="product-image-box">
             <span class="product-badge">Popular</span>
             <img src="https://assets.ajio.com/medias/sys_master/root/20241018/Mtzn/6712123b260f9c41e883dd46/-473Wx593H-469705034-black-MODEL.jpg"
@@ -271,7 +272,7 @@
         </div>
 
         <!-- Product 3: Leather Bomber Jacket -->
-        <div class="product-card" id="jackets">
+        <div class="product-card" data-product-id="men-leather-bomber-jacket" id="jackets">
           <div class="product-image-box">
             <span class="product-badge">Best Seller</span>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB7hKk7g-GvOprheTksCZt16o_1Wsc8cbxy2FJ8FgpidzyjWBRYEjT-tvz&s=10"
@@ -290,7 +291,7 @@
         </div>
 
         <!-- Product 4: Linen Shirt -->
-        <div class="product-card" id="shirts">
+        <div class="product-card" data-product-id="men-linen-summer-shirt" id="shirts">
           <div class="product-image-box">
             <span class="product-badge">Trending</span>
             <img src="https://cottonfolk.in/cdn/shop/files/Men_s_collarless_summer_shirt_in_aqua.jpg?v=1748415278&width=2048"
@@ -309,7 +310,7 @@
         </div>
 
         <!-- Product 5: Blue Denim Jacket -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="men-blue-denim-jacket">
           <div class="product-image-box">
             <img src="https://www.urbanofashion.com/cdn/shop/files/jakt-denimvint-dblue_ea174286-d9fa-4e9f-9835-8f1a49b5ac28.jpg?v=1758282519"
               alt="Blue Denim Jacket">
@@ -327,7 +328,7 @@
         </div>
 
         <!-- Product 6: Jeans -->
-        <div class="product-card" id="jeans">
+        <div class="product-card" data-product-id="men-slim-dark-denim-jeans" id="jeans">
           <div class="product-image-box">
             <span class="product-badge">Must Have</span>
             <img src="https://www.jackjones.in/cdn/shop/files/139434301_g0.jpg?v=1779079314&width=2048"
@@ -346,7 +347,7 @@
         </div>
 
         <!-- Product 7: Heavyweight Oversized Hoodie -->
-        <div class="product-card" id="hoodies">
+        <div class="product-card" data-product-id="men-heavyweight-oversized-fleece-hoodie" id="hoodies">
           <div class="product-image-box">
             <span class="product-badge">New Arrival</span>
             <img src="https://www.dripmylook.in/cdn/shop/files/bg2.jpg?v=1731053355&width=3840"
@@ -365,7 +366,7 @@
         </div>
 
         <!-- Product 8: Wool Suit Jacket -->
-        <div class="product-card">
+        <div class="product-card" data-product-id="men-italian-wool-suit-jacket">
           <div class="product-image-box">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr1My-vXNER1RraoRTzpgLyDL4_pqx66vg7itnbNp8QMsIwK6KL7GTDnNW&s=10"
               alt="Italian Wool Suit Jacket">
@@ -580,6 +581,14 @@
     </div>
   </div>
 
+  <!-- Velora shared JavaScript (deferred; order matters: storage -> products -> store -> header -> app) -->
+  <script src="js/storage.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart-ui.js" defer></script>
+  <script src="js/wishlist-ui.js" defer></script>
 </body>
 
 </html>

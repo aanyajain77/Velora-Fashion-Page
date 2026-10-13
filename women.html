@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="women_style.css">
+  <link rel="stylesheet" href="velora-app.css">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -67,7 +68,7 @@
                     </svg>
                 </a>
 
-                <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path
                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
@@ -75,7 +76,7 @@
                     </svg>
                 </a>
 
-                <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -235,7 +236,7 @@
             <div class="product-grid">
 
                 <!-- Product 1: Silk Dress -->
-                <div class="product-card" id="dresses">
+                <div class="product-card" data-product-id="women-silk-satin-evening-dress" id="dresses">
                     <div class="product-image-box">
                         <span class="product-badge">New</span>
                         <img src="https://www.forevernew.co.in/cdn/shop/files/30048501_s.jpg?v=1782061191&width=3840"
@@ -254,7 +255,7 @@
                 </div>
 
                 <!-- Product 2: Satin Wrap Blouse -->
-                <div class="product-card" id="tops">
+                <div class="product-card" data-product-id="women-ivory-satin-wrap-blouse" id="tops">
                     <div class="product-image-box">
                         <span class="product-badge">Popular</span>
                         <img src="https://www.stfrock.com.au/cdn/shop/files/251009_StFrock_Maddie_AM_T1770D-WHT_1033.jpg?v=1764034310&width=700"
@@ -273,7 +274,7 @@
                 </div>
 
                 <!-- Product 3: Wool Trench Coat -->
-                <div class="product-card" id="jackets">
+                <div class="product-card" data-product-id="women-camel-wool-trench-coat" id="jackets">
                     <div class="product-image-box">
                         <span class="product-badge">Best Seller</span>
                         <img src="https://i.etsystatic.com/62415535/r/il/e1304d/7543635429/il_570xN.7543635429_fq1x.jpg"
@@ -292,7 +293,7 @@
                 </div>
 
                 <!-- Product 4: High-Waisted Flare Jeans -->
-                <div class="product-card" id="jeans">
+                <div class="product-card" data-product-id="women-high-rise-straight-flare-jeans" id="jeans">
                     <div class="product-image-box">
                         <span class="product-badge">Trending</span>
                         <img src="https://static.cilory.com/866869-large_default/high-waist-flared-denim-jeans.jpg.webp"
@@ -311,7 +312,7 @@
                 </div>
 
                 <!-- Product 5: Pleated Midi Skirt -->
-                <div class="product-card" id="skirts">
+                <div class="product-card" data-product-id="women-metallic-pleated-midi-skirt" id="skirts">
                     <div class="product-image-box">
                         <img src="https://m.media-amazon.com/images/I/71K+wo1Sm7L.jpg"
                             alt="Metallic Pleated Midi Skirt">
@@ -329,7 +330,7 @@
                 </div>
 
                 <!-- Product 6: Leather Handbag -->
-                <div class="product-card" id="bags">
+                <div class="product-card" data-product-id="women-designer-leather-crossbody-bag" id="bags">
                     <div class="product-image-box">
                         <span class="product-badge">Must Have</span>
                         <img src="https://rukmini1.flixcart.com/image/1500/1500/xif0q/sling-bag/o/q/e/women-s-faux-leather-crossbody-sling-bag-flap-style-shoulder-bag-resized-original-imahg84fjnhq7ryq.jpeg?q=70"
@@ -348,7 +349,7 @@
                 </div>
 
                 <!-- Product 7: Cashmere Knit Sweater -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="women-oversized-cashmere-knit-sweater">
                     <div class="product-image-box">
                         <img src="https://image.made-in-china.com/202f0j00gpoqTvKnANcR/Wholesale-Manufacturer-Trendy-Design-Turtleneck-Cable-Knit-Oversize-Solid-Color-Cashmere-Women-Sweater-for-Winter.webp"
                             alt="Oversized Soft Cashmere Sweater">
@@ -366,7 +367,7 @@
                 </div>
 
                 <!-- Product 8: Tailored Blazer -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="women-tailored-double-breasted-blazer">
                     <div class="product-image-box">
                         <img src="https://showoffff.in/cdn/shop/files/CHN-GD-004_Teal_2_9a1e23fc-91ff-4b22-9442-e5e0dd660642.jpg?v=1778332456&width=1080"
                             alt="Tailored Double-Breasted Linen Blazer">
@@ -580,6 +581,14 @@
         </div>
     </div>
 
+  <!-- Velora shared JavaScript (deferred; order matters: storage -> products -> store -> header -> app) -->
+  <script src="js/storage.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart-ui.js" defer></script>
+  <script src="js/wishlist-ui.js" defer></script>
 </body>
 
 </html>

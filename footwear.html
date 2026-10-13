@@ -17,6 +17,7 @@
 
     <!-- Dedicated Pure CSS Stylesheet for Footwear -->
     <link rel="stylesheet" href="footwear_style.css">
+  <link rel="stylesheet" href="velora-app.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 
@@ -71,14 +72,14 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </a>
-                <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path
                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                         </path>
                     </svg>
                 </a>
-                <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -209,7 +210,7 @@
                 <div class="product-grid">
 
                     <!-- Product 1 -->
-                    <div class="product-card" id="w-heels">
+                    <div class="product-card" data-product-id="fw-w-velora-105mm-italian-leather-stiletto-pumps" id="w-heels">
                         <span class="product-badge accent-badge">ITALIAN LEATHER</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -238,7 +239,7 @@
                     </div>
 
                     <!-- Product 2 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-crystal-embellished-evening-strappy-heels">
                         <span class="product-badge">BESTSELLER</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -266,7 +267,7 @@
                     </div>
 
                     <!-- Product 3 -->
-                    <div class="product-card" id="w-sneakers">
+                    <div class="product-card" data-product-id="fw-w-minimalist-calfskin-leather-white-sneakers" id="w-sneakers">
                         <span class="product-badge accent-badge">NEW</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -294,7 +295,7 @@
                     </div>
 
                     <!-- Product 4 -->
-                    <div class="product-card" id="w-sandals">
+                    <div class="product-card" data-product-id="fw-w-pointed-toe-patent-leather-mules" id="w-sandals">
                         <span class="product-badge">HANDCRAFTED</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -322,7 +323,7 @@
                     </div>
 
                     <!-- Product 5 -->
-                    <div class="product-card" id="w-boots">
+                    <div class="product-card" data-product-id="fw-w-suede-ankle-boots-with-sculpted-heel" id="w-boots">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -349,7 +350,7 @@
                     </div>
 
                     <!-- Product 6 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-chunky-platform-lug-sole-loafers">
                         <span class="product-badge accent-badge">TRENDING</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -376,7 +377,7 @@
                     </div>
 
                     <!-- Product 7 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-velvet-ankle-strap-block-heels">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -403,7 +404,7 @@
                     </div>
 
                     <!-- Product 8 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-metallic-strappy-gladiator-sandals">
                         <span class="product-badge accent-badge">SUMMER LUXE</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -430,7 +431,7 @@
                     </div>
 
                     <!-- Product 9 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-italian-leather-knee-high-riding-boots">
                         <span class="product-badge accent-badge">ITALIAN LEATHER</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -458,7 +459,7 @@
                     </div>
 
                     <!-- Product 10 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-woven-leather-summer-flat-slides">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -484,7 +485,7 @@
                     </div>
 
                     <!-- Product 11 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-pointed-ballerina-flats-with-bow-detail">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -511,7 +512,7 @@
                     </div>
 
                     <!-- Product 12 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-w-retro-platform-heeled-sandals">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -638,7 +639,7 @@
                 <div class="product-grid">
 
                     <!-- Men Product 1 -->
-                    <div class="product-card" id="m-oxfords">
+                    <div class="product-card" data-product-id="fw-m-hand-burnished-italian-leather-oxfords" id="m-oxfords">
                         <span class="product-badge accent-badge">ITALIAN LEATHER</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -666,7 +667,7 @@
                     </div>
 
                     <!-- Men Product 2 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-cap-toe-double-monk-strap-dress-shoes">
                         <span class="product-badge">HANDCRAFTED</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -694,7 +695,7 @@
                     </div>
 
                     <!-- Men Product 3 -->
-                    <div class="product-card" id="m-sneakers">
+                    <div class="product-card" data-product-id="fw-m-minimalist-nappa-leather-low-top-sneakers" id="m-sneakers">
                         <span class="product-badge">BESTSELLER</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -723,7 +724,7 @@
                     </div>
 
                     <!-- Men Product 4 -->
-                    <div class="product-card" id="m-loafers">
+                    <div class="product-card" data-product-id="fw-m-classic-suede-penny-loafers" id="m-loafers">
                         <span class="product-badge accent-badge">NEW</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -751,7 +752,7 @@
                     </div>
 
                     <!-- Men Product 5 -->
-                    <div class="product-card" id="m-boots">
+                    <div class="product-card" data-product-id="fw-m-handcrafted-calfskin-chelsea-boots" id="m-boots">
                         <span class="product-badge accent-badge">ITALIAN LEATHER</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -779,7 +780,7 @@
                     </div>
 
                     <!-- Men Product 6 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-bit-driver-loafers-with-gold-hardware">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -806,7 +807,7 @@
                     </div>
 
                     <!-- Men Product 7 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-rugged-leather-lace-up-combat-boots">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -833,7 +834,7 @@
                     </div>
 
                     <!-- Men Product 8 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-suede-venetian-slip-on-loafers">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -860,7 +861,7 @@
                     </div>
 
                     <!-- Men Product 9 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-retro-high-top-italian-leather-sneakers">
                         <span class="product-badge accent-badge">TRENDING</span>
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -888,7 +889,7 @@
                     </div>
 
                     <!-- Men Product 10 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-woven-calfskin-summer-slides">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -915,7 +916,7 @@
                     </div>
 
                     <!-- Men Product 11 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-cap-toe-brogue-leather-shoes">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -942,7 +943,7 @@
                     </div>
 
                     <!-- Men Product 12 -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="fw-m-casual-canvas-and-suede-espadrilles">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -1147,7 +1148,7 @@
     </footer>
 
     <!-- PURE CSS QUICK VIEW MODALS FOR WOMEN -->
-    <div id="quick-view-w1" class="modal-overlay">
+    <div id="quick-view-w1" class="modal-overlay" data-product-id="fw-w-velora-105mm-italian-leather-stiletto-pumps">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1176,7 +1177,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w2" class="modal-overlay">
+    <div id="quick-view-w2" class="modal-overlay" data-product-id="fw-w-crystal-embellished-evening-strappy-heels">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1204,7 +1205,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w3" class="modal-overlay">
+    <div id="quick-view-w3" class="modal-overlay" data-product-id="fw-w-minimalist-calfskin-leather-white-sneakers">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1232,7 +1233,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w4" class="modal-overlay">
+    <div id="quick-view-w4" class="modal-overlay" data-product-id="fw-w-pointed-toe-patent-leather-mules">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1260,7 +1261,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w5" class="modal-overlay">
+    <div id="quick-view-w5" class="modal-overlay" data-product-id="fw-w-suede-ankle-boots-with-sculpted-heel">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1288,7 +1289,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w6" class="modal-overlay">
+    <div id="quick-view-w6" class="modal-overlay" data-product-id="fw-w-chunky-platform-lug-sole-loafers">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1316,7 +1317,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w7" class="modal-overlay">
+    <div id="quick-view-w7" class="modal-overlay" data-product-id="fw-w-velvet-ankle-strap-block-heels">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1344,7 +1345,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w8" class="modal-overlay">
+    <div id="quick-view-w8" class="modal-overlay" data-product-id="fw-w-metallic-strappy-gladiator-sandals">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1372,7 +1373,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w9" class="modal-overlay">
+    <div id="quick-view-w9" class="modal-overlay" data-product-id="fw-w-italian-leather-knee-high-riding-boots">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1400,7 +1401,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w10" class="modal-overlay">
+    <div id="quick-view-w10" class="modal-overlay" data-product-id="fw-w-woven-leather-summer-flat-slides">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1428,7 +1429,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w11" class="modal-overlay">
+    <div id="quick-view-w11" class="modal-overlay" data-product-id="fw-w-pointed-ballerina-flats-with-bow-detail">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1456,7 +1457,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w12" class="modal-overlay">
+    <div id="quick-view-w12" class="modal-overlay" data-product-id="fw-w-retro-platform-heeled-sandals">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1485,7 +1486,7 @@
     </div>
 
     <!-- PURE CSS QUICK VIEW MODALS FOR MEN -->
-    <div id="quick-view-m1" class="modal-overlay">
+    <div id="quick-view-m1" class="modal-overlay" data-product-id="fw-m-hand-burnished-italian-leather-oxfords">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1513,7 +1514,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m2" class="modal-overlay">
+    <div id="quick-view-m2" class="modal-overlay" data-product-id="fw-m-cap-toe-double-monk-strap-dress-shoes">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1541,7 +1542,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m3" class="modal-overlay">
+    <div id="quick-view-m3" class="modal-overlay" data-product-id="fw-m-minimalist-nappa-leather-low-top-sneakers">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1569,7 +1570,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m4" class="modal-overlay">
+    <div id="quick-view-m4" class="modal-overlay" data-product-id="fw-m-classic-suede-penny-loafers">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1597,7 +1598,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m5" class="modal-overlay">
+    <div id="quick-view-m5" class="modal-overlay" data-product-id="fw-m-handcrafted-calfskin-chelsea-boots">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1625,7 +1626,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m6" class="modal-overlay">
+    <div id="quick-view-m6" class="modal-overlay" data-product-id="fw-m-bit-driver-loafers-with-gold-hardware">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1653,7 +1654,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m7" class="modal-overlay">
+    <div id="quick-view-m7" class="modal-overlay" data-product-id="fw-m-rugged-leather-lace-up-combat-boots">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1681,7 +1682,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m8" class="modal-overlay">
+    <div id="quick-view-m8" class="modal-overlay" data-product-id="fw-m-suede-venetian-slip-on-loafers">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1709,7 +1710,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m9" class="modal-overlay">
+    <div id="quick-view-m9" class="modal-overlay" data-product-id="fw-m-retro-high-top-italian-leather-sneakers">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1737,7 +1738,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m10" class="modal-overlay">
+    <div id="quick-view-m10" class="modal-overlay" data-product-id="fw-m-woven-calfskin-summer-slides">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1765,7 +1766,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m11" class="modal-overlay">
+    <div id="quick-view-m11" class="modal-overlay" data-product-id="fw-m-cap-toe-brogue-leather-shoes">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1793,7 +1794,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m12" class="modal-overlay">
+    <div id="quick-view-m12" class="modal-overlay" data-product-id="fw-m-casual-canvas-and-suede-espadrilles">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1880,6 +1881,14 @@
         </div>
     </div>
 
+  <!-- Velora shared JavaScript (deferred; order matters: storage -> products -> store -> header -> app) -->
+  <script src="js/storage.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart-ui.js" defer></script>
+  <script src="js/wishlist-ui.js" defer></script>
 </body>
 
 </html>

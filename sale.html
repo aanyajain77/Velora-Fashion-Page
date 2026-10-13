@@ -17,6 +17,7 @@
 
     <!-- Dedicated Pure CSS Stylesheet for Sales & Offers -->
     <link rel="stylesheet" href="sale_style.css">
+  <link rel="stylesheet" href="velora-app.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 
@@ -68,14 +69,14 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </a>
-                <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path
                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                         </path>
                     </svg>
                 </a>
-                <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -158,7 +159,7 @@
             <div class="product-grid">
 
                 <!-- Deal Item 1 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-velora-italian-leather-stiletto-pumps">
                     <span class="discount-badge">50% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -185,7 +186,7 @@
                 </div>
 
                 <!-- Deal Item 2 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-hand-burnished-italian-leather-oxfords">
                     <span class="discount-badge">40% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -212,7 +213,7 @@
                 </div>
 
                 <!-- Deal Item 3 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-quilted-leather-chain-shoulder-bag">
                     <span class="discount-badge">55% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -239,7 +240,7 @@
                 </div>
 
                 <!-- Deal Item 4 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-wool-blend-double-breasted-trench-coat">
                     <span class="discount-badge">45% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -266,7 +267,7 @@
                 </div>
 
                 <!-- Deal Item 5 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-18k-gold-plated-layered-pendant-necklace">
                     <span class="discount-badge">60% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -293,7 +294,7 @@
                 </div>
 
                 <!-- Deal Item 6 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-minimalist-nappa-leather-sneakers">
                     <span class="discount-badge">35% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -320,7 +321,7 @@
                 </div>
 
                 <!-- Deal Item 7 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-tailored-italian-wool-double-breasted-blazer">
                     <span class="discount-badge">50% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -347,7 +348,7 @@
                 </div>
 
                 <!-- Deal Item 8 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="sale-gradient-tinted-retro-square-sunglasses">
                     <span class="discount-badge">40% OFF</span>
                     <button class="wishlist-btn" aria-label="Add to Wishlist">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -602,7 +603,7 @@
     </footer>
 
     <!-- Quick View Modals for Deals -->
-    <div id="quick-view-deal1" class="modal-overlay">
+    <div id="quick-view-deal1" class="modal-overlay" data-product-id="sale-velora-italian-leather-stiletto-pumps">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -621,7 +622,7 @@
         </div>
     </div>
 
-    <div id="quick-view-deal2" class="modal-overlay">
+    <div id="quick-view-deal2" class="modal-overlay" data-product-id="sale-hand-burnished-italian-leather-oxfords">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -639,7 +640,7 @@
         </div>
     </div>
 
-    <div id="quick-view-deal3" class="modal-overlay">
+    <div id="quick-view-deal3" class="modal-overlay" data-product-id="sale-quilted-leather-chain-shoulder-bag">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -657,7 +658,7 @@
         </div>
     </div>
 
-    <div id="quick-view-deal4" class="modal-overlay">
+    <div id="quick-view-deal4" class="modal-overlay" data-product-id="sale-wool-blend-double-breasted-trench-coat">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -675,7 +676,7 @@
         </div>
     </div>
 
-    <div id="quick-view-deal5" class="modal-overlay">
+    <div id="quick-view-deal5" class="modal-overlay" data-product-id="sale-18k-gold-plated-layered-pendant-necklace">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -693,7 +694,7 @@
         </div>
     </div>
 
-    <div id="quick-view-deal6" class="modal-overlay">
+    <div id="quick-view-deal6" class="modal-overlay" data-product-id="sale-minimalist-nappa-leather-sneakers">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -711,7 +712,7 @@
         </div>
     </div>
 
-    <div id="quick-view-deal7" class="modal-overlay">
+    <div id="quick-view-deal7" class="modal-overlay" data-product-id="sale-tailored-italian-wool-double-breasted-blazer">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -729,7 +730,7 @@
         </div>
     </div>
 
-    <div id="quick-view-deal8" class="modal-overlay">
+    <div id="quick-view-deal8" class="modal-overlay" data-product-id="sale-gradient-tinted-retro-square-sunglasses">
         <div class="modal-box">
             <a href="#live-deals" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -806,6 +807,14 @@
         </div>
     </div>
 
+  <!-- Velora shared JavaScript (deferred; order matters: storage -> products -> store -> header -> app) -->
+  <script src="js/storage.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart-ui.js" defer></script>
+  <script src="js/wishlist-ui.js" defer></script>
 </body>
 
 </html>

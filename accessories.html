@@ -17,6 +17,7 @@
 
     <!-- Dedicated Pure CSS Stylesheet for Accessories -->
     <link rel="stylesheet" href="accessories_style.css">
+  <link rel="stylesheet" href="velora-app.css">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <style>
@@ -82,14 +83,14 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </a>
-                <a href="#login-modal" class="icon-btn" aria-label="Wishlist">
+                <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path
                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                         </path>
                     </svg>
                 </a>
-                <a href="#login-modal" class="icon-btn" aria-label="Shopping Cart">
+                <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -233,7 +234,7 @@
                 <div class="products-grid">
 
                     <!-- Women Product 1: 18K Gold Layered Herringbone Chain -->
-                    <div class="product-card" id="w-jewelry">
+                    <div class="product-card" data-product-id="acc-w-18k-gold-layered-herringbone-chain-necklace" id="w-jewelry">
                         <div class="product-badge-group">
                             <span class="badge-tag">Bestseller</span>
                         </div>
@@ -266,7 +267,7 @@
                     </div>
 
                     <!-- Women Product 2: Italian Leather Quilted Shoulder Purse -->
-                    <div class="product-card" id="w-bags">
+                    <div class="product-card" data-product-id="acc-w-velora-quilted-italian-leather-shoulder-purse" id="w-bags">
                         <div class="product-badge-group">
                             <span class="badge-tag sale">-15%</span>
                         </div>
@@ -301,7 +302,7 @@
                     </div>
 
                     <!-- Women Product 3: 18K Gold Plated Body & Waist Chain -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-velora-luxe-18k-gold-plated-delicate-waist-chain">
                         <div class="product-badge-group">
                             <span class="badge-tag sale">-15%</span>
                             <span class="badge-tag">Trending</span>
@@ -336,7 +337,7 @@
                     </div>
 
                     <!-- Women Product 4: Oversized Retro Cat-Eye Sunglasses -->
-                    <div class="product-card" id="w-sunglasses">
+                    <div class="product-card" data-product-id="acc-w-oversized-retro-cat-eye-sunglasses" id="w-sunglasses">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -366,7 +367,7 @@
                     </div>
 
                     <!-- Women Product 5: Wide-Brimmed Artisanal Straw Sun Hat -->
-                    <div class="product-card" id="w-hats">
+                    <div class="product-card" data-product-id="acc-w-wide-brimmed-artisanal-straw-sun-hat" id="w-hats">
                         <div class="product-badge-group">
                             <span class="badge-tag">Artisanal</span>
                         </div>
@@ -399,7 +400,7 @@
                     </div>
 
                     <!-- Women Product 6: Handcrafted Structured Leather Tote Bag -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-handcrafted-structured-leather-city-tote-bag">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -429,7 +430,7 @@
                     </div>
 
                     <!-- Women Product 7: Diamond-Cut Pearl & Gold Charm Bracelet -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-freshwater-pearl-and-18k-gold-charm-bracelet">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -459,7 +460,7 @@
                     </div>
 
                     <!-- Women Product 8: Emerald & Solitaire Crystal Ring Set -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-emerald-cut-crystal-and-gold-stacking-ring-set">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -489,7 +490,7 @@
                     </div>
 
                     <!-- Women Product 9: Gold Chain Evening Envelope Clutch Purse -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-gold-chain-satin-evening-envelope-clutch-purse">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -519,7 +520,7 @@
                     </div>
 
                     <!-- Women Product 10: 100% Wool Felt French Beret -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-100-australian-wool-felt-parisian-beret">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -549,7 +550,7 @@
                     </div>
 
                     <!-- Women Product 11: Cubic Zirconia Sparkle Tennis Bracelet -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-cubic-zirconia-diamond-tennis-bracelet">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -580,7 +581,7 @@
                     </div>
 
                     <!-- Women Product 12: Gradient Tinted Retro Square Sunglasses -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-w-gradient-tinted-retro-square-sunglasses">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -715,7 +716,7 @@
                 <div class="products-grid">
 
                     <!-- Product 1: Weekender Leather Bag / Purse -->
-                    <div class="product-card" id="m-bags">
+                    <div class="product-card" data-product-id="acc-m-velora-heritage-leather-weekender-bag" id="m-bags">
                         <div class="product-badge-group">
                             <span class="badge-tag sale">-18%</span>
                             <span class="badge-tag">Bestseller</span>
@@ -752,7 +753,7 @@
                     </div>
 
                     <!-- Product 2: Italian Suede Loafers / Shoes -->
-                    <div class="product-card" id="m-footwear">
+                    <div class="product-card" data-product-id="acc-m-artisanal-italian-suede-penny-loafers" id="m-footwear">
                         <div class="product-badge-group">
                             <span class="badge-tag">New</span>
                         </div>
@@ -785,7 +786,7 @@
                     </div>
 
                     <!-- Product 3: 925 Sterling Silver Cuban Link Chain -->
-                    <div class="product-card" id="m-chains">
+                    <div class="product-card" data-product-id="acc-m-925-sterling-silver-heavy-cuban-link-chain" id="m-chains">
                         <div class="product-badge-group">
                             <span class="badge-tag">Handmade</span>
                         </div>
@@ -818,7 +819,7 @@
                     </div>
 
                     <!-- Product 4: Black Onyx Gold Signet Ring -->
-                    <div class="product-card" id="m-rings">
+                    <div class="product-card" data-product-id="acc-m-18k-gold-plated-black-onyx-signet-ring" id="m-rings">
                         <div class="product-badge-group">
                             <span class="badge-tag sale">-20%</span>
                         </div>
@@ -852,7 +853,7 @@
                     </div>
 
                     <!-- Product 5: City Leather Crossbody Purse Bag -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-structured-leather-city-crossbody-purse">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -882,7 +883,7 @@
                     </div>
 
                     <!-- Product 6: Chelsea Leather Boots / Shoes -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-goodyear-welted-chelsea-leather-boots">
                         <div class="product-badge-group">
                             <span class="badge-tag">Handcrafted</span>
                         </div>
@@ -915,7 +916,7 @@
                     </div>
 
                     <!-- Product 7: 18K Gold Plated Bar Pendant Chain -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-18k-gold-plated-minimalist-bar-pendant-chain">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -945,7 +946,7 @@
                     </div>
 
                     <!-- Product 8: Brushed Titanium & Sapphire Ring -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-brushed-titanium-and-sapphire-signet-ring">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -976,7 +977,7 @@
                     </div>
 
                     <!-- Product 9: Automatic Mechanical Chronograph Watch -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-automatic-mechanical-chronograph-watch">
                         <div class="product-badge-group">
                             <span class="badge-tag sale">-13%</span>
                             <span class="badge-tag">Luxury</span>
@@ -1011,7 +1012,7 @@
                     </div>
 
                     <!-- Product 10: Vintage Square Acetate Sunglasses -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-vintage-square-acetate-sunglasses">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -1041,7 +1042,7 @@
                     </div>
 
                     <!-- Product 11: Full-Grain Italian Leather Dress Belt -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-full-grain-italian-leather-reversible-dress-belt">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -1072,7 +1073,7 @@
                     </div>
 
                     <!-- Product 12: Bifold Leather Cardholder Purse & Wallet -->
-                    <div class="product-card">
+                    <div class="product-card" data-product-id="acc-m-slim-bifold-leather-cardholder-wallet-purse">
                         <button class="wishlist-btn" aria-label="Add to Wishlist">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path
@@ -1150,7 +1151,7 @@
     </section>
 
     <!-- PURE CSS QUICK VIEW MODALS FOR WOMEN -->
-    <div id="quick-view-w1" class="modal-overlay">
+    <div id="quick-view-w1" class="modal-overlay" data-product-id="acc-w-18k-gold-layered-herringbone-chain-necklace">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1171,7 +1172,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w2" class="modal-overlay">
+    <div id="quick-view-w2" class="modal-overlay" data-product-id="acc-w-velora-quilted-italian-leather-shoulder-purse">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1193,7 +1194,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w3" class="modal-overlay">
+    <div id="quick-view-w3" class="modal-overlay" data-product-id="acc-w-velora-luxe-18k-gold-plated-delicate-waist-chain">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1215,7 +1216,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w4" class="modal-overlay">
+    <div id="quick-view-w4" class="modal-overlay" data-product-id="acc-w-oversized-retro-cat-eye-sunglasses">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1236,7 +1237,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w5" class="modal-overlay">
+    <div id="quick-view-w5" class="modal-overlay" data-product-id="acc-w-wide-brimmed-artisanal-straw-sun-hat">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1257,7 +1258,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w6" class="modal-overlay">
+    <div id="quick-view-w6" class="modal-overlay" data-product-id="acc-w-handcrafted-structured-leather-city-tote-bag">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1278,7 +1279,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w7" class="modal-overlay">
+    <div id="quick-view-w7" class="modal-overlay" data-product-id="acc-w-freshwater-pearl-and-18k-gold-charm-bracelet">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1299,7 +1300,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w8" class="modal-overlay">
+    <div id="quick-view-w8" class="modal-overlay" data-product-id="acc-w-emerald-cut-crystal-and-gold-stacking-ring-set">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1320,7 +1321,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w9" class="modal-overlay">
+    <div id="quick-view-w9" class="modal-overlay" data-product-id="acc-w-gold-chain-satin-evening-envelope-clutch-purse">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1341,7 +1342,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w10" class="modal-overlay">
+    <div id="quick-view-w10" class="modal-overlay" data-product-id="acc-w-100-australian-wool-felt-parisian-beret">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1362,7 +1363,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w11" class="modal-overlay">
+    <div id="quick-view-w11" class="modal-overlay" data-product-id="acc-w-cubic-zirconia-diamond-tennis-bracelet">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1383,7 +1384,7 @@
         </div>
     </div>
 
-    <div id="quick-view-w12" class="modal-overlay">
+    <div id="quick-view-w12" class="modal-overlay" data-product-id="acc-w-gradient-tinted-retro-square-sunglasses">
         <div class="modal-box">
             <a href="#products-women" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1405,7 +1406,7 @@
     </div>
 
     <!-- PURE CSS QUICK VIEW MODALS FOR MEN -->
-    <div id="quick-view-m1" class="modal-overlay">
+    <div id="quick-view-m1" class="modal-overlay" data-product-id="acc-m-velora-heritage-leather-weekender-bag">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1427,7 +1428,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m2" class="modal-overlay">
+    <div id="quick-view-m2" class="modal-overlay" data-product-id="acc-m-artisanal-italian-suede-penny-loafers">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1448,7 +1449,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m3" class="modal-overlay">
+    <div id="quick-view-m3" class="modal-overlay" data-product-id="acc-m-925-sterling-silver-heavy-cuban-link-chain">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1469,7 +1470,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m4" class="modal-overlay">
+    <div id="quick-view-m4" class="modal-overlay" data-product-id="acc-m-18k-gold-plated-black-onyx-signet-ring">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1491,7 +1492,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m5" class="modal-overlay">
+    <div id="quick-view-m5" class="modal-overlay" data-product-id="acc-m-structured-leather-city-crossbody-purse">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1512,7 +1513,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m6" class="modal-overlay">
+    <div id="quick-view-m6" class="modal-overlay" data-product-id="acc-m-goodyear-welted-chelsea-leather-boots">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1533,7 +1534,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m7" class="modal-overlay">
+    <div id="quick-view-m7" class="modal-overlay" data-product-id="acc-m-18k-gold-plated-minimalist-bar-pendant-chain">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1554,7 +1555,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m8" class="modal-overlay">
+    <div id="quick-view-m8" class="modal-overlay" data-product-id="acc-m-brushed-titanium-and-sapphire-signet-ring">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1575,7 +1576,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m9" class="modal-overlay">
+    <div id="quick-view-m9" class="modal-overlay" data-product-id="acc-m-automatic-mechanical-chronograph-watch">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1597,7 +1598,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m10" class="modal-overlay">
+    <div id="quick-view-m10" class="modal-overlay" data-product-id="acc-m-vintage-square-acetate-sunglasses">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1618,7 +1619,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m11" class="modal-overlay">
+    <div id="quick-view-m11" class="modal-overlay" data-product-id="acc-m-full-grain-italian-leather-reversible-dress-belt">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1639,7 +1640,7 @@
         </div>
     </div>
 
-    <div id="quick-view-m12" class="modal-overlay">
+    <div id="quick-view-m12" class="modal-overlay" data-product-id="acc-m-slim-bifold-leather-cardholder-wallet-purse">
         <div class="modal-box">
             <a href="#products-men" class="modal-close" aria-label="Close Modal">&times;</a>
             <div class="quickview-grid">
@@ -1812,22 +1813,15 @@
         </div>
     </footer>
 
-    <script>
-document.querySelectorAll('img').forEach(img => {
-    if (img.complete) {
-        img.classList.add('loaded');
-    } else {
-        img.addEventListener('load', () => {
-            img.classList.add('loaded');
-        });
 
-        img.addEventListener('error', () => {
-            img.classList.add('loaded');
-        });
-    }
-});
-</script>
-
+  <!-- Velora shared JavaScript (deferred; order matters: storage -> products -> store -> header -> app) -->
+  <script src="js/storage.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart-ui.js" defer></script>
+  <script src="js/wishlist-ui.js" defer></script>
 </body>
 
 </html>
