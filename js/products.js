@@ -108,6 +108,40 @@
 
   const BY_ID = new Map(PRODUCTS.map((p) => [p.id, p]));
 
+  /** Lower-case, trimmed, single-spaced text for matching. */
+  function normalize(text) {
+    return String(text == null ? '' : text).toLowerCase().replace(/\s+/g, ' ').trim();
+  }
+
+  const GENDER_WORDS = { men: "men mens men's male", women: "women womens women's female ladies", unisex: 'unisex men women' };
+  // Words that only count when they start a word, so "men" never matches "women".
+  const WHOLE_WORD_ONLY = new Set(['men', 'man', 'mens', "men's", 'women', 'woman']);
+
+  function escapeRegExp(text) { return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  /** A query word matches when it starts a word in the text, or appears inside one (except gender words). */
+  function matchesWord(idx, word) {
+    if (idx.prefixRe(word)) return true;
+    if (WHOLE_WORD_ONLY.has(word)) return false;
+    return idx.all.includes(word);
+  }
+
+  // Pre-built search text per product so typing stays instant.
+  const INDEX = new Map(PRODUCTS.map((p) => {
+    const name = normalize(p.name);
+    const category = normalize(p.category);
+    const subcategory = normalize(p.subcategory);
+    const all = normalize([
+      name, category, subcategory, GENDER_WORDS[p.gender] || '',
+      (p.colors || []).map((c) => c.name).join(' '),
+      p.badge || '', p.description || '', p.alt || '',
+      (p.sizes || []).join(' '),
+      p.compareAtPrice != null && p.compareAtPrice > p.price ? 'sale discount offer' : '',
+    ].join(' '));
+    const prefixRe = (word) => new RegExp(`(^|[^a-z0-9])${escapeRegExp(word)}`).test(all);
+    return [p.id, { name, category, subcategory, all, prefixRe }];
+  }));
+
   const SIZE_LABEL = {
     men: 'Size', women: 'Size', accessories: 'Size', footwear: 'EU Size', sale: 'Size',
   };
@@ -120,11 +154,32 @@
     has(id) { return BY_ID.has(String(id)); },
     byCategory(category) { return PRODUCTS.filter((p) => p.category === category); },
     byGender(gender) { return PRODUCTS.filter((p) => p.gender === gender || p.gender === 'unisex'); },
+    /**
+     * Case-insensitive partial-match search over name, category, subcategory,
+     * gender, colour names, badge, description, alt text and sizes. Every
+     * whitespace-separated word of the query must match somewhere ("red
+     * dress" finds red dresses). Results are ranked: name matches first,
+     * then category/subcategory, then everything else.
+     */
     search(query) {
-      const q = String(query || '').trim().toLowerCase();
+      const q = normalize(query);
       if (!q) return [];
-      return PRODUCTS.filter((p) =>
-        p.name.toLowerCase().includes(q) || p.subcategory.toLowerCase().includes(q) || p.category.includes(q));
+      const words = q.split(' ');
+      const scored = [];
+      PRODUCTS.forEach((p) => {
+        const idx = INDEX.get(p.id);
+        if (!words.every((w) => matchesWord(idx, w))) return;
+        let score = 0;
+        if (idx.name === q) score += 100;
+        else if (idx.name.startsWith(q)) score += 60;
+        else if (idx.name.includes(q)) score += 40;
+        if (words.every((w) => idx.name.includes(w))) score += 20;
+        if (words.some((w) => idx.category.includes(w))) score += 15;
+        if (idx.subcategory.includes(q)) score += 15;
+        scored.push({ p, score });
+      });
+      scored.sort((a, b) => b.score - a.score || a.p.name.localeCompare(b.p.name));
+      return scored.map((s) => s.p);
     },
     /** Products that are discounted (sale deals and marked-down catalog items). */
     onSale() { return PRODUCTS.filter((p) => p.compareAtPrice != null && p.compareAtPrice > p.price); },
