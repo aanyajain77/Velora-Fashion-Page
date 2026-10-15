@@ -16,6 +16,7 @@
   
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="velora-app.css">
+  <link rel="stylesheet" href="profile_style.css">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -315,10 +316,83 @@
     </div>
   </div>
 
-  <!-- Velora shared JavaScript (deferred; order matters: storage -> products -> store -> header -> app) -->
+  <!-- Velora Luxury Checkout Modal -->
+  <div id="checkout-modal" class="velora-modal" hidden role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title">
+    <div class="velora-modal__box" style="max-width: 600px;">
+      <button type="button" class="velora-modal__close" id="close-checkout-modal" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="auth-pre-title">Express Checkout</span>
+        <h3 id="checkout-modal-title" class="modal-title">Complete Your Order</h3>
+        <p class="modal-subtitle">Review shipping destination and payment method.</p>
+      </div>
+
+      <div id="checkout-alert" class="auth-alert" hidden>
+        <span id="checkout-alert-text"></span>
+      </div>
+
+      <form id="checkout-form" novalidate>
+        <!-- Delivery Address Section -->
+        <div style="margin-bottom: 1.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.5rem;">
+            <label class="form-label" for="checkout-address-select">Delivery Address <span class="required-star">*</span></label>
+            <a href="profile.html#addresses" target="_blank" class="btn-text-link">+ Manage in Address Book</a>
+          </div>
+          <select id="checkout-address-select" class="form-select" required>
+            <option value="" disabled selected>Select a saved delivery address...</option>
+          </select>
+          <div id="checkout-address-preview" style="display:none; font-size:0.8rem; background:var(--color-bg); padding:0.75rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); margin-top:0.5rem; line-height:1.45;"></div>
+        </div>
+
+        <!-- Payment Method Section -->
+        <div style="margin-bottom: 1.5rem;">
+          <label class="form-label" style="margin-bottom:0.5rem; display:block;">Payment Method <span class="required-star">*</span></label>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <label style="display:flex; align-items:center; gap:0.6rem; padding:0.75rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); cursor:pointer;">
+              <input type="radio" name="checkout-payment" value="Credit / Debit Card" checked class="custom-checkbox">
+              <span style="font-size:0.85rem; font-weight:600;">Credit / Debit Card (Secure Tokenized)</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.6rem; padding:0.75rem; border:1px solid var(--color-border); border-radius:var(--radius-sm); cursor:pointer;">
+              <input type="radio" name="checkout-payment" value="Pay on Delivery" class="custom-checkbox">
+              <span style="font-size:0.85rem; font-weight:600;">Cash / Pay on Delivery</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div style="background:var(--color-surface-alt, #f2f0eb); padding:1rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; font-size:0.85rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem;">
+            <span>Items Subtotal:</span>
+            <strong id="checkout-sum-subtotal">$0.00</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem;">
+            <span>Express Shipping:</span>
+            <strong id="checkout-sum-shipping">Free</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:1.05rem; font-weight:700; border-top:1px solid var(--color-border, #e8e8e1); padding-top:0.5rem; margin-top:0.4rem;">
+            <span>Total Amount:</span>
+            <strong id="checkout-sum-total">$0.00</strong>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="btn-place-order">
+          <span class="btn-text">Confirm & Place Order</span>
+          <span class="btn-spinner" hidden></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Supabase CDN (Official v2) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Velora shared JavaScript -->
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
   <script src="js/storage.js" defer></script>
   <script src="js/products.js" defer></script>
   <script src="js/store.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/db.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/app.js" defer></script>
   <script src="js/cart-ui.js" defer></script>

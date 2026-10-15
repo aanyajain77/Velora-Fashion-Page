@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | Velora Fashion</title>
+  <meta name="description" content="Manage your Velora fashion account, view order history, update delivery addresses, and view saved atelier pieces.">
+
+  <!-- Google Fonts for Velora Theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="velora-app.css">
+  <link rel="stylesheet" href="profile_style.css">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="profile-page-body">
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    Complimentary Concierge & Express Shipping On Orders Over $99 <span class="star-icon">✦</span>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="home.html" class="brand-logo">
+        <span class="brand-name">Velora</span>
+        <span class="brand-tagline">LIVE YOUR STYLE</span>
+      </a>
+
+      <!-- Hamburger Toggle -->
+      <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <!-- Navigation Bar -->
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="men.html" class="nav-link">Men</a></li>
+          <li><a href="women.html" class="nav-link">Women</a></li>
+          <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+          <li><a href="footwear.html" class="nav-link">Footwear</a></li>
+          <li><a href="sale.html" class="nav-link sale">Sale</a></li>
+          <li><a href="home.html#testimonials" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Icons -->
+      <div class="header-actions">
+        <a href="profile.html" class="btn-auth is-logged-in" id="header-auth-btn">My Account</a>
+        <a href="search.html" class="icon-btn" aria-label="Search">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
+          </svg>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="profile.html" class="icon-btn active" aria-label="User Account">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <main class="profile-page-section">
+    <div class="container">
+
+      <!-- Page Header -->
+      <div class="profile-page-header">
+        <div>
+          <h1 class="profile-page-title">Velora Atelier Account</h1>
+          <p class="profile-page-subtitle">Personalised fashion profile, bespoke curation, and order tracking.</p>
+        </div>
+        <div id="backend-status-indicator" class="profile-badge-status" title="Authentication & Database Engine Status">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="backend-status-text">Connecting...</span>
+        </div>
+      </div>
+
+      <!-- Main Profile Grid -->
+      <div class="profile-dashboard-grid">
+
+        <!-- Left Navigation Sidebar -->
+        <aside class="profile-sidebar" aria-label="Account Navigation">
+          <div class="profile-user-summary">
+            <div class="user-avatar-badge" id="sidebar-avatar">
+              <span id="sidebar-avatar-initials">V</span>
+            </div>
+            <h2 class="user-display-name" id="sidebar-user-name">Loading Account...</h2>
+            <p class="user-display-email" id="sidebar-user-email">please wait</p>
+            <span class="user-member-pill" id="sidebar-member-badge">Atelier Member</span>
+          </div>
+
+          <nav>
+            <ul class="profile-nav-list">
+              <li>
+                <button type="button" class="profile-nav-btn active" data-tab="overview">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  <span>Overview</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="profile-nav-btn" data-tab="personal">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Personal Info</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="profile-nav-btn" data-tab="orders">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Current Orders</span>
+                  <span class="nav-count-badge" id="badge-active-orders">0</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="profile-nav-btn" data-tab="past-orders">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Past Orders</span>
+                  <span class="nav-count-badge" id="badge-past-orders">0</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="profile-nav-btn" data-tab="addresses">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Address Book</span>
+                  <span class="nav-count-badge" id="badge-addresses">0</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="profile-nav-btn" data-tab="wishlist">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                  <span>Saved Items</span>
+                  <span class="nav-count-badge" id="badge-wishlist">0</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="profile-nav-btn" data-tab="billing">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                  </svg>
+                  <span>Billing & Receipts</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="profile-nav-btn" data-tab="security">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <span>Security & Settings</span>
+                </button>
+              </li>
+              <li class="profile-nav-divider"></li>
+              <li>
+                <button type="button" class="profile-nav-btn btn-logout" id="btn-sidebar-logout">
+                  <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  <span>Log Out</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Right Main Panel Content -->
+        <section class="profile-content">
+
+          <!-- TAB 1: OVERVIEW -->
+          <div class="profile-panel active" id="panel-overview" role="tabpanel">
+            <div class="overview-welcome-card">
+              <div class="welcome-text">
+                <h2>Welcome back, <span id="overview-user-firstname">Customer</span></h2>
+                <p>Welcome to your personal Velora space. Manage purchases, curate wishlists, and track orders with ease.</p>
+                <div class="member-meta">
+                  <span id="overview-member-since">Member since 2026</span>
+                  <span>✦</span>
+                  <span id="overview-tier-status">Tier: Velvet Connoisseur</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="overview-metrics-grid">
+              <div class="metric-card">
+                <span class="metric-card__label">Total Orders</span>
+                <span class="metric-card__value" id="stat-total-orders">0</span>
+                <a href="#orders" class="metric-card__link" data-tab-link="orders">View all orders &rarr;</a>
+              </div>
+              <div class="metric-card">
+                <span class="metric-card__label">Active Orders</span>
+                <span class="metric-card__value" id="stat-active-orders">0</span>
+                <a href="#orders" class="metric-card__link" data-tab-link="orders">Track packages &rarr;</a>
+              </div>
+              <div class="metric-card">
+                <span class="metric-card__label">Saved Addresses</span>
+                <span class="metric-card__value" id="stat-addresses">0</span>
+                <a href="#addresses" class="metric-card__link" data-tab-link="addresses">Manage address book &rarr;</a>
+              </div>
+              <div class="metric-card">
+                <span class="metric-card__label">Wishlist</span>
+                <span class="metric-card__value" id="stat-wishlist">0</span>
+                <a href="#wishlist" class="metric-card__link" data-tab-link="wishlist">View saved items &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Quick Action Cards -->
+            <div class="overview-section-header">
+              <h3 class="overview-section-title">Quick Actions</h3>
+            </div>
+            <div class="overview-quick-links">
+              <div class="quick-action-card" data-tab-link="orders">
+                <div class="quick-action-icon">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <div class="quick-action-info">
+                  <h4>Track Current Orders</h4>
+                  <p>Check dispatch & live courier status</p>
+                </div>
+              </div>
+
+              <div class="quick-action-card" data-tab-link="personal">
+                <div class="quick-action-icon">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="quick-action-info">
+                  <h4>Personal Details</h4>
+                  <p>Update phone, email, and preferences</p>
+                </div>
+              </div>
+
+              <div class="quick-action-card" data-tab-link="addresses">
+                <div class="quick-action-icon">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="quick-action-info">
+                  <h4>Delivery Addresses</h4>
+                  <p>Add or set your primary shipping destination</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Activity / Items Preview -->
+            <div class="overview-section-header">
+              <h3 class="overview-section-title">Latest Order Overview</h3>
+              <a href="#orders" class="btn-link" data-tab-link="orders">All Orders &rarr;</a>
+            </div>
+            <div id="overview-recent-order-container">
+              <!-- Injected by profile.js -->
+            </div>
+          </div>
+
+          <!-- TAB 2: PERSONAL INFORMATION -->
+          <div class="profile-panel" id="panel-personal" role="tabpanel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Personal Information</h2>
+                <p class="panel-subtitle">Manage your personal credentials, contact info, and profile avatar.</p>
+              </div>
+            </div>
+
+            <div id="profile-update-alert" class="auth-alert" hidden>
+              <span id="profile-update-alert-text"></span>
+            </div>
+            <div id="profile-update-success" class="auth-success" hidden>
+              <span id="profile-update-success-text">Profile updated successfully!</span>
+            </div>
+
+            <form id="personal-info-form" novalidate>
+              <!-- Avatar Selector -->
+              <div class="avatar-selector-row">
+                <div class="avatar-preview-box" id="avatar-preview-box">
+                  <span id="avatar-preview-initials">V</span>
+                </div>
+                <div class="avatar-selector-controls">
+                  <label class="form-label" for="profile-avatar-url">Profile Avatar URL</label>
+                  <input
+                    type="url"
+                    id="profile-avatar-url"
+                    class="form-input"
+                    placeholder="https://example.com/avatar.jpg">
+                  <span class="optional-tag" style="display:block; margin-top:0.25rem;">Or select a signature atelier monogram style:</span>
+                  <div class="avatar-preset-chips">
+                    <button type="button" class="avatar-chip active" data-style="dark" title="Signature Noir">V</button>
+                    <button type="button" class="avatar-chip" data-style="gold" title="Imperial Gold" style="background:#b5a48b; color:#fff;">✦</button>
+                    <button type="button" class="avatar-chip" data-style="cream" title="Ivory Minimal" style="background:#f2f0eb; color:#1a1a1a;">❖</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="profile-fullname">Full Name <span class="required-star">*</span></label>
+                  <input
+                    type="text"
+                    id="profile-fullname"
+                    class="form-input"
+                    required
+                    minlength="2">
+                  <span class="field-error-msg" id="err-fullname">Full name is required.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="profile-email">Email Address</label>
+                  <input
+                    type="email"
+                    id="profile-email"
+                    class="form-input"
+                    readonly
+                    disabled
+                    title="Email updates require verification via Security settings">
+                  <span class="optional-tag">Email is securely managed under Security & Settings.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="profile-phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="profile-phone"
+                    class="form-input"
+                    placeholder="+1 (555) 019-2834">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="profile-created-date">Account Registered</label>
+                  <input
+                    type="text"
+                    id="profile-created-date"
+                    class="form-input"
+                    readonly
+                    disabled>
+                </div>
+              </div>
+
+              <div class="form-actions-row">
+                <button type="button" class="btn btn-secondary" id="btn-cancel-personal">Cancel Changes</button>
+                <button type="submit" class="btn btn-primary" id="btn-save-personal">
+                  <span class="btn-text">Save Personal Details</span>
+                  <span class="btn-spinner" hidden></span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- TAB 3: CURRENT ORDERS -->
+          <div class="profile-panel" id="panel-orders" role="tabpanel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Active & Current Orders</h2>
+                <p class="panel-subtitle">Orders in fulfillment, processing, and transit.</p>
+              </div>
+            </div>
+
+            <!-- Injected by profile.js -->
+            <div id="current-orders-container" class="orders-list">
+              <div class="panel-empty-state">
+                <svg class="empty-state-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <h3 class="empty-state-title">No Active Orders</h3>
+                <p class="empty-state-text">You have no orders currently in transit or fulfillment.</p>
+                <a href="home.html" class="btn btn-primary">Discover New Season Arrivals</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: PAST ORDERS -->
+          <div class="profile-panel" id="panel-past-orders" role="tabpanel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Past Order Archive</h2>
+                <p class="panel-subtitle">Delivered and completed purchases with instant reorder functionality.</p>
+              </div>
+            </div>
+
+            <div id="past-orders-container" class="orders-list">
+              <!-- Injected by profile.js -->
+            </div>
+          </div>
+
+          <!-- TAB 5: ADDRESS BOOK -->
+          <div class="profile-panel" id="panel-addresses" role="tabpanel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Address Book</h2>
+                <p class="panel-subtitle">Manage delivery destinations for seamless checkout.</p>
+              </div>
+              <button type="button" class="btn btn-primary" id="btn-add-address">+ Add New Address</button>
+            </div>
+
+            <div id="address-grid-container" class="address-grid">
+              <!-- Injected by profile.js -->
+            </div>
+          </div>
+
+          <!-- TAB 6: WISHLIST -->
+          <div class="profile-panel" id="panel-wishlist" role="tabpanel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Saved Atelier Items</h2>
+                <p class="panel-subtitle">Pieces you've bookmarked across our collections.</p>
+              </div>
+              <a href="wishlist.html" class="btn btn-secondary">Open Full Wishlist Page &rarr;</a>
+            </div>
+
+            <div id="profile-wishlist-grid" class="product-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <!-- Injected by profile.js -->
+            </div>
+          </div>
+
+          <!-- TAB 7: BILLING & RECEIPTS -->
+          <div class="profile-panel" id="panel-billing" role="tabpanel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Billing & Receipts</h2>
+                <p class="panel-subtitle">Review official transaction references and download itemized invoices.</p>
+              </div>
+            </div>
+
+            <div class="settings-section-card">
+              <h3 class="settings-card-title">Payment Security Notice</h3>
+              <p class="settings-card-subtitle" style="margin-bottom:0;">
+                Velora employs bank-grade, PCI-DSS compliant encryption. We never store complete credit or debit card numbers on our servers.
+              </p>
+            </div>
+
+            <div class="overview-section-header">
+              <h3 class="overview-section-title">Transaction History</h3>
+            </div>
+            <div id="billing-history-container">
+              <!-- Injected by profile.js -->
+            </div>
+          </div>
+
+          <!-- TAB 8: SECURITY & SETTINGS -->
+          <div class="profile-panel" id="panel-security" role="tabpanel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Security & Account Settings</h2>
+                <p class="panel-subtitle">Manage authentication credentials, notifications, and account integrity.</p>
+              </div>
+            </div>
+
+            <!-- Email Verification -->
+            <div class="settings-section-card">
+              <h3 class="settings-card-title">Email Verification</h3>
+              <p class="settings-card-subtitle">Verify your email address to receive order updates and security alerts.</p>
+              <div class="verification-status-banner">
+                <div>
+                  <strong>Status:</strong>
+                  <span id="security-verification-badge" style="margin-left:0.5rem; color:#188038; font-weight:600;">Verified Account</span>
+                </div>
+                <button type="button" class="btn btn-secondary" id="btn-resend-verification" style="padding:0.4rem 0.8rem; font-size:0.75rem;">Resend Verification Link</button>
+              </div>
+            </div>
+
+            <!-- Change Password -->
+            <div class="settings-section-card">
+              <h3 class="settings-card-title">Change Password</h3>
+              <p class="settings-card-subtitle">Update your password to keep your account safe.</p>
+
+              <div id="change-pw-alert" class="auth-alert" hidden>
+                <span id="change-pw-alert-text"></span>
+              </div>
+              <div id="change-pw-success" class="auth-success" hidden>
+                Password updated successfully!
+              </div>
+
+              <form id="change-password-form" class="auth-form" style="max-width: 440px;" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="new-pw-input">New Password</label>
+                  <div class="password-input-wrapper">
+                    <input
+                      type="password"
+                      id="new-pw-input"
+                      class="form-input"
+                      placeholder="At least 8 characters"
+                      required
+                      minlength="8">
+                    <button type="button" class="password-toggle-btn" id="toggle-change-pw" aria-label="Show password">
+                      <svg class="eye-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                    </button>
+                  </div>
+                  <span class="field-error-msg" id="err-change-pw">Please enter at least 8 characters.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="confirm-new-pw-input">Confirm New Password</label>
+                  <input
+                    type="password"
+                    id="confirm-new-pw-input"
+                    class="form-input"
+                    placeholder="Repeat new password"
+                    required>
+                  <span class="field-error-msg" id="err-change-pw-match">Passwords do not match.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="btn-submit-change-pw" style="align-self: flex-start;">
+                  <span class="btn-text">Update Password</span>
+                  <span class="btn-spinner" hidden></span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Notification Preferences -->
+            <div class="settings-section-card">
+              <h3 class="settings-card-title">Notification Preferences</h3>
+              <p class="settings-card-subtitle">Select which communications you wish to receive from Velora.</p>
+              <div class="notification-toggle-list">
+                <div class="toggle-item">
+                  <div class="toggle-info">
+                    <h4>Order & Delivery Dispatches</h4>
+                    <p>Real-time updates regarding tracking, courier progress, and delivery confirmation.</p>
+                  </div>
+                  <input type="checkbox" id="pref-order-notify" class="custom-checkbox" checked>
+                </div>
+                <div class="toggle-item">
+                  <div class="toggle-info">
+                    <h4>Private Seasonal Previews & VIP Sales</h4>
+                    <p>Curated early access to new collections and private archival sales.</p>
+                  </div>
+                  <input type="checkbox" id="pref-promo-notify" class="custom-checkbox">
+                </div>
+              </div>
+            </div>
+
+            <!-- Supabase Cloud Credentials Modal Trigger -->
+            <div class="settings-section-card">
+              <h3 class="settings-card-title">Supabase Cloud Configuration</h3>
+              <p class="settings-card-subtitle">Connect your live Supabase project URL and anon public key anytime.</p>
+              <button type="button" class="btn btn-secondary" id="btn-open-supabase-config">Configure Supabase Project &rarr;</button>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="settings-section-card danger-zone">
+              <h3 class="settings-card-title">Delete Account</h3>
+              <p class="settings-card-subtitle">Permanently delete your Velora account and erase personal stored data.</p>
+              <button type="button" class="btn btn-secondary" id="btn-trigger-delete-account" style="color:#c5221f; border-color:#f4c7c3;">Delete My Account</button>
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+
+  <!-- 1. Address Modal (Add / Edit) -->
+  <div id="address-modal" class="velora-modal" hidden role="dialog" aria-modal="true" aria-labelledby="address-modal-title">
+    <div class="velora-modal__box" style="max-width: 560px;">
+      <button type="button" class="velora-modal__close" id="close-address-modal" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <h3 id="address-modal-title" class="modal-title">Add Delivery Address</h3>
+        <p class="modal-subtitle">Ensure exact delivery details for uninterrupted shipping.</p>
+      </div>
+
+      <div id="address-form-alert" class="auth-alert" hidden>
+        <span id="address-form-alert-text"></span>
+      </div>
+
+      <form id="address-form" novalidate>
+        <input type="hidden" id="address-id-field">
+        <div class="profile-form-grid" style="margin-bottom: 1.25rem;">
+          <div class="form-group profile-form-full">
+            <label class="form-label" for="addr-name">Recipient Full Name <span class="required-star">*</span></label>
+            <input type="text" id="addr-name" class="form-input" required placeholder="e.g. Eleanor Vance">
+          </div>
+          <div class="form-group profile-form-full">
+            <label class="form-label" for="addr-phone">Contact Phone Number <span class="required-star">*</span></label>
+            <input type="tel" id="addr-phone" class="form-input" required placeholder="+1 (555) 019-2834">
+          </div>
+          <div class="form-group profile-form-full">
+            <label class="form-label" for="addr-line1">Street Address <span class="required-star">*</span></label>
+            <input type="text" id="addr-line1" class="form-input" required placeholder="740 Fifth Avenue">
+          </div>
+          <div class="form-group profile-form-full">
+            <label class="form-label" for="addr-line2">Apartment, Suite, Unit <span class="optional-tag">(Optional)</span></label>
+            <input type="text" id="addr-line2" class="form-input" placeholder="Apt 14B">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="addr-city">City <span class="required-star">*</span></label>
+            <input type="text" id="addr-city" class="form-input" required placeholder="New York">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="addr-state">State / Province <span class="required-star">*</span></label>
+            <input type="text" id="addr-state" class="form-input" required placeholder="NY">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="addr-postal">Postal Code <span class="required-star">*</span></label>
+            <input type="text" id="addr-postal" class="form-input" required placeholder="10019">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="addr-country">Country <span class="required-star">*</span></label>
+            <select id="addr-country" class="form-select">
+              <option value="United States" selected>United States</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Italy">Italy</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-checkbox-group" style="margin-bottom: 1.5rem;">
+          <input type="checkbox" id="addr-default" class="custom-checkbox">
+          <label for="addr-default" class="checkbox-label">Make this my primary delivery address</label>
+        </div>
+
+        <div class="form-actions-row">
+          <button type="button" class="btn btn-secondary" id="cancel-address-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="save-address-btn">
+            <span class="btn-text">Save Address</span>
+            <span class="btn-spinner" hidden></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Delete Confirmation Modal -->
+  <div id="delete-confirm-modal" class="velora-modal" hidden role="dialog" aria-modal="true" aria-labelledby="delete-confirm-title">
+    <div class="velora-modal__box" style="max-width: 440px;">
+      <button type="button" class="velora-modal__close" id="close-delete-modal" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <h3 id="delete-confirm-title" class="modal-title">Delete Address</h3>
+        <p class="modal-subtitle" id="delete-confirm-desc">Are you sure you want to remove this delivery address from your account?</p>
+      </div>
+      <div class="form-actions-row" style="justify-content: center;">
+        <button type="button" class="btn btn-secondary" id="cancel-delete-btn">Cancel</button>
+        <button type="button" class="btn btn-primary" id="confirm-delete-btn" style="background:#c5221f; border-color:#c5221f;">Delete Address</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Order Details Modal -->
+  <div id="order-details-modal" class="velora-modal" hidden role="dialog" aria-modal="true" aria-labelledby="order-details-title">
+    <div class="velora-modal__box" style="max-width: 680px;">
+      <button type="button" class="velora-modal__close" id="close-order-modal" aria-label="Close dialog">&times;</button>
+      <div class="modal-header" style="text-align: left; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+        <span class="order-meta-label" id="modal-order-number-label">Order #VEL-2026-00000</span>
+        <h3 id="order-details-title" class="modal-title" style="margin-top:0.25rem;">Order Specifications</h3>
+      </div>
+      <div id="order-details-body" style="padding: 1.25rem 0;">
+        <!-- Injected by profile.js -->
+      </div>
+      <div class="form-actions-row">
+        <button type="button" class="btn btn-secondary" id="close-order-details-btn">Close</button>
+        <button type="button" class="btn btn-primary" id="btn-print-order-receipt">Download Invoice</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Printable Invoice Receipt Modal -->
+  <div id="invoice-modal" class="velora-modal" hidden role="dialog" aria-modal="true">
+    <div class="velora-modal__box" style="max-width: 780px;">
+      <button type="button" class="velora-modal__close" id="close-invoice-modal" aria-label="Close dialog">&times;</button>
+      <div id="invoice-content" class="invoice-box">
+        <!-- Rendered by profile.js -->
+      </div>
+      <div class="form-actions-row invoice-actions-print" style="padding-top:1.5rem;">
+        <button type="button" class="btn btn-secondary" id="close-invoice-btn">Close</button>
+        <button type="button" class="btn btn-primary" id="btn-trigger-print">Print / Save as PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Supabase Configuration Modal (For Evaluators & Admins) -->
+  <div id="supabase-config-modal" class="velora-modal" hidden role="dialog" aria-modal="true">
+    <div class="velora-modal__box" style="max-width: 520px;">
+      <button type="button" class="velora-modal__close" id="close-config-modal" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title">Supabase Setup</h3>
+        <p class="modal-subtitle">Connect your live Supabase cloud instance. Settings persist in local storage.</p>
+      </div>
+      <form id="supabase-config-form">
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label" for="cfg-supabase-url">Project URL</label>
+          <input type="url" id="cfg-supabase-url" class="form-input" placeholder="https://your-project.supabase.co" required>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label class="form-label" for="cfg-supabase-anon">Anon Public Key</label>
+          <input type="text" id="cfg-supabase-anon" class="form-input" placeholder="eyJhbGciOi..." required>
+        </div>
+        <div class="form-actions-row">
+          <button type="button" class="btn btn-secondary" id="reset-config-btn">Use Demo Local Mode</button>
+          <button type="submit" class="btn btn-primary">Save & Connect</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. Delete Account Confirmation Modal -->
+  <div id="delete-account-modal" class="velora-modal" hidden role="dialog" aria-modal="true">
+    <div class="velora-modal__box" style="max-width: 480px;">
+      <button type="button" class="velora-modal__close" id="close-del-acc-modal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title" style="color:#c5221f;">Confirm Account Deletion</h3>
+        <p class="modal-subtitle">This action is permanent and cannot be undone. All saved addresses, preferences, and profile data will be permanently purged.</p>
+      </div>
+      <div class="form-group" style="margin-bottom:1.5rem;">
+        <label class="form-label" for="delete-confirm-type">Type "DELETE" below to confirm:</label>
+        <input type="text" id="delete-confirm-type" class="form-input" placeholder="DELETE">
+      </div>
+      <div class="form-actions-row" style="justify-content:center;">
+        <button type="button" class="btn btn-secondary" id="cancel-del-acc-btn">Keep Account</button>
+        <button type="button" class="btn btn-primary" id="confirm-del-acc-btn" disabled style="background:#c5221f; border-color:#c5221f;">Erase Account</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Velora Fashion Store. All Rights Reserved.</div>
+        <div>
+          <span>Accepted Payments:</span>
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">PAYPAL</span>
+          <span class="payment-badge">AMEX</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Supabase CDN (Official v2) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Velora App Modules (Order: config -> supabase -> storage -> products -> store -> auth -> db -> header -> app -> cart-ui -> profile) -->
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart-ui.js"></script>
+  <script src="profile.js"></script>
+
+</body>
+
+</html>

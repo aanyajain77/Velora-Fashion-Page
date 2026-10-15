@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Velora Fashion</title>
+  <meta name="description" content="Sign in to your Velora account to access orders, saved items, and personalized fashion recommendations.">
+
+  <!-- Google Fonts for Velora Theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="velora-app.css">
+  <link rel="stylesheet" href="profile_style.css">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="auth-page-body">
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    Free Shipping on all orders above $99 <span class="star-icon">✦</span>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="home.html" class="brand-logo">
+        <span class="brand-name">Velora</span>
+        <span class="brand-tagline">LIVE YOUR STYLE</span>
+      </a>
+
+      <!-- Hamburger Toggle -->
+      <label for="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <!-- Navigation Bar -->
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="men.html" class="nav-link">Men</a></li>
+          <li><a href="women.html" class="nav-link">Women</a></li>
+          <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+          <li><a href="footwear.html" class="nav-link">Footwear</a></li>
+          <li><a href="sale.html" class="nav-link sale">Sale</a></li>
+          <li><a href="home.html#testimonials" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Icons -->
+      <div class="header-actions">
+        <a href="login.html" class="btn-auth">Login / Sign Up</a>
+        <a href="search.html" class="icon-btn" aria-label="Search">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
+          </svg>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Shopping Cart">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="login.html" class="icon-btn active" aria-label="User Account">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Auth Page Content -->
+  <main class="auth-page-section">
+    <div class="auth-card-container">
+
+      <!-- Breadcrumbs -->
+      <nav class="auth-breadcrumb" aria-label="Breadcrumb">
+        <a href="home.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Sign In</span>
+      </nav>
+
+      <!-- Auth Card -->
+      <div class="auth-card">
+        <div class="auth-card-header">
+          <span class="auth-pre-title">Welcome Back</span>
+          <h1 class="auth-card-title">Sign In to Velora</h1>
+          <p class="auth-card-subtitle">Access your orders, saved luxury pieces, and curated wardrobe.</p>
+        </div>
+
+        <!-- Alert Banner -->
+        <div id="auth-alert" class="auth-alert" role="alert" hidden>
+          <span class="auth-alert-icon">⚠️</span>
+          <span id="auth-alert-message" class="auth-alert-text"></span>
+        </div>
+
+        <!-- Success Banner -->
+        <div id="auth-success" class="auth-success" role="status" hidden>
+          <span class="auth-alert-icon">✓</span>
+          <span id="auth-success-message" class="auth-alert-text"></span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="auth-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address <span class="required-star">*</span></label>
+            <input
+              type="email"
+              id="login-email"
+              class="form-input"
+              placeholder="name@example.com"
+              required
+              autocomplete="email"
+              aria-required="true">
+            <span class="field-error-msg" id="login-email-err">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label-row">
+              <label class="form-label" for="login-password">Password <span class="required-star">*</span></label>
+              <button type="button" class="btn-text-link" id="btn-forgot-password">Forgot password?</button>
+            </div>
+            <div class="password-input-wrapper">
+              <input
+                type="password"
+                id="login-password"
+                class="form-input"
+                placeholder="••••••••"
+                required
+                autocomplete="current-password"
+                aria-required="true">
+              <button
+                type="button"
+                class="password-toggle-btn"
+                id="toggle-login-password"
+                aria-label="Show password"
+                title="Show password">
+                <svg class="eye-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+            <span class="field-error-msg" id="login-password-err">Please enter your password.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full btn-auth-submit" id="btn-login-submit">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-spinner" hidden></span>
+          </button>
+        </form>
+
+        <!-- Forgot Password Modal -->
+        <div id="forgot-modal" class="velora-modal" hidden role="dialog" aria-modal="true" aria-labelledby="forgot-modal-title">
+          <div class="velora-modal__box auth-modal-box">
+            <button type="button" class="velora-modal__close" id="close-forgot-modal" aria-label="Close dialog">&times;</button>
+            <div class="modal-header">
+              <h2 id="forgot-modal-title" class="modal-title">Reset Password</h2>
+              <p class="modal-subtitle">Enter your registered email and we'll send you instructions to reset your password.</p>
+            </div>
+            <div id="forgot-alert" class="auth-alert" role="alert" hidden>
+              <span id="forgot-alert-text"></span>
+            </div>
+            <form id="forgot-form" class="auth-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="forgot-email">Account Email</label>
+                <input type="email" id="forgot-email" class="form-input" placeholder="name@example.com" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="btn-forgot-submit">
+                <span class="btn-text">Send Reset Instructions</span>
+                <span class="btn-spinner" hidden></span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Switch to Sign Up -->
+        <div class="auth-card-footer">
+          <p>Don't have a Velora account yet?</p>
+          <a href="signup.html" class="auth-switch-link" id="link-to-signup">Create an Account &rarr;</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Velora Fashion Store. All Rights Reserved.</div>
+        <div>
+          <span>Accepted Payments:</span>
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">PAYPAL</span>
+          <span class="payment-badge">AMEX</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Supabase CDN (Official v2) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Velora App Modules -->
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Login Page Controller Script -->
+  <script>
+    (function () {
+      'use strict';
+      const V = window.Velora || {};
+
+      // If already logged in, redirect
+      V.Auth.redirectIfAuth();
+
+      const form = document.getElementById('login-form');
+      const emailInput = document.getElementById('login-email');
+      const passwordInput = document.getElementById('login-password');
+      const submitBtn = document.getElementById('btn-login-submit');
+      const alertBox = document.getElementById('auth-alert');
+      const alertMsg = document.getElementById('auth-alert-message');
+      const successBox = document.getElementById('auth-success');
+      const successMsg = document.getElementById('auth-success-message');
+      const togglePwBtn = document.getElementById('toggle-login-password');
+
+      // Preserve redirect param in signup link
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get('redirect');
+      if (redirect) {
+        const signupLink = document.getElementById('link-to-signup');
+        if (signupLink) signupLink.href = `signup.html?redirect=${encodeURIComponent(redirect)}`;
+      }
+
+      function showAlert(msg) {
+        alertMsg.textContent = msg;
+        alertBox.hidden = false;
+        successBox.hidden = true;
+      }
+
+      function showSuccess(msg) {
+        successMsg.textContent = msg;
+        successBox.hidden = false;
+        alertBox.hidden = true;
+      }
+
+      function hideAlerts() {
+        alertBox.hidden = true;
+        successBox.hidden = true;
+      }
+
+      // Show/Hide password
+      if (togglePwBtn && passwordInput) {
+        togglePwBtn.addEventListener('click', () => {
+          const isText = passwordInput.type === 'text';
+          passwordInput.type = isText ? 'password' : 'text';
+          togglePwBtn.setAttribute('aria-label', isText ? 'Show password' : 'Hide password');
+          togglePwBtn.classList.toggle('active', !isText);
+        });
+      }
+
+      // Handle Login
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        hideAlerts();
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        let hasError = false;
+        if (!email) {
+          emailInput.classList.add('is-invalid');
+          document.getElementById('login-email-err').style.display = 'block';
+          hasError = true;
+        } else {
+          emailInput.classList.remove('is-invalid');
+          document.getElementById('login-email-err').style.display = 'none';
+        }
+
+        if (!password) {
+          passwordInput.classList.add('is-invalid');
+          document.getElementById('login-password-err').style.display = 'block';
+          hasError = true;
+        } else {
+          passwordInput.classList.remove('is-invalid');
+          document.getElementById('login-password-err').style.display = 'none';
+        }
+
+        if (hasError) return;
+
+        submitBtn.disabled = true;
+        submitBtn.querySelector('.btn-text').textContent = 'Authenticating...';
+        submitBtn.querySelector('.btn-spinner').hidden = false;
+
+        try {
+          const result = await V.Auth.signIn({ email, password });
+          showSuccess('Signed in successfully! Redirecting...');
+          setTimeout(() => {
+            const dest = redirect || 'profile.html';
+            window.location.href = dest;
+          }, 600);
+        } catch (err) {
+          showAlert(err.message || 'Login failed. Please check your credentials.');
+          submitBtn.disabled = false;
+          submitBtn.querySelector('.btn-text').textContent = 'Sign In';
+          submitBtn.querySelector('.btn-spinner').hidden = true;
+        }
+      });
+
+      // Forgot Password Modal
+      const forgotBtn = document.getElementById('btn-forgot-password');
+      const forgotModal = document.getElementById('forgot-modal');
+      const closeForgot = document.getElementById('close-forgot-modal');
+      const forgotForm = document.getElementById('forgot-form');
+      const forgotEmail = document.getElementById('forgot-email');
+      const forgotAlert = document.getElementById('forgot-alert');
+      const forgotAlertText = document.getElementById('forgot-alert-text');
+      const forgotSubmit = document.getElementById('btn-forgot-submit');
+
+      if (forgotBtn && forgotModal) {
+        forgotBtn.addEventListener('click', () => {
+          forgotModal.hidden = false;
+          forgotModal.classList.add('is-open');
+          forgotEmail.value = emailInput.value.trim();
+          forgotAlert.hidden = true;
+        });
+
+        closeForgot.addEventListener('click', () => {
+          forgotModal.hidden = true;
+          forgotModal.classList.remove('is-open');
+        });
+
+        forgotForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const email = forgotEmail.value.trim();
+          if (!email) return;
+
+          forgotSubmit.disabled = true;
+          forgotSubmit.querySelector('.btn-text').textContent = 'Sending...';
+          forgotSubmit.querySelector('.btn-spinner').hidden = false;
+
+          try {
+            await V.Auth.resetPassword(email);
+            forgotAlert.className = 'auth-success';
+            forgotAlertText.textContent = 'Password reset instructions have been dispatched to your email address.';
+            forgotAlert.hidden = false;
+          } catch (err) {
+            forgotAlert.className = 'auth-alert';
+            forgotAlertText.textContent = err.message || 'Unable to send reset instructions.';
+            forgotAlert.hidden = false;
+          } finally {
+            forgotSubmit.disabled = false;
+            forgotSubmit.querySelector('.btn-text').textContent = 'Send Reset Instructions';
+            forgotSubmit.querySelector('.btn-spinner').hidden = true;
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

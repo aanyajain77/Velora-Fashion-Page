@@ -67,17 +67,125 @@
     }
 
     const authBtn = doc.querySelector('.header-actions .btn-auth');
-    if (authBtn && V.Profile) {
-      if (!authBtn.dataset.defaultLabel) authBtn.dataset.defaultLabel = authBtn.textContent.trim();
-      if (V.Profile.isLoggedIn()) {
-        const p = V.Profile.get();
-        const first = (p.name || p.email).split(/[\s@]/)[0];
-        authBtn.textContent = `Hi, ${first}`;
-        authBtn.classList.add('is-logged-in');
-      } else {
-        authBtn.textContent = authBtn.dataset.defaultLabel;
-        authBtn.classList.remove('is-logged-in');
+    const userAccountLink = findIconLink('user account') || doc.querySelector('.header-actions a[aria-label="User Account"]');
+
+    if (V.Profile) {
+      const loggedIn = V.Profile.isLoggedIn();
+
+      if (authBtn) {
+        if (!authBtn.dataset.defaultLabel) authBtn.dataset.defaultLabel = authBtn.textContent.trim();
+        if (loggedIn) {
+          const p = V.Profile.get();
+          const first = (p.name || p.email).split(/[\s@]/)[0] || 'Member';
+          authBtn.textContent = `Hi, ${first}`;
+          authBtn.classList.add('is-logged-in');
+          authBtn.href = 'profile.html';
+        } else {
+          authBtn.textContent = authBtn.dataset.defaultLabel;
+          authBtn.classList.remove('is-logged-in');
+          authBtn.href = 'login.html';
+        }
       }
+
+      if (userAccountLink) {
+        userAccountLink.href = loggedIn ? 'profile.html' : 'login.html';
+        userAccountLink.setAttribute('aria-label', loggedIn ? 'My Profile' : 'User Account');
+      }
+    }
+  }
+
+  function wireAuthModal() {
+    const modal = doc.getElementById('login-modal');
+    if (!modal) return;
+
+    // Login Form inside modal
+    const loginForm = modal.querySelector('.content-login form');
+    if (loginForm && !loginForm.dataset.veloraBound) {
+      loginForm.dataset.veloraBound = '1';
+      loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const emailInput = loginForm.querySelector('#login-email') || loginForm.querySelector('input[type="email"]');
+        const passwordInput = loginForm.querySelector('#login-password') || loginForm.querySelector('input[type="password"]');
+        const submitBtn = loginForm.querySelector('button[type="submit"]');
+
+        const email = emailInput ? emailInput.value.trim() : '';
+        const password = passwordInput ? passwordInput.value : '';
+
+        if (!email || !password) {
+          alert('Please enter both email and password.');
+          return;
+        }
+
+        const origText = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Authenticating...';
+        }
+
+        try {
+          if (V.Auth) {
+            await V.Auth.signIn({ email, password });
+            global.location.hash = ''; // close modal
+            render();
+            if (V.CartUI) V.CartUI.toast('Signed in successfully!', { actionLabel: 'View Account', actionHref: 'profile.html' });
+          }
+        } catch (err) {
+          alert(err.message || 'Login failed. Please check credentials.');
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = origText;
+          }
+        }
+      });
+    }
+
+    // Sign Up Form inside modal
+    const signupForm = modal.querySelector('.content-signup form');
+    if (signupForm && !signupForm.dataset.veloraBound) {
+      signupForm.dataset.veloraBound = '1';
+      signupForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const nameInput = signupForm.querySelector('#signup-name') || signupForm.querySelector('input[type="text"]');
+        const emailInput = signupForm.querySelector('#signup-email') || signupForm.querySelector('input[type="email"]');
+        const passwordInput = signupForm.querySelector('#signup-password') || signupForm.querySelector('input[type="password"]');
+        const submitBtn = signupForm.querySelector('button[type="submit"]');
+
+        const fullName = nameInput ? nameInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
+        const password = passwordInput ? passwordInput.value : '';
+
+        if (!fullName || !email || !password) {
+          alert('Please fill in all registration fields.');
+          return;
+        }
+
+        const origText = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Creating Account...';
+        }
+
+        try {
+          if (V.Auth) {
+            const res = await V.Auth.signUp({ fullName, email, password });
+            global.location.hash = ''; // close modal
+            render();
+            if (res.needsEmailConfirmation) {
+              alert('Account created! Please check your email to confirm registration.');
+            } else {
+              if (V.CartUI) V.CartUI.toast('Welcome to Velora! Your account has been created.', { actionLabel: 'View Account', actionHref: 'profile.html' });
+            }
+          }
+        } catch (err) {
+          alert(err.message || 'Sign up failed.');
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = origText;
+          }
+        }
+      });
     }
   }
 
@@ -85,6 +193,7 @@
 
   function init() {
     render();
+    wireAuthModal();
     if (bound) return;
     bound = true;
     doc.addEventListener('velora:change', (event) => {

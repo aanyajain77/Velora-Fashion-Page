@@ -159,15 +159,174 @@
       }
     });
 
-    util.on('click', '#cart-checkout', (event) => {
-      event.preventDefault();
+    // Real Checkout Modal & Flow
+    const checkoutModal = query('checkout-modal');
+    const closeCheckoutModal = query('close-checkout-modal');
+    const checkoutForm = query('checkout-form');
+    const addressSelect = query('checkout-address-select');
+    const addressPreview = query('checkout-address-preview');
+    const sumSubtotalEl = query('checkout-sum-subtotal');
+    const sumShippingEl = query('checkout-sum-shipping');
+    const sumTotalEl = query('checkout-sum-total');
+    const checkoutAlert = query('checkout-alert');
+    const checkoutAlertText = query('checkout-alert-text');
+    const btnPlaceOrder = query('btn-place-order');
+
+    let availableAddresses = [];
+
+    async function openCheckout() {
       if (Cart.isEmpty()) return;
-      if (V.Profile && !V.Profile.isLoggedIn()) {
-        CartUI.toast('Please log in to check out.', { actionLabel: 'Log in', actionHref: '#login-modal' });
+      const isAuth = V.Auth ? await V.Auth.isLoggedIn() : (V.Profile && V.Profile.isLoggedIn());
+      if (!isAuth) {
+        CartUI.toast('Please sign in or create an account to proceed to checkout.', {
+          actionLabel: 'Sign In',
+          actionHref: 'login.html?redirect=cart.html',
+        });
         return;
       }
-      CartUI.toast('Checkout is not available in this demo yet.');
+
+      // Populate Totals
+      const subtotal = Cart.subtotal();
+      const shipping = shippingFor(subtotal);
+      const total = Math.round((subtotal + shipping) * 100) / 100;
+      if (sumSubtotalEl) sumSubtotalEl.textContent = formatPrice(subtotal);
+      if (sumShippingEl) sumShippingEl.textContent = shipping === 0 ? 'Complimentary' : formatPrice(shipping);
+      if (sumTotalEl) sumTotalEl.textContent = formatPrice(total);
+
+      // Load Addresses
+      if (addressSelect && V.DB) {
+        addressSelect.innerHTML = '<option value="" disabled selected>Loading saved addresses...</option>';
+        try {
+          availableAddresses = await V.DB.getAddresses();
+        } catch (e) {
+          availableAddresses = [];
+        }
+
+        addressSelect.innerHTML = '';
+        if (!availableAddresses.length) {
+          const opt = doc.createElement('option');
+          opt.value = '__add_new__';
+          opt.textContent = 'No saved address found. Click here to add in Profile';
+          addressSelect.appendChild(opt);
+          if (addressPreview) {
+            addressPreview.style.display = 'block';
+            addressPreview.innerHTML = '<span style="color:#d93025;">You need at least one delivery address. <a href="profile.html#addresses" target="_blank" style="text-decoration:underline;">Click here to open Address Book in your profile.</a></span>';
+          }
+        } else {
+          availableAddresses.forEach((a, idx) => {
+            const opt = doc.createElement('option');
+            opt.value = a.id;
+            opt.textContent = `${a.recipient_name} — ${a.address_line1}, ${a.city} ${a.is_default ? '(Default)' : ''}`;
+            if (a.is_default || idx === 0) opt.selected = true;
+            addressSelect.appendChild(opt);
+          });
+          updateAddressPreview();
+        }
+      }
+
+      if (checkoutAlert) checkoutAlert.hidden = true;
+      if (checkoutModal) {
+        checkoutModal.hidden = false;
+        checkoutModal.classList.add('is-open');
+      }
+    }
+
+    function updateAddressPreview() {
+      if (!addressSelect || !addressPreview) return;
+      const selectedId = addressSelect.value;
+      const addr = availableAddresses.find((a) => a.id === selectedId);
+      if (addr) {
+        addressPreview.style.display = 'block';
+        addressPreview.innerHTML = `<strong>${addr.recipient_name}</strong> · Tel: ${addr.phone}<br>${addr.address_line1} ${addr.address_line2 || ''}, ${addr.city}, ${addr.state} ${addr.postal_code}, ${addr.country || 'USA'}`;
+      } else {
+        addressPreview.style.display = 'none';
+      }
+    }
+
+    if (addressSelect) {
+      addressSelect.addEventListener('change', () => {
+        if (addressSelect.value === '__add_new__') {
+          global.open('profile.html#addresses', '_blank');
+          return;
+        }
+        updateAddressPreview();
+      });
+    }
+
+    if (closeCheckoutModal) {
+      closeCheckoutModal.addEventListener('click', () => {
+        if (checkoutModal) {
+          checkoutModal.hidden = true;
+          checkoutModal.classList.remove('is-open');
+        }
+      });
+    }
+
+    util.on('click', '#cart-checkout', (event) => {
+      event.preventDefault();
+      openCheckout();
     });
+
+    if (checkoutForm) {
+      checkoutForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (checkoutAlert) checkoutAlert.hidden = true;
+
+        const selectedAddrId = addressSelect ? addressSelect.value : null;
+        const selectedAddr = availableAddresses.find((a) => a.id === selectedAddrId);
+
+        if (!selectedAddr) {
+          if (checkoutAlert && checkoutAlertText) {
+            checkoutAlertText.textContent = 'Please choose a valid delivery address or add one in your profile.';
+            checkoutAlert.hidden = false;
+          }
+          return;
+        }
+
+        const paymentRadio = doc.querySelector('input[name="checkout-payment"]:checked');
+        const paymentMethod = paymentRadio ? paymentRadio.value : 'Credit / Debit Card';
+
+        if (btnPlaceOrder) {
+          btnPlaceOrder.disabled = true;
+          btnPlaceOrder.querySelector('.btn-text').textContent = 'Authorizing & Creating Order...';
+          btnPlaceOrder.querySelector('.btn-spinner').hidden = false;
+        }
+
+        try {
+          const newOrder = await V.DB.createOrder({
+            address: selectedAddr,
+            paymentMethod: paymentMethod,
+          });
+
+          if (checkoutModal) {
+            checkoutModal.hidden = true;
+            checkoutModal.classList.remove('is-open');
+          }
+
+          render();
+
+          CartUI.toast(`✦ Order ${newOrder.order_number} confirmed! Thank you for choosing Velora.`, {
+            actionLabel: 'View Order',
+            actionHref: 'profile.html#orders',
+            duration: 8000,
+          });
+
+          setTimeout(() => {
+            global.location.href = 'profile.html#orders';
+          }, 1200);
+        } catch (err) {
+          if (checkoutAlert && checkoutAlertText) {
+            checkoutAlertText.textContent = err.message || 'Failed to place order.';
+            checkoutAlert.hidden = false;
+          }
+          if (btnPlaceOrder) {
+            btnPlaceOrder.disabled = false;
+            btnPlaceOrder.querySelector('.btn-text').textContent = 'Confirm & Place Order';
+            btnPlaceOrder.querySelector('.btn-spinner').hidden = true;
+          }
+        }
+      });
+    }
 
     doc.addEventListener('velora:change', (event) => {
       if (!event.detail || event.detail.store === 'cart') render();
