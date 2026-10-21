@@ -765,9 +765,14 @@ body.velora-modal-open {
 }
 
 .wishlist-btn--remove {
-  font-size: 1.1rem;
-  line-height: 1;
-  font-family: inherit;
+  color: #e63946;
+}
+
+.wishlist-btn--remove svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
 }
 
 .wishlist-card__remove {

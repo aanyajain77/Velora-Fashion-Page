@@ -44,7 +44,17 @@
     remove.dataset.action = 'remove';
     remove.setAttribute('aria-label', `Remove ${product.name} from wishlist`);
     remove.title = 'Remove from wishlist';
-    remove.textContent = '×';
+    const removeIcon = doc.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    removeIcon.setAttribute('viewBox', '0 0 12 12');
+    removeIcon.setAttribute('fill', 'none');
+    removeIcon.setAttribute('stroke', 'currentColor');
+    removeIcon.setAttribute('stroke-width', '1.8');
+    removeIcon.setAttribute('stroke-linecap', 'round');
+    removeIcon.setAttribute('aria-hidden', 'true');
+    const removePath = doc.createElementNS('http://www.w3.org/2000/svg', 'path');
+    removePath.setAttribute('d', 'M3 3l6 6M9 3L3 9');
+    removeIcon.appendChild(removePath);
+    remove.appendChild(removeIcon);
     box.appendChild(remove);
 
     const content = el('div', 'product-content');
